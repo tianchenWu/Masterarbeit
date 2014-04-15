@@ -1,0 +1,67 @@
+library("stringdist")
+
+string.list<-sequence_db[,2]  # a list of character vector
+string.dist.matrix<-matrix(numeric(0), 30,30) 
+
+for(i in 1:length(string.list)){
+for(j in 1:length(string.list)){
+
+
+string.dist.matrix[i,j]<-stringdist(string.list[i],string.list[j],"jaccard",q=1)
+
+
+}#end j
+}#end i
+
+heatmap(string.dist.matrix)
+
+
+#measure gives meaningful result  "dl" ("qgram",q=1) ("cosine",q=1) ("jaccard",q=1)
+#possibilities ("jw",p=0.2) "osa" "lv" "hamming" "lcs" ("qgram",q=15) ("jaccard",q=1) ("cosine",q=1)
+
+
+library("boot")
+########################################################
+
+#m: distance matrix
+#k: k nearst neighbour
+#l: complete labels for distance matrix
+
+l<-c(rep("h",15),rep("d",15))
+
+LOO.knn<-function(m,k,l){
+n<-dim(m)[[1]]
+correct<-0
+
+for(i in 1:n){
+env<-m[i,]
+neighbour.index<-order(env)[2:k+1]
+neighbour.label<-l[neighbour.index]
+predicted<-majority_h_d(neighbour.label)
+test<-l[i]
+if(predicted==test){correct<-correct+1}
+}#end for
+accuracy<-correct/n
+return (accuracy)
+}#end function
+
+
+
+
+majority_h_d<-function(x){
+
+count.h<-0
+count.d<-0
+for(j in 1:length(x)){
+if (x[j]=="h"){count.h<-count.h+1}
+if (x[j]=="d"){count.d<-count.d+1}
+}#end for
+
+if(count.h>=count.d) {return ("h")}
+if(count.h<count.d){return ("d")}
+
+}#end fucntion
+
+###############################################################
+
+LOO.knn(string.dist.matrix,1,l)

@@ -1,0 +1,10 @@
+print ("Calculate gcor distance matrix")
+
+cor.matrix<-gcor(graph_db,mode="graph")
+gcor.matrix<-1-abs(cor.matrix)
+gcor.matrix[is.na(gcor.matrix)]=1#if it is a correlation distance matrix, setting all NaNs to 1
+gcor.agn<-agnes(gcor.matrix,method="ward")
+
+
+
+

@@ -1,0 +1,4 @@
+par(mar=rep(0,4))
+patient.WeightedAverage.ecol<-matrix(gray(1-(as.matrix(patient.WeightedAverage,attrname="weight")/3)),nrow=network.size(patient.WeightedAverage))
+
+plot(patient.WeightedAverage,edge.col=patient.WeightedAverage.ecol,usecurve=T,edge.curve=0.0001,displaylabels=T,vertex.col=as.factor(patient.WeightedAverage%v%"R"))

@@ -1,0 +1,158 @@
+#Load Data
+source("C:\\Users\\wu\\spyder_workspace\\HurryUp2\\R Scripts\\Alternative Model\\LoadData.txt")
+source("C:\\Users\\wu\\spyder_workspace\\HurryUp2\\R Scripts\\Alternative Model\\LoadValuedData.txt")
+
+#clustering
+library("fpc")
+library("cluster")
+library("MASS")
+library("igraph")
+library("intergraph")
+library("csound")
+library("playitbyr")
+
+
+
+source("C:\\Users\\wu\\spyder_workspace\\HurryUp2\\R Scripts\\Alternative Model\\CallHamming.txt")
+source("C:\\Users\\wu\\spyder_workspace\\HurryUp2\\R Scripts\\Alternative Model\\Callgcor.txt")
+source("C:\\Users\\wu\\spyder_workspace\\HurryUp2\\R Scripts\\Alternative Model\\CallSW.txt")
+source("C:\\Users\\wu\\spyder_workspace\\HurryUp2\\R Scripts\\Alternative Model\\CallValuedHamming.txt")
+source("C:\\Users\\wu\\spyder_workspace\\HurryUp2\\R Scripts\\Alternative Model\\CallValuedgcor.txt")
+
+
+
+
+
+
+
+
+
+
+#get result
+#################################################################################################################
+print("hamming distance")
+hamming.cut_list<-c(700,500,380)
+for(cut_ in hamming.cut_list){
+print (cut_)
+#construct sequence
+
+hh<-cutree(as.hclust(hamming.agn),h=cut_)
+#attach cluster column to db
+db$cluster<-hh
+#reconstruct time series information for each patient
+sequence_db<-aggregate(db$cluster,by=list(db$ID),FUN=as.vector)
+
+####Now the structure of the data is following
+# id,  list(c(1,2,3,3,3,4,5))
+
+#convert the 2 column to a string
+convert.to.string<-function(x) return(paste(as.character(x[[1]]),collapse=""))
+col_headings<-c("ID","Sequence")
+names(sequence_db)<-col_headings
+
+sequence_db["Sequence"]<-apply(sequence_db["Sequence"],MARGIN=c(1),FUN=convert.to.string)
+
+#10 can not be identified from the string
+
+#evaluation by bootstrapping
+source("C:\\Users\\wu\\spyder_workspace\\HurryUp2\\R Scripts\\Alternative Model\\BootstrappingEvaluation.txt")
+}
+##################################################################################################################
+print("gcor distance")
+gcor.cut_list<-c(150,100,50)
+for(cut_ in gcor.cut_list){
+print (cut_)
+hh<-cutree(as.hclust(gcor.agn),h=cut_)
+#attach cluster column to db
+db$cluster<-hh
+#reconstruct time series information for each patient
+sequence_db<-aggregate(db$cluster,by=list(db$ID),FUN=as.vector)
+convert.to.string<-function(x) return(paste(as.character(x[[1]]),collapse=""))
+col_headings<-c("ID","Sequence")
+names(sequence_db)<-col_headings
+sequence_db["Sequence"]<-apply(sequence_db["Sequence"],MARGIN=c(1),FUN=convert.to.string)
+source("C:\\Users\\wu\\spyder_workspace\\HurryUp2\\R Scripts\\Alternative Model\\BootstrappingEvaluation.txt")
+}
+####################################################################################################################
+print("small world distance")
+sw.cut_list<-c(5,2,1.6)
+
+for(cut_ in sw.cut_list){
+print (cut_)
+hh<-cutree(as.hclust(sw.agn),h=cut_)
+db$cluster<-hh
+sequence_db<-aggregate(db$cluster,by=list(db$ID),FUN=as.vector)
+convert.to.string<-function(x) return(paste(as.character(x[[1]]),collapse=""))
+col_headings<-c("ID","Sequence")
+names(sequence_db)<-col_headings
+sequence_db["Sequence"]<-apply(sequence_db["Sequence"],MARGIN=c(1),FUN=convert.to.string)
+#evaluation by bootstrapping
+source("C:\\Users\\wu\\spyder_workspace\\HurryUp2\\R Scripts\\Alternative Model\\BootstrappingEvaluation.txt")
+}#end for
+
+
+######################################################################################################################
+print("valued hamming distance")
+
+valued.hamming.cut_list<-c(1000000,500000,230000)
+for(cut_ in valued.hamming.cut_list){
+print (cut_)
+#construct sequence
+
+hh<-cutree(as.hclust(valued.hamming.agn),h=cut_)
+#attach cluster column to db
+db$cluster<-hh
+#reconstruct time series information for each patient
+sequence_db<-aggregate(db$cluster,by=list(db$ID),FUN=as.vector)
+
+####Now the structure of the data is following
+# id,  list(c(1,2,3,3,3,4,5))
+
+#convert the 2 column to a string
+convert.to.string<-function(x) return(paste(as.character(x[[1]]),collapse=""))
+col_headings<-c("ID","Sequence")
+names(sequence_db)<-col_headings
+
+sequence_db["Sequence"]<-apply(sequence_db["Sequence"],MARGIN=c(1),FUN=convert.to.string)
+
+#10 can not be identified from the string
+
+#evaluation by bootstrapping
+source("C:\\Users\\wu\\spyder_workspace\\HurryUp2\\R Scripts\\Alternative Model\\BootstrappingEvaluation.txt")
+}
+
+
+##########################################################################################################################
+print("value gcor distance")
+valued.gcor.cut_list<-c(320,230,170)
+for(cut_ in valued.gcor.cut_list){
+print (cut_)
+#construct sequence
+
+hh<-cutree(as.hclust(valued.gcor.agn),h=cut_)
+#attach cluster column to db
+db$cluster<-hh
+#reconstruct time series information for each patient
+sequence_db<-aggregate(db$cluster,by=list(db$ID),FUN=as.vector)
+
+####Now the structure of the data is following
+# id,  list(c(1,2,3,3,3,4,5))
+
+#convert the 2 column to a string
+convert.to.string<-function(x) return(paste(as.character(x[[1]]),collapse=""))
+col_headings<-c("ID","Sequence")
+names(sequence_db)<-col_headings
+
+sequence_db["Sequence"]<-apply(sequence_db["Sequence"],MARGIN=c(1),FUN=convert.to.string)
+
+#10 can not be identified from the string
+
+#evaluation by bootstrapping
+source("C:\\Users\\wu\\spyder_workspace\\HurryUp2\\R Scripts\\Alternative Model\\BootstrappingEvaluation.txt")
+}
+
+
+
+
+
+

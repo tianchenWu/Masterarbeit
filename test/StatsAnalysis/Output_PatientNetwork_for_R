@@ -1,0 +1,35 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Feb 08 22:08:30 2014
+
+@author: wu
+"""
+
+import matplotlib.pylab as pl
+from test.StatsAnalysis.GraphMeasuresTable import *
+import pandas as pd
+import test.Global.globalvars as vars
+import numpy as np
+from test.I_O_put.Selector import *
+from test.Global.HelpFunction import average_graph
+import igraph as ig
+from test.Global.HelpFunction import parse_file_name
+
+patientsNetworkDir="C:\\Users\\wu\\Desktop\\patientsNetwork"
+
+selector=Selector("specified",weight_filter_method=vars.weight_filter_method)
+data=selector.data
+
+for file_name,eeg in data:
+    patientPath=patientsNetworkDir+"\\"+parse_file_name(file_name)
+    print patientPath
+    if not os.path.isdir(patientPath):
+        os.makedirs(patientPath)
+    for index,g in enumerate(eeg.graphlist):
+        graphPath=patientPath+"\\"+str(index)+".pajek"
+        g.write_pajek(graphPath)
+
+
+#for file_name,eeg in data:
+#    graph=average_graph(eeg.graphlist,0.217)
+    

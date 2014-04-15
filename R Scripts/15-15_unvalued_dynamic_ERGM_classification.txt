@@ -1,0 +1,71 @@
+library("ergm.count")
+library("statnet")
+
+
+#Also different model can be used
+#model<- ergm(g~kstar(2)+triangle,constraints=~edges)
+#model<-ergm(g~altkstar(2,fixed=TRUE)+gwesp(alpha=0.693,fixed=TRUE)+gwdsp(alpha=0.693,fixed=TRUE),constraints=~edges)
+
+read.weight.mat <- function(mat.path) {
+con <- file(mat.path, "rb")
+dim <- readBin(con, "integer", 2)
+Mat <- matrix( readBin(con, "numeric", prod(dim)), dim[1], dim[2])
+close(con)
+return(Mat)
+}
+
+
+in_<-"C:\\Users\\wu\\Desktop\\15_15_threshold_30_timeSeries\\"
+out_<-"C:\\Users\\wu\\Desktop\\TimeSeriesCoefficient"
+
+#############################Healthy Group
+
+healthy_filenames <- list.files(paste(in_,"Healthy",sep=""),full.name=TRUE)
+
+for(i in 1:length(healthy_filenames)){
+patient.path<-healthy_filenames[[i]]
+patient.id<-strsplit(patient.path,"/")[[1]][[2]]
+patient.out<-paste(paste(out_,"\\Healthy\\",sep=""),paste(patient.id,".txt",sep=""),sep="")
+patient.graphnames<-list.files(patient.path,full.name=T)
+
+readPaj<- function(x) read.paj(x)
+patient.graphlist<-lapply(patient.graphnames,readPaj)
+
+if(!file.exists(patient.out)){file.create(patient.out)}
+for(j in 1:length(patient.graphlist)){
+g<-patient.graphlist[[j]]
+model<-ergm(g~kstar(2)+triangle,constraints=~edges)
+density<-network.density(g)
+vars<-as.numeric(c(density,coef(model)))
+write(vars,file=patient.out,append=T)
+print(summary(model))
+
+}#end patient.graphlist
+
+}#end healthy_filenames
+
+print ("###################################")
+
+
+########################Disease Group
+
+disease_filenames <- list.files(paste(in_,"Disease",sep=""),full.name=TRUE)
+
+for(i in 1:length(disease_filenames)){
+patient.path<-disease_filenames[[i]]
+patient.id<-strsplit(patient.path,"/")[[1]][[2]]
+patient.out<-paste(paste(out_,"\\Disease\\",sep=""),paste(patient.id,".txt",sep=""),sep="")
+patient.graphnames<-list.files(patient.path,full.name=T)
+
+readPaj<- function(x) read.paj(x)
+patient.graphlist<-lapply(patient.graphnames,readPaj)
+
+for(j in 1:length(patient.graphlist)){
+g<-patient.graphlist[[j]]
+model<- ergm(g~kstar(2)+triangle,constraints=~edges)
+density<-network.density(g)
+vars<-as.numeric(c(density,coef(model)))
+write(vars,file=patient.out,append=T)
+print(summary(model))
+}#end patient.graphlist
+}#end healthy_filenames

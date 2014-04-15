@@ -1,0 +1,38 @@
+print ("Calculate gcor distance matrix")
+library("MASS")
+
+cor.matrix<-gcor(graph_db,mode="graph")
+dist.matrix<-1-abs(cor.matrix)
+dist.matrix[is.na(dist.matrix)]=1#if it is a correlation distance matrix, setting all NaNs to 1
+
+
+
+print ("Clustering")
+####################################### Clustering
+library("fpc")
+library("cluster")
+
+
+#hierachical clustering
+agn<-agnes(dist.matrix,method="ward")
+hh<-cutree(as.hclust(agn),h=cut_)
+#attach cluster column to db
+db$cluster<-hh
+#reconstruct time series information for each patient
+sequence_db<-aggregate(db$cluster,by=list(db$ID),FUN=as.vector)
+
+####Now the structure of the data is following
+# id,  list(c(1,2,3,3,3,4,5))
+
+#convert the 2 column to a string
+convert.to.string<-function(x) return(paste(as.character(x[[1]]),collapse=""))
+col_headings<-c("ID","Sequence")
+names(sequence_db)<-col_headings
+
+sequence_db["Sequence"]<-apply(sequence_db["Sequence"],MARGIN=c(1),FUN=convert.to.string)
+
+#10 can not be identified from the string
+
+
+
+

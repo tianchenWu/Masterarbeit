@@ -1,0 +1,6 @@
+delta = 5
+theta = 13
+alpha = 14
+beta = 15
+gamma = 15
+lowpass50Hz = 3

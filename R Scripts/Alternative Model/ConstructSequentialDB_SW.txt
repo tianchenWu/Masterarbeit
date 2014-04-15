@@ -1,0 +1,74 @@
+print ("Calculate small world distance matrix")
+library("igraph")
+library("intergraph")
+library("csound")
+library("playitbyr")
+minmax.scale<-function(v){
+    max<-max(v)
+    min<-min(v)
+    print(max)
+    print (min) 
+    normalizeit<-function(x){
+	return ((x-min)/(max-min))
+    }
+    
+    return (sapply(v,normalizeit))
+}
+calculate.pairwiseDistance<-function(v){
+    n<-length(v)
+    m<-matrix(numeric(0),n,n)
+    for(i in 1:n){
+	for(j in 1:n){
+	m[i,j]<-abs(v[i]-v[j])#manhattan distance
+	} 
+    }#i loop
+    return(m)
+
+}
+#######################################################################Calculate Small World Distance
+
+igraph_db<-lapply(graph_db,asIgraph)
+#average path length
+apl_list<-lapply(igraph_db,function(x){return (average.path.length(graph=x,directed=F,unconnected=F))})
+apl<-c(do.call("cbind",apl_list))
+normalized_apl<-minmax.scale(apl)
+normalized_apl_distance<-calculate.pairwiseDistance(normalized_apl)
+#clustering coefficent
+cc_list<-lapply(igraph_db,function(x){return(transitivity(x,type="localaverageundirected",isolates="zero"))})
+cc<-c(do.call("cbind",cc_list))
+normalized_cc<-minmax.scale(cc)
+normalized_cc_distance<-calculate.pairwiseDistance(normalized_cc)
+
+sw.dist.matrix<-as.dist((normalized_apl_distance+normalized_cc_distance)/2)
+#######################################################################
+
+
+
+print ("Clustering")
+####################################### Clustering
+library("fpc")
+library("cluster")
+
+#hierachical clustering
+agn<-agnes(sw.dist.matrix,method="ward")
+hh<-cutree(as.hclust(agn),h=8000)
+#attach cluster column to db
+db$cluster<-hh
+#reconstruct time series information for each patient
+sequence_db<-aggregate(db$cluster,by=list(db$ID),FUN=as.vector)
+
+####Now the structure of the data is following
+# id,  list(c(1,2,3,3,3,4,5))
+
+#convert the 2 column to a string
+convert.to.string<-function(x) return(paste(as.character(x[[1]]),collapse=""))
+col_headings<-c("ID","Sequence")
+names(sequence_db)<-col_headings
+
+sequence_db["Sequence"]<-apply(sequence_db["Sequence"],MARGIN=c(1),FUN=convert.to.string)
+
+#10 can not be identified from the string
+
+
+
+

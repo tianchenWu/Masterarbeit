@@ -1,0 +1,4384 @@
+DGS003
+"/media/FreeAgent GoFlex Drive/research/data/EEG/OVGU_FME_IMP/09_dgs/sl_pref2E-02/Healthy/Magdeburg/AG/delta_AG_prae_closed1" 143 0
+st 0
+an Fp1 x=-12 y=-88 label="Fp1"
+an Fp2 x=12 y=-88 label="Fp2"
+an F7 x=-32 y=-74 label="F7"
+an F3 x=-16 y=-71 label="F3"
+an Fz x=0 y=-70 label="Fz"
+an F4 x=16 y=-71 label="F4"
+an F8 x=32 y=-74 label="F8"
+an T3 x=-40 y=-50 label="T3"
+an C3 x=-20 y=-50 label="C3"
+an Cz x=0 y=-50 label="Cz"
+an C4 x=20 y=-50 label="C4"
+an T4 x=40 y=-50 label="T4"
+an T5 x=-32 y=-26 label="T5"
+an P3 x=-16 y=-29 label="P3"
+an Pz x=0 y=-30 label="Pz"
+an P4 x=16 y=-29 label="P4"
+an T6 x=32 y=-26 label="T6"
+an O1 x=-12 y=-12 label="O1"
+an O2 x=12 y=-12 label="O2"
+st 1
+ae Fp1F3 Fp1 F3 weight=1
+ae Fp1Fz Fp1 Fz weight=0.2
+ae Fp1T4 Fp1 T4 weight=1
+ae Fp1P4 Fp1 P4 weight=1
+ae Fp1T6 Fp1 T6 weight=1
+ae Fp2Pz Fp2 Pz weight=0.6
+ae F3Fz F3 Fz weight=0.2
+ae F3T4 F3 T4 weight=1
+ae F3P4 F3 P4 weight=1
+ae F3T6 F3 T6 weight=1
+ae FzT4 Fz T4 weight=0.2
+ae FzP3 Fz P3 weight=0.2
+ae FzP4 Fz P4 weight=0.2
+ae FzT6 Fz T6 weight=0.2
+ae FzO2 Fz O2 weight=0.6
+ae F4P3 F4 P3 weight=0.2
+ae F4O1 F4 O1 weight=0.6
+ae C3Cz C3 Cz weight=0.6
+ae T4P4 T4 P4 weight=1
+ae T4T6 T4 T6 weight=1
+ae T5Pz T5 Pz weight=0.2
+ae P3O2 P3 O2 weight=0.6
+ae P4T6 P4 T6 weight=1
+st 2
+de Fp1F3
+de Fp1Fz
+de Fp1T4
+de Fp1P4
+de Fp1T6
+ae Fp1O2 Fp1 O2 weight=0.4
+de Fp2Pz
+de F3Fz
+de F3T4
+ae F3P3 F3 P3 weight=0.2
+de F3P4
+de F3T6
+ae FzF4 Fz F4 weight=0.2
+ae FzT3 Fz T3 weight=0.2
+de FzT4
+de FzP3
+de FzP4
+de FzT6
+de FzO2
+ae F4T5 F4 T5 weight=0.8
+de F4P3
+ae F4Pz F4 Pz weight=0.8
+de F4O1
+de C3Cz
+ae CzC4 Cz C4 weight=0.6
+de T4P4
+de T4T6
+ae T4O1 T4 O1 weight=0.2
+ce T5Pz weight=1
+ae P3T6 P3 T6 weight=0.2
+de P3O2
+de P4T6
+ae T6O2 T6 O2 weight=0.4
+st 3
+ae Fp1Fp2 Fp1 Fp2 weight=0.4
+ae Fp1F3 Fp1 F3 weight=1
+ae Fp1Fz Fp1 Fz weight=0.8
+ae Fp1P4 Fp1 P4 weight=1
+ae Fp1T6 Fp1 T6 weight=1
+de Fp1O2
+ae Fp2F3 Fp2 F3 weight=0.4
+ae Fp2Fz Fp2 Fz weight=0.6
+ae Fp2P4 Fp2 P4 weight=0.4
+ae Fp2T6 Fp2 T6 weight=0.4
+ae Fp2O2 Fp2 O2 weight=0.6
+ae F7Pz F7 Pz weight=1
+ae F3Fz F3 Fz weight=0.8
+de F3P3
+ae F3P4 F3 P4 weight=1
+ae F3T6 F3 T6 weight=1
+de FzF4
+de FzT3
+ae FzP4 Fz P4 weight=0.8
+ae FzT6 Fz T6 weight=0.8
+ae FzO2 Fz O2 weight=0.2
+ce F4T5 weight=0.6
+de F4Pz
+ae F8O2 F8 O2 weight=0.2
+ae C3O1 C3 O1 weight=0.4
+de CzC4
+de T4O1
+ae T5P3 T5 P3 weight=0.4
+de T5Pz
+de P3T6
+ae P4T6 P4 T6 weight=1
+de T6O2
+st 4
+de Fp1Fp2
+de Fp1F3
+de Fp1Fz
+de Fp1P4
+de Fp1T6
+de Fp2F3
+de Fp2Fz
+ce Fp2P4 weight=0.6
+de Fp2T6
+de Fp2O2
+ae F7T4 F7 T4 weight=1
+de F7Pz
+de F3Fz
+de F3P4
+de F3T6
+ae FzF4 Fz F4 weight=0.2
+ae FzP3 Fz P3 weight=0.8
+de FzP4
+de FzT6
+de FzO2
+de F4T5
+de F8O2
+ae C3Cz C3 Cz weight=1
+de C3O1
+de T5P3
+ae T5O1 T5 O1 weight=0.2
+de P4T6
+ae O1O2 O1 O2 weight=0.8
+st 5
+ae Fp1F7 Fp1 F7 weight=0.6
+ae Fp1P4 Fp1 P4 weight=0.8
+ae Fp2Pz Fp2 Pz weight=0.6
+de Fp2P4
+de F7T4
+ae F7P4 F7 P4 weight=0.8
+ae F3Fz F3 Fz weight=0.8
+ae F3P3 F3 P3 weight=0.6
+de FzF4
+ce FzP3 weight=0.4
+ae F4O1 F4 O1 weight=0.8
+ae T3T5 T3 T5 weight=1
+de C3Cz
+de T5O1
+ce O1O2 weight=0.2
+st 6
+de Fp1F7
+ae Fp1Cz Fp1 Cz weight=0.2
+de Fp1P4
+ae Fp2F7 Fp2 F7 weight=0.6
+ae Fp2F4 Fp2 F4 weight=0.6
+ae Fp2C3 Fp2 C3 weight=0.2
+ae Fp2Cz Fp2 Cz weight=0.4
+ae Fp2P3 Fp2 P3 weight=0.6
+de Fp2Pz
+ae Fp2T6 Fp2 T6 weight=0.6
+ae F7F4 F7 F4 weight=1
+ae F7P3 F7 P3 weight=1
+de F7P4
+ae F7T6 F7 T6 weight=1
+de F3Fz
+de F3P3
+ae F3Pz F3 Pz weight=0.8
+de FzP3
+ae F4P3 F4 P3 weight=1
+ae F4T6 F4 T6 weight=1
+de F4O1
+ae F8Cz F8 Cz weight=0.2
+de T3T5
+ae C3Cz C3 Cz weight=0.2
+ae T5O1 T5 O1 weight=0.6
+ae P3T6 P3 T6 weight=1
+ae PzP4 Pz P4 weight=0.2
+de O1O2
+st 7
+ae Fp1Fp2 Fp1 Fp2 weight=0.2
+de Fp1Cz
+ae Fp1T6 Fp1 T6 weight=0.2
+de Fp2F7
+de Fp2F4
+ae Fp2F8 Fp2 F8 weight=0.6
+de Fp2C3
+de Fp2Cz
+de Fp2P3
+de Fp2T6
+de F7F4
+ae F7C4 F7 C4 weight=0.4
+de F7P3
+de F7T6
+de F3Pz
+ae FzF4 Fz F4 weight=1
+ae FzP3 Fz P3 weight=1
+ae FzT6 Fz T6 weight=0.6
+ce F4P3 weight=1
+ce F4T6 weight=0.6
+de F8Cz
+ae F8T4 F8 T4 weight=0.4
+ce C3Cz weight=0.2
+ce T5O1 weight=0.2
+ce P3T6 weight=0.6
+ce PzP4 weight=0.2
+ae O1O2 O1 O2 weight=0.6
+st 8
+de Fp1Fp2
+ae Fp1Fz Fp1 Fz weight=0.8
+ae Fp1T4 Fp1 T4 weight=0.8
+ae Fp1P3 Fp1 P3 weight=0.2
+ae Fp1P4 Fp1 P4 weight=0.8
+de Fp1T6
+de Fp2F8
+ae Fp2P3 Fp2 P3 weight=0.4
+de F7C4
+de FzF4
+ae FzT4 Fz T4 weight=1
+de FzP3
+ae FzP4 Fz P4 weight=1
+de FzT6
+ae F4C3 F4 C3 weight=0.6
+de F4P3
+ce F4T6 weight=0.4
+de F8T4
+ae F8Pz F8 Pz weight=0.6
+de C3Cz
+ae CzPz Cz Pz weight=0.4
+ae T4P4 T4 P4 weight=1
+ce T5O1 weight=0.2
+de P3T6
+de PzP4
+de O1O2
+st 9
+de Fp1Fz
+de Fp1T4
+de Fp1P3
+ce Fp1P4 weight=0.6
+ae Fp2F8 Fp2 F8 weight=0.6
+de Fp2P3
+ae F7F3 F7 F3 weight=0.4
+ae F7Fz F7 Fz weight=1
+ae F7C4 F7 C4 weight=1
+ae F3Fz F3 Fz weight=0.4
+ae F3C4 F3 C4 weight=0.4
+ae FzC4 Fz C4 weight=1
+de FzT4
+de FzP4
+de F4C3
+de F4T6
+de F8Pz
+ae C3Cz C3 Cz weight=0.8
+ae C3T5 C3 T5 weight=0.4
+ae C3O1 C3 O1 weight=0.8
+ae CzT5 Cz T5 weight=0.6
+de CzPz
+ae CzO1 Cz O1 weight=1
+de T4P4
+ce T5O1 weight=0.6
+ae P3Pz P3 Pz weight=0.8
+st 10
+ae Fp1Fp2 Fp1 Fp2 weight=0.2
+ae Fp1F3 Fp1 F3 weight=0.6
+ae Fp1F4 Fp1 F4 weight=0.2
+ae Fp1T3 Fp1 T3 weight=0.4
+ce Fp1P4 weight=0.4
+ae Fp2F4 Fp2 F4 weight=0.2
+de Fp2F8
+ae Fp2T3 Fp2 T3 weight=0.2
+ae Fp2P3 Fp2 P3 weight=0.6
+ae Fp2P4 Fp2 P4 weight=0.2
+de F7F3
+de F7Fz
+de F7C4
+ae F7T4 F7 T4 weight=0.8
+de F3Fz
+de F3C4
+ae F3P3 F3 P3 weight=0.2
+ce FzC4 weight=0.8
+ae FzP4 Fz P4 weight=0.4
+ae FzT6 Fz T6 weight=1
+ae FzO2 Fz O2 weight=0.2
+ae F4T3 F4 T3 weight=0.2
+ae F4P4 F4 P4 weight=0.2
+ae F4O1 F4 O1 weight=0.4
+ae F4O2 F4 O2 weight=0.8
+ae T3P4 T3 P4 weight=0.6
+de C3Cz
+de C3T5
+de C3O1
+de CzT5
+de CzO1
+ae C4P4 C4 P4 weight=0.2
+ae C4T6 C4 T6 weight=0.8
+ce T5O1 weight=0.6
+de P3Pz
+ae P4T6 P4 T6 weight=0.4
+ae P4O2 P4 O2 weight=0.2
+ae T6O2 T6 O2 weight=0.2
+ae O1O2 O1 O2 weight=0.4
+st 11
+de Fp1Fp2
+de Fp1F3
+de Fp1F4
+de Fp1T3
+de Fp1P4
+de Fp2F4
+de Fp2T3
+de Fp2P3
+de Fp2P4
+de F7T4
+de F3P3
+de FzC4
+de FzP4
+ce FzT6 weight=1
+ce FzO2 weight=0.4
+de F4T3
+ae F4T5 F4 T5 weight=0.8
+de F4P4
+de F4O1
+de F4O2
+ae F8P3 F8 P3 weight=0.6
+de T3P4
+ae CzP3 Cz P3 weight=0.4
+de C4P4
+de C4T6
+de T5O1
+de P4T6
+de P4O2
+ce T6O2 weight=0.4
+ce O1O2 weight=0.6
+st 12
+ae F7T4 F7 T4 weight=0.2
+ae FzC4 Fz C4 weight=0.8
+ae FzT5 Fz T5 weight=0.8
+de FzT6
+ce FzO2 weight=1
+de F4T5
+ae F8T3 F8 T3 weight=0.8
+ae F8C3 F8 C3 weight=0.2
+ae F8Cz F8 Cz weight=0.4
+de F8P3
+ae F8O1 F8 O1 weight=0.2
+ae T3C3 T3 C3 weight=0.4
+ae T3Cz T3 Cz weight=0.6
+ae T3O1 T3 O1 weight=0.4
+ae C3Cz C3 Cz weight=0.8
+ae C3O1 C3 O1 weight=1
+de CzP3
+ae CzO1 Cz O1 weight=0.8
+ae C4T5 C4 T5 weight=1
+ae C4O2 C4 O2 weight=0.8
+ae T5O2 T5 O2 weight=0.8
+ae P3Pz P3 Pz weight=0.8
+ae P3P4 P3 P4 weight=0.4
+ae PzP4 Pz P4 weight=0.6
+de T6O2
+de O1O2
+st 13
+ae Fp1Fp2 Fp1 Fp2 weight=0.8
+ae Fp1F8 Fp1 F8 weight=0.2
+ae Fp1C3 Fp1 C3 weight=0.8
+ae Fp1P3 Fp1 P3 weight=0.2
+ae Fp1O1 Fp1 O1 weight=0.4
+ae Fp2F8 Fp2 F8 weight=0.4
+ae Fp2C3 Fp2 C3 weight=1
+ae Fp2P3 Fp2 P3 weight=0.4
+ae Fp2O1 Fp2 O1 weight=0.2
+de F7T4
+de FzC4
+de FzT5
+ae FzPz Fz Pz weight=0.6
+de FzO2
+ae F4T3 F4 T3 weight=0.2
+ae F4C4 F4 C4 weight=0.6
+ae F4O2 F4 O2 weight=0.2
+de F8T3
+ce F8C3 weight=0.4
+de F8Cz
+ae F8P3 F8 P3 weight=1
+de F8O1
+de T3C3
+de T3Cz
+ae T3C4 T3 C4 weight=0.2
+de T3O1
+de C3Cz
+ae C3P3 C3 P3 weight=0.4
+ce C3O1 weight=0.2
+de CzO1
+de C4T5
+de C4O2
+ae T5T6 T5 T6 weight=0.8
+de T5O2
+de P3Pz
+de P3P4
+de PzP4
+ae O1O2 O1 O2 weight=0.6
+st 14
+ce Fp1Fp2 weight=0.4
+de Fp1F8
+de Fp1C3
+de Fp1P3
+de Fp1O1
+de Fp2F8
+de Fp2C3
+de Fp2P3
+de Fp2O1
+ae F3Cz F3 Cz weight=0.4
+de FzPz
+de F4T3
+de F4C4
+ae F4P4 F4 P4 weight=0.4
+de F4O2
+de F8C3
+ce F8P3 weight=0.6
+ae F8Pz F8 Pz weight=0.2
+de T3C4
+ae T3T5 T3 T5 weight=0.4
+ae T3O1 T3 O1 weight=0.2
+de C3P3
+de C3O1
+ae CzT4 Cz T4 weight=0.2
+de T5T6
+ae P3Pz P3 Pz weight=0.6
+ae T6O1 T6 O1 weight=0.4
+ae T6O2 T6 O2 weight=1
+ce O1O2 weight=0.4
+st 15
+ce Fp1Fp2 weight=0.8
+ae Fp1C3 Fp1 C3 weight=0.6
+ae Fp2C3 Fp2 C3 weight=0.4
+ae F3F8 F3 F8 weight=0.8
+de F3Cz
+ae F3P3 F3 P3 weight=0.4
+ae FzPz Fz Pz weight=0.4
+ae F4T5 F4 T5 weight=0.8
+de F4P4
+ce F8P3 weight=0.2
+de F8Pz
+de T3T5
+de T3O1
+ae C3O2 C3 O2 weight=0.4
+de CzT4
+ae C4P4 C4 P4 weight=0.2
+ae T5O1 T5 O1 weight=0.2
+de P3Pz
+de T6O1
+de T6O2
+de O1O2
+st 16
+de Fp1Fp2
+de Fp1C3
+de Fp2C3
+ae Fp2T6 Fp2 T6 weight=0.2
+de F3F8
+de F3P3
+ae FzF4 Fz F4 weight=0.2
+de FzPz
+de F4T5
+ce F8P3 weight=0.6
+ae T3T5 T3 T5 weight=0.4
+de C3O2
+de C4P4
+de T5O1
+st 17
+ae Fp1F7 Fp1 F7 weight=0.4
+ae Fp1P4 Fp1 P4 weight=0.6
+ae Fp2F8 Fp2 F8 weight=0.4
+ae Fp2C3 Fp2 C3 weight=0.2
+ae Fp2P3 Fp2 P3 weight=1
+de Fp2T6
+ae F7Pz F7 Pz weight=0.2
+ae F7P4 F7 P4 weight=0.8
+ae F3Fz F3 Fz weight=0.4
+de FzF4
+ce F8P3 weight=0.4
+ae T3Cz T3 Cz weight=0.8
+de T3T5
+ae T3T6 T3 T6 weight=0.8
+ae C3P3 C3 P3 weight=0.2
+ae CzT6 Cz T6 weight=1
+ae T5O1 T5 O1 weight=1
+st 18
+ce Fp1F7 weight=0.6
+ce Fp1P4 weight=0.2
+ae Fp2F4 Fp2 F4 weight=0.8
+de Fp2F8
+de Fp2C3
+ce Fp2P3 weight=1
+de F7Pz
+ce F7P4 weight=0.6
+de F3Fz
+ae F3Pz F3 Pz weight=0.4
+ae FzF4 Fz F4 weight=0.2
+ae FzT5 Fz T5 weight=1
+ae F4T5 F4 T5 weight=0.2
+ae F4P3 F4 P3 weight=0.8
+de F8P3
+de T3Cz
+de T3T6
+de C3P3
+de CzT6
+de T5O1
+st 19
+ce Fp1F7 weight=0.6
+ae Fp1F3 Fp1 F3 weight=0.6
+de Fp1P4
+de Fp2F4
+de Fp2P3
+ae Fp2P4 Fp2 P4 weight=0.6
+ae F7F3 F7 F3 weight=1
+de F7P4
+de F3Pz
+de FzF4
+ce FzT5 weight=0.8
+de F4T5
+de F4P3
+ae F8Cz F8 Cz weight=0.8
+ae F8T4 F8 T4 weight=0.8
+ae CzT4 Cz T4 weight=0.6
+ae C4P3 C4 P3 weight=1
+ae T5O1 T5 O1 weight=0.2
+ae T6O2 T6 O2 weight=1
+st 20
+ae Fp1Fp2 Fp1 Fp2 weight=0.2
+de Fp1F7
+de Fp1F3
+ae Fp1P4 Fp1 P4 weight=0.4
+ae Fp2F7 Fp2 F7 weight=0.4
+ae Fp2Pz Fp2 Pz weight=0.8
+de Fp2P4
+de F7F3
+ae F7Pz F7 Pz weight=0.6
+ae F3T3 F3 T3 weight=0.4
+ae F3T4 F3 T4 weight=0.6
+de FzT5
+de F8Cz
+de F8T4
+de CzT4
+de C4P3
+de T5O1
+de T6O2
+st 21
+ce Fp1Fp2 weight=0.6
+ae Fp1F7 Fp1 F7 weight=0.8
+ae Fp1F8 Fp1 F8 weight=0.4
+ae Fp1C3 Fp1 C3 weight=0.4
+ae Fp1Pz Fp1 Pz weight=0.4
+ce Fp1P4 weight=0.6
+ce Fp2F7 weight=0.8
+ae Fp2F8 Fp2 F8 weight=0.8
+ae Fp2P3 Fp2 P3 weight=0.4
+de Fp2Pz
+ae Fp2P4 Fp2 P4 weight=1
+ae F7F8 F7 F8 weight=0.6
+ae F7C3 F7 C3 weight=0.2
+ae F7P3 F7 P3 weight=0.2
+ce F7Pz weight=0.2
+ae F7P4 F7 P4 weight=0.8
+de F3T3
+ae F3C4 F3 C4 weight=0.6
+de F3T4
+ae FzF4 Fz F4 weight=1
+ae FzT5 Fz T5 weight=1
+ae F4T5 F4 T5 weight=1
+ae F8P3 F8 P3 weight=0.6
+ae F8P4 F8 P4 weight=0.8
+ae C3Pz C3 Pz weight=1
+ae P3P4 P3 P4 weight=0.4
+st 22
+de Fp1Fp2
+de Fp1F7
+de Fp1F8
+de Fp1C3
+de Fp1Pz
+de Fp1P4
+de Fp2F7
+de Fp2F8
+de Fp2P3
+de Fp2P4
+de F7F8
+de F7C3
+de F7P3
+de F7Pz
+de F7P4
+de F3C4
+ce FzF4 weight=0.2
+de FzT5
+de F4T5
+de F8P3
+ae F8Pz F8 Pz weight=0.4
+de F8P4
+ae C3T4 C3 T4 weight=0.4
+de C3Pz
+ae CzPz Cz Pz weight=0.4
+de P3P4
+ae O1O2 O1 O2 weight=0.8
+st 23
+ae Fp1Fp2 Fp1 Fp2 weight=0.8
+ae Fp1F7 Fp1 F7 weight=0.2
+ae Fp1Pz Fp1 Pz weight=0.8
+ae Fp1P4 Fp1 P4 weight=1
+ae Fp2F7 Fp2 F7 weight=0.4
+ae Fp2Pz Fp2 Pz weight=0.6
+ae Fp2P4 Fp2 P4 weight=0.8
+ae F7P4 F7 P4 weight=0.2
+ae F3Fz F3 Fz weight=1
+ae F3F4 F3 F4 weight=1
+ae F3T3 F3 T3 weight=1
+ae F3Cz F3 Cz weight=1
+ae F3T6 F3 T6 weight=0.4
+ae F3O2 F3 O2 weight=0.4
+ce FzF4 weight=1
+ae FzT3 Fz T3 weight=1
+ae FzCz Fz Cz weight=1
+ae FzT6 Fz T6 weight=0.4
+ae FzO2 Fz O2 weight=0.4
+ae F4T3 F4 T3 weight=1
+ae F4Cz F4 Cz weight=1
+ae F4T6 F4 T6 weight=0.4
+ae F4O2 F4 O2 weight=0.4
+de F8Pz
+ae T3Cz T3 Cz weight=1
+ae T3T6 T3 T6 weight=0.4
+ae T3O2 T3 O2 weight=0.4
+de C3T4
+de CzPz
+ae CzT6 Cz T6 weight=0.4
+ae CzO2 Cz O2 weight=0.4
+ae PzP4 Pz P4 weight=0.8
+ae T6O2 T6 O2 weight=0.4
+ce O1O2 weight=0.6
+st 24
+ce Fp1Fp2 weight=0.6
+de Fp1F7
+de Fp1Pz
+de Fp1P4
+de Fp2F7
+de Fp2Pz
+de Fp2P4
+ce F7P4 weight=0.4
+ce F3Fz weight=1
+de F3F4
+ce F3T3 weight=1
+ce F3Cz weight=0.4
+ae F3C4 F3 C4 weight=1
+de F3T6
+de F3O2
+de FzF4
+ce FzT3 weight=1
+ce FzCz weight=0.4
+ae FzC4 Fz C4 weight=1
+de FzT6
+de FzO2
+de F4T3
+de F4Cz
+ae F4P3 F4 P3 weight=0.6
+de F4T6
+ce F4O2 weight=0.4
+ce T3Cz weight=0.4
+ae T3C4 T3 C4 weight=1
+de T3T6
+de T3O2
+ae C3Cz C3 Cz weight=0.6
+ae CzC4 Cz C4 weight=0.4
+de CzT6
+de CzO2
+de PzP4
+de T6O2
+de O1O2
+st 25
+ce Fp1Fp2 weight=0.6
+de F7P4
+ce F3Fz weight=1
+de F3T3
+de F3Cz
+de F3C4
+ae F3T5 F3 T5 weight=0.6
+de FzT3
+de FzCz
+de FzC4
+ae FzT5 Fz T5 weight=0.6
+de F4P3
+de F4O2
+ae F8Pz F8 Pz weight=0.4
+ae T3C3 T3 C3 weight=0.4
+de T3Cz
+de T3C4
+ce C3Cz weight=0.6
+de CzC4
+ae P4O2 P4 O2 weight=0.4
+st 26
+de Fp1Fp2
+ae Fp1F8 Fp1 F8 weight=0.6
+ae Fp1Pz Fp1 Pz weight=0.8
+ae F7Pz F7 Pz weight=0.2
+de F3Fz
+de F3T5
+ae FzF4 Fz F4 weight=0.2
+de FzT5
+ce F8Pz weight=0.4
+ae F8P4 F8 P4 weight=0.2
+de T3C3
+ce C3Cz weight=0.4
+ae T5P3 T5 P3 weight=1
+de P4O2
+ae T6O1 T6 O1 weight=0.8
+ae T6O2 T6 O2 weight=0.4
+ae O1O2 O1 O2 weight=0.2
+st 27
+ae Fp1F7 Fp1 F7 weight=0.6
+de Fp1F8
+ce Fp1Pz weight=0.6
+ce F7Pz weight=0.2
+ae F3F4 F3 F4 weight=0.4
+ae F3T6 F3 T6 weight=0.2
+ce FzF4 weight=0.2
+ae FzT6 Fz T6 weight=0.4
+ae F4T6 F4 T6 weight=0.8
+ae F8P3 F8 P3 weight=0.8
+de F8Pz
+de F8P4
+ce C3Cz weight=1
+de T5P3
+de T6O1
+de T6O2
+de O1O2
+st 28
+ce Fp1F7 weight=0.6
+ae Fp1Cz Fp1 Cz weight=0.2
+de Fp1Pz
+ae F7Cz F7 Cz weight=0.6
+de F7Pz
+de F3F4
+de F3T6
+de FzF4
+ae FzPz Fz Pz weight=1
+de FzT6
+ae F4T3 F4 T3 weight=1
+ae F4T5 F4 T5 weight=0.6
+de F4T6
+ae F8C3 F8 C3 weight=0.6
+de F8P3
+ae T3T5 T3 T5 weight=0.6
+de C3Cz
+st 29
+ae Fp1Fp2 Fp1 Fp2 weight=0.8
+de Fp1F7
+ae Fp1Fz Fp1 Fz weight=0.2
+ce Fp1Cz weight=0.4
+ae Fp1Pz Fp1 Pz weight=0.4
+ae Fp2Fz Fp2 Fz weight=0.4
+ae Fp2Cz Fp2 Cz weight=0.6
+ae Fp2Pz Fp2 Pz weight=0.6
+ae F7Fz F7 Fz weight=0.4
+ae F7C3 F7 C3 weight=0.8
+ce F7Cz weight=0.2
+ae F7Pz F7 Pz weight=0.2
+ae F3C4 F3 C4 weight=0.4
+ae F3T5 F3 T5 weight=0.2
+ae FzC3 Fz C3 weight=0.6
+ae FzCz Fz Cz weight=0.8
+ce FzPz weight=0.8
+de F4T3
+de F4T5
+de F8C3
+ae F8P3 F8 P3 weight=1
+de T3T5
+ae T3T6 T3 T6 weight=0.6
+ae C3Cz C3 Cz weight=0.4
+ae C3Pz C3 Pz weight=0.4
+ae CzPz Cz Pz weight=1
+ae C4T5 C4 T5 weight=0.8
+ae O1O2 O1 O2 weight=0.8
+st 30
+ce Fp1Fp2 weight=0.8
+de Fp1Fz
+de Fp1Cz
+ae Fp1P3 Fp1 P3 weight=0.4
+de Fp1Pz
+ae Fp1P4 Fp1 P4 weight=0.6
+de Fp2Fz
+de Fp2Cz
+ae Fp2P3 Fp2 P3 weight=0.6
+de Fp2Pz
+ae Fp2P4 Fp2 P4 weight=0.4
+de F7Fz
+de F7C3
+de F7Cz
+ae F7P3 F7 P3 weight=0.2
+de F7Pz
+ae F3Fz F3 Fz weight=0.6
+de F3C4
+de F3T5
+ae F3T6 F3 T6 weight=0.6
+de FzC3
+de FzCz
+de FzPz
+ae FzT6 Fz T6 weight=1
+ae F4C4 F4 C4 weight=0.2
+ae F4T5 F4 T5 weight=0.2
+ae F4O1 F4 O1 weight=0.8
+ae F8C3 F8 C3 weight=1
+de F8P3
+de T3T6
+de C3Cz
+de C3Pz
+de CzPz
+de C4T5
+ae T5O1 T5 O1 weight=0.4
+ae PzP4 Pz P4 weight=0.4
+ae PzO2 Pz O2 weight=1
+ae P4O2 P4 O2 weight=0.4
+de O1O2
+st 31
+de Fp1Fp2
+ae Fp1T3 Fp1 T3 weight=0.2
+de Fp1P3
+de Fp1P4
+de Fp2P3
+de Fp2P4
+ae F7Cz F7 Cz weight=1
+de F7P3
+ae F7Pz F7 Pz weight=1
+ce F3Fz weight=0.8
+ce F3T6 weight=0.8
+ce FzT6 weight=0.6
+de F4C4
+ce F4T5 weight=0.4
+de F4O1
+de F8C3
+ae F8P3 F8 P3 weight=0.8
+ae T3O1 T3 O1 weight=0.6
+ae T3O2 T3 O2 weight=0.6
+ae C3P4 C3 P4 weight=1
+ae CzPz Cz Pz weight=1
+ae C4T4 C4 T4 weight=0.2
+de T5O1
+de PzP4
+de PzO2
+de P4O2
+ae O1O2 O1 O2 weight=1
+st 32
+ae Fp1Fp2 Fp1 Fp2 weight=0.4
+ae Fp1F7 Fp1 F7 weight=0.2
+ae Fp1F8 Fp1 F8 weight=0.4
+de Fp1T3
+ae Fp1Cz Fp1 Cz weight=0.6
+ae Fp1C4 Fp1 C4 weight=0.2
+ae Fp2F8 Fp2 F8 weight=1
+ae Fp2C3 Fp2 C3 weight=0.4
+ae Fp2Cz Fp2 Cz weight=0.8
+ce F7Cz weight=0.2
+ae F7C4 F7 C4 weight=0.4
+de F7Pz
+de F3Fz
+ae F3F4 F3 F4 weight=0.2
+de F3T6
+ae FzT4 Fz T4 weight=0.2
+de FzT6
+ae FzO1 Fz O1 weight=0.8
+de F4T5
+ae F8C3 F8 C3 weight=0.4
+ae F8Cz F8 Cz weight=0.8
+de F8P3
+de T3O1
+de T3O2
+ae C3Cz C3 Cz weight=0.2
+ae C3Pz C3 Pz weight=0.6
+de C3P4
+ae CzC4 Cz C4 weight=0.2
+de CzPz
+de C4T4
+de O1O2
+st 33
+de Fp1Fp2
+de Fp1F7
+de Fp1F8
+de Fp1Cz
+de Fp1C4
+ae Fp2F4 Fp2 F4 weight=0.8
+de Fp2F8
+de Fp2C3
+de Fp2Cz
+ae Fp2O1 Fp2 O1 weight=1
+ae F7T3 F7 T3 weight=1
+de F7Cz
+de F7C4
+ae F7T5 F7 T5 weight=0.2
+de F3F4
+de FzT4
+de FzO1
+ae F4P4 F4 P4 weight=0.2
+ae F4O1 F4 O1 weight=0.8
+ce F8C3 weight=0.6
+ce F8Cz weight=0.6
+ae F8C4 F8 C4 weight=1
+ae F8T4 F8 T4 weight=0.2
+ae F8P3 F8 P3 weight=0.6
+ae F8Pz F8 Pz weight=0.2
+ae T3T5 T3 T5 weight=0.2
+ce C3Cz weight=0.2
+ae C3C4 C3 C4 weight=0.6
+ae C3P3 C3 P3 weight=1
+ce C3Pz weight=0.6
+ae C3P4 C3 P4 weight=0.4
+ce CzC4 weight=0.6
+ae CzT4 Cz T4 weight=0.6
+ae CzP3 Cz P3 weight=0.2
+ae C4T4 C4 T4 weight=0.2
+ae C4P3 C4 P3 weight=0.6
+ae C4Pz C4 Pz weight=0.2
+ae P3Pz P3 Pz weight=0.6
+ae P3P4 P3 P4 weight=0.4
+ae PzP4 Pz P4 weight=0.4
+st 34
+de Fp2F4
+ae Fp2C3 Fp2 C3 weight=0.8
+ae Fp2T4 Fp2 T4 weight=0.4
+de Fp2O1
+ae F7F8 F7 F8 weight=0.2
+ce F7T3 weight=0.6
+ae F7Cz F7 Cz weight=0.2
+de F7T5
+ae F7P3 F7 P3 weight=0.4
+ae F3T6 F3 T6 weight=0.8
+ae FzO1 Fz O1 weight=1
+ae FzO2 Fz O2 weight=1
+de F4P4
+de F4O1
+de F8C3
+ce F8Cz weight=1
+ce F8C4 weight=0.8
+de F8T4
+ce F8P3 weight=0.8
+ce F8Pz weight=0.6
+ae F8P4 F8 P4 weight=0.6
+de T3T5
+de C3Cz
+de C3C4
+ae C3T4 C3 T4 weight=0.2
+de C3P3
+de C3Pz
+de C3P4
+ce CzC4 weight=0.8
+de CzT4
+ce CzP3 weight=0.8
+ae CzPz Cz Pz weight=0.6
+ae CzP4 Cz P4 weight=0.6
+de C4T4
+ce C4P3 weight=0.6
+ce C4Pz weight=0.8
+ae C4P4 C4 P4 weight=0.8
+ce P3Pz weight=0.4
+ce P3P4 weight=0.4
+ce PzP4 weight=1
+ae O1O2 O1 O2 weight=1
+st 35
+ae Fp1F8 Fp1 F8 weight=1
+ae Fp1C3 Fp1 C3 weight=0.4
+ae Fp1Cz Fp1 Cz weight=0.6
+ae Fp1P3 Fp1 P3 weight=1
+ae Fp1Pz Fp1 Pz weight=0.4
+de Fp2C3
+de Fp2T4
+de F7F8
+de F7T3
+de F7Cz
+de F7P3
+de F3T6
+de FzO1
+ce FzO2 weight=0.4
+ae F4O1 F4 O1 weight=0.4
+ae F8C3 F8 C3 weight=0.4
+ce F8Cz weight=0.6
+de F8C4
+ce F8P3 weight=1
+ce F8Pz weight=0.4
+de F8P4
+ae C3Cz C3 Cz weight=0.8
+de C3T4
+ae C3P3 C3 P3 weight=0.4
+de CzC4
+ce CzP3 weight=0.6
+de CzPz
+de CzP4
+de C4P3
+de C4Pz
+de C4P4
+ce P3Pz weight=0.4
+de P3P4
+de PzP4
+de O1O2
+st 36
+de Fp1F8
+de Fp1C3
+de Fp1Cz
+de Fp1P3
+de Fp1Pz
+ae Fp2F8 Fp2 F8 weight=0.2
+ae Fp2Pz Fp2 Pz weight=0.4
+ae F7T3 F7 T3 weight=0.6
+ae F7T5 F7 T5 weight=0.6
+de FzO2
+ae F4F8 F4 F8 weight=0.2
+ae F4C3 F4 C3 weight=0.4
+ae F4C4 F4 C4 weight=0.2
+ae F4P3 F4 P3 weight=0.8
+de F4O1
+de F8C3
+ce F8Cz weight=0.6
+ae F8C4 F8 C4 weight=0.8
+ae F8T4 F8 T4 weight=0.6
+ce F8P3 weight=0.4
+de F8Pz
+ae T3T5 T3 T5 weight=0.2
+de C3Cz
+ce C3P3 weight=0.4
+ae CzC4 Cz C4 weight=0.8
+ae CzT4 Cz T4 weight=1
+ce CzP3 weight=0.2
+ae C4T4 C4 T4 weight=0.8
+ae C4P3 C4 P3 weight=0.4
+ae T4P3 T4 P3 weight=0.2
+de P3Pz
+st 37
+ae Fp1P4 Fp1 P4 weight=0.4
+de Fp2F8
+de Fp2Pz
+ae Fp2O2 Fp2 O2 weight=1
+ce F7T3 weight=1
+de F7T5
+ae F7P3 F7 P3 weight=0.8
+de F4F8
+de F4C3
+ae F4Cz F4 Cz weight=0.6
+de F4C4
+de F4P3
+ae F4Pz F4 Pz weight=1
+de F8Cz
+de F8C4
+de F8T4
+ce F8P3 weight=0.2
+de T3T5
+ae T3P3 T3 P3 weight=0.8
+ae C3Cz C3 Cz weight=0.2
+ae C3T4 C3 T4 weight=0.8
+de C3P3
+de CzC4
+de CzT4
+de CzP3
+ae CzPz Cz Pz weight=0.6
+de C4T4
+de C4P3
+de T4P3
+st 38
+de Fp1P4
+de Fp2O2
+de F7T3
+de F7P3
+ae F3Fz F3 Fz weight=0.4
+ae F3T6 F3 T6 weight=0.4
+ae FzT3 Fz T3 weight=0.6
+ae FzT6 Fz T6 weight=0.8
+de F4Cz
+ae F4T5 F4 T5 weight=1
+de F4Pz
+ae F8C3 F8 C3 weight=0.6
+ae F8Cz F8 Cz weight=0.4
+ae F8T4 F8 T4 weight=0.6
+de F8P3
+de T3P3
+ae T3T6 T3 T6 weight=0.4
+de C3Cz
+ce C3T4 weight=0.2
+ae C3Pz C3 Pz weight=0.2
+ae CzT4 Cz T4 weight=0.8
+de CzPz
+ae C4O2 C4 O2 weight=1
+st 39
+ae Fp1P4 Fp1 P4 weight=0.2
+ae Fp2F8 Fp2 F8 weight=0.2
+de F3Fz
+de F3T6
+de FzT3
+ae FzT5 Fz T5 weight=0.6
+de FzT6
+de F4T5
+de F8C3
+de F8Cz
+de F8T4
+ae T3P3 T3 P3 weight=0.6
+de T3T6
+ce C3T4 weight=0.8
+de C3Pz
+de CzT4
+de C4O2
+ae O1O2 O1 O2 weight=0.6
+st 40
+ae Fp1F7 Fp1 F7 weight=0.8
+de Fp1P4
+ce Fp2F8 weight=0.6
+ae Fp2Pz Fp2 Pz weight=0.8
+ae Fp2P4 Fp2 P4 weight=0.2
+ae F3F4 F3 F4 weight=0.8
+de FzT5
+ae FzT6 Fz T6 weight=0.4
+ae F8Pz F8 Pz weight=0.8
+de T3P3
+ae C3Cz C3 Cz weight=0.8
+de C3T4
+ae C4O1 C4 O1 weight=1
+ae P3P4 P3 P4 weight=0.8
+de O1O2
+st 41
+ae Fp1Fp2 Fp1 Fp2 weight=0.8
+ce Fp1F7 weight=0.6
+ae Fp1F8 Fp1 F8 weight=0.4
+ae Fp1P3 Fp1 P3 weight=0.8
+ae Fp2F7 Fp2 F7 weight=0.8
+ce Fp2F8 weight=0.6
+ae Fp2P3 Fp2 P3 weight=1
+de Fp2Pz
+de Fp2P4
+ae F7F8 F7 F8 weight=0.8
+ae F7P3 F7 P3 weight=0.8
+de F3F4
+de FzT6
+ae F8P3 F8 P3 weight=0.6
+de F8Pz
+ae T3C3 T3 C3 weight=0.6
+ae T3Cz T3 Cz weight=0.2
+ae T3T4 T3 T4 weight=0.4
+ce C3Cz weight=0.6
+ae C3T4 C3 T4 weight=0.8
+ae CzT4 Cz T4 weight=0.8
+ae C4T5 C4 T5 weight=0.2
+ce C4O1 weight=0.6
+ae C4O2 C4 O2 weight=0.4
+de P3P4
+ae O1O2 O1 O2 weight=0.8
+st 42
+de Fp1Fp2
+de Fp1F7
+de Fp1F8
+de Fp1P3
+ae Fp1O2 Fp1 O2 weight=0.2
+ce Fp2F7 weight=1
+de Fp2F8
+ce Fp2P3 weight=0.2
+de F7F8
+ce F7P3 weight=0.2
+ae F3T3 F3 T3 weight=0.4
+ae F3Cz F3 Cz weight=0.8
+ce F8P3 weight=0.4
+ce T3C3 weight=0.6
+ce T3Cz weight=0.6
+de T3T4
+ae T3Pz T3 Pz weight=0.2
+ce C3Cz weight=0.2
+de C3T4
+ae C3Pz C3 Pz weight=0.6
+de CzT4
+de C4T5
+de C4O1
+de C4O2
+ae T5P4 T5 P4 weight=0.6
+de O1O2
+st 43
+ae Fp1Fp2 Fp1 Fp2 weight=0.4
+ae Fp1F7 Fp1 F7 weight=0.8
+ae Fp1P3 Fp1 P3 weight=0.2
+ae Fp1P4 Fp1 P4 weight=1
+de Fp1O2
+ce Fp2F7 weight=0.6
+ce Fp2P3 weight=0.6
+ae Fp2Pz Fp2 Pz weight=0.2
+ae Fp2P4 Fp2 P4 weight=0.4
+ce F7P3 weight=0.4
+ae F7P4 F7 P4 weight=0.8
+ae F3Fz F3 Fz weight=0.6
+ae F3F8 F3 F8 weight=0.8
+de F3T3
+ce F3Cz weight=0.8
+ae F3O2 F3 O2 weight=0.8
+ae FzF8 Fz F8 weight=0.4
+ae FzT3 Fz T3 weight=0.4
+ae FzCz Fz Cz weight=0.4
+ae FzO2 Fz O2 weight=0.4
+ae F4T3 F4 T3 weight=0.4
+ae F8Cz F8 Cz weight=1
+de F8P3
+ae F8O2 F8 O2 weight=1
+de T3C3
+de T3Cz
+de T3Pz
+de C3Cz
+ae C3P3 C3 P3 weight=0.4
+ce C3Pz weight=0.8
+ae CzO2 Cz O2 weight=1
+ae C4O1 C4 O1 weight=1
+de T5P4
+ae P3Pz P3 Pz weight=0.6
+ae P3P4 P3 P4 weight=0.2
+st 44
+ce Fp1Fp2 weight=0.4
+ce Fp1F7 weight=0.4
+de Fp1P3
+de Fp1P4
+ce Fp2F7 weight=1
+de Fp2P3
+ce Fp2Pz weight=0.2
+de Fp2P4
+de F7P3
+ae F7Pz F7 Pz weight=0.2
+de F7P4
+de F3Fz
+de F3F8
+de F3Cz
+de F3O2
+de FzF8
+de FzT3
+de FzCz
+de FzO2
+de F4T3
+de F8Cz
+ae F8P3 F8 P3 weight=0.4
+de F8O2
+de C3P3
+de C3Pz
+ae CzT4 Cz T4 weight=0.6
+de CzO2
+ce C4O1 weight=0.6
+ae T5P4 T5 P4 weight=0.4
+ae T5O2 T5 O2 weight=0.6
+ce P3Pz weight=0.4
+de P3P4
+ae P4O1 P4 O1 weight=0.2
+st 45
+ce Fp1Fp2 weight=0.8
+de Fp1F7
+ae Fp1F8 Fp1 F8 weight=0.8
+ae Fp1P3 Fp1 P3 weight=0.6
+ce Fp2F7 weight=0.2
+ae Fp2F8 Fp2 F8 weight=0.6
+ae Fp2P3 Fp2 P3 weight=0.8
+de Fp2Pz
+ae F7P3 F7 P3 weight=0.4
+de F7Pz
+ae F3T6 F3 T6 weight=0.2
+ce F8P3 weight=0.4
+ae T3C4 T3 C4 weight=0.4
+ae C3Cz C3 Cz weight=1
+de CzT4
+ae C4T5 C4 T5 weight=0.2
+ce C4O1 weight=0.6
+de T5P4
+ae T5O1 T5 O1 weight=0.6
+de T5O2
+de P3Pz
+ae PzP4 Pz P4 weight=1
+de P4O1
+st 46
+de Fp1Fp2
+ce Fp1F8 weight=0.6
+ae Fp1T4 Fp1 T4 weight=0.6
+ce Fp1P3 weight=0.6
+de Fp2F7
+de Fp2F8
+de Fp2P3
+ae Fp2T6 Fp2 T6 weight=0.8
+ae F7C4 F7 C4 weight=0.4
+de F7P3
+de F3T6
+ae F8T4 F8 T4 weight=1
+ce F8P3 weight=1
+de T3C4
+ce C3Cz weight=0.6
+de C4T5
+de C4O1
+ae T4P3 T4 P3 weight=1
+ce T5O1 weight=0.2
+ae T5O2 T5 O2 weight=0.6
+ce PzP4 weight=0.8
+ae PzT6 Pz T6 weight=0.2
+st 47
+de Fp1F8
+de Fp1T4
+de Fp1P3
+ae Fp1P4 Fp1 P4 weight=1
+ae Fp2F8 Fp2 F8 weight=0.4
+de Fp2T6
+de F7C4
+ae F7T4 F7 T4 weight=0.8
+ae FzO2 Fz O2 weight=0.2
+ae F4T5 F4 T5 weight=0.8
+ae F4O1 F4 O1 weight=1
+de F8T4
+de F8P3
+ae T3Cz T3 Cz weight=1
+ae T3Pz T3 Pz weight=0.2
+de C3Cz
+ae CzPz Cz Pz weight=0.2
+de T4P3
+ce T5O1 weight=0.8
+ce T5O2 weight=0.2
+ae P3T6 P3 T6 weight=0.2
+de PzP4
+de PzT6
+st 48
+ae Fp1Fp2 Fp1 Fp2 weight=0.6
+ae Fp1F8 Fp1 F8 weight=0.6
+ae Fp1P3 Fp1 P3 weight=0.6
+de Fp1P4
+ce Fp2F8 weight=0.2
+ae Fp2P3 Fp2 P3 weight=1
+de F7T4
+ae F3Fz F3 Fz weight=0.8
+ae F3T6 F3 T6 weight=1
+ae FzT6 Fz T6 weight=0.8
+de FzO2
+ce F4T5 weight=0.6
+de F4O1
+ae F8P3 F8 P3 weight=0.2
+de T3Cz
+ce T3Pz weight=0.2
+ae C3Cz C3 Cz weight=0.8
+ae CzT4 Cz T4 weight=0.2
+de CzPz
+de T5O1
+de T5O2
+de P3T6
+st 49
+de Fp1Fp2
+de Fp1F8
+de Fp1P3
+ae Fp2F4 Fp2 F4 weight=0.8
+de Fp2F8
+ae Fp2T5 Fp2 T5 weight=0.6
+de Fp2P3
+ae Fp2O1 Fp2 O1 weight=0.6
+ae Fp2O2 Fp2 O2 weight=0.4
+de F3Fz
+de F3T6
+ae FzF4 Fz F4 weight=0.2
+de FzT6
+ae FzO2 Fz O2 weight=0.6
+ce F4T5 weight=0.4
+ae F4O1 F4 O1 weight=0.4
+ae F4O2 F4 O2 weight=0.6
+ae F8C3 F8 C3 weight=0.8
+ae F8T4 F8 T4 weight=0.8
+de F8P3
+ae F8Pz F8 Pz weight=0.6
+de T3Pz
+de C3Cz
+ae C3T4 C3 T4 weight=0.6
+ae C3Pz C3 Pz weight=0.4
+de CzT4
+ae T4Pz T4 Pz weight=0.8
+ae T5O1 T5 O1 weight=1
+st 50
+de Fp2F4
+ae Fp2F8 Fp2 F8 weight=0.6
+de Fp2T5
+ae Fp2Pz Fp2 Pz weight=0.2
+ae Fp2P4 Fp2 P4 weight=0.4
+de Fp2O1
+de Fp2O2
+de FzF4
+de FzO2
+de F4T5
+ce F4O1 weight=0.2
+de F4O2
+de F8C3
+de F8T4
+ce F8Pz weight=0.6
+ce C3T4 weight=0.2
+de C3Pz
+de T4Pz
+ae T4T6 T4 T6 weight=0.8
+ce T5O1 weight=0.8
+ae T5O2 T5 O2 weight=0.2
+st 51
+ae Fp2F4 Fp2 F4 weight=0.8
+de Fp2F8
+de Fp2Pz
+ce Fp2P4 weight=0.4
+ae F7C3 F7 C3 weight=0.2
+ae F4P4 F4 P4 weight=0.6
+de F4O1
+ae F8P3 F8 P3 weight=0.6
+ce F8Pz weight=0.6
+de C3T4
+de T4T6
+de T5O1
+de T5O2
+ae P3Pz P3 Pz weight=1
+st 52
+de Fp2F4
+ae Fp2F8 Fp2 F8 weight=0.8
+ae Fp2P3 Fp2 P3 weight=0.4
+de Fp2P4
+de F7C3
+ae F7P4 F7 P4 weight=0.2
+ae F7O2 F7 O2 weight=0.8
+de F4P4
+ce F8P3 weight=0.6
+de F8Pz
+ae T3C4 T3 C4 weight=0.4
+de P3Pz
+st 53
+ae Fp1F3 Fp1 F3 weight=1
+ae Fp1Cz Fp1 Cz weight=0.4
+ae Fp1P3 Fp1 P3 weight=0.4
+ae Fp1T6 Fp1 T6 weight=0.8
+ae Fp1O2 Fp1 O2 weight=0.4
+ce Fp2F8 weight=0.2
+ae Fp2T5 Fp2 T5 weight=0.2
+de Fp2P3
+de F7P4
+de F7O2
+ae F3Cz F3 Cz weight=0.4
+ae F3P3 F3 P3 weight=0.4
+ae F3T6 F3 T6 weight=0.8
+ae F3O2 F3 O2 weight=0.4
+ae F4T5 F4 T5 weight=0.6
+de F8P3
+ce T3C4 weight=0.4
+ae C3P3 C3 P3 weight=0.6
+ae C3T6 C3 T6 weight=0.2
+ae CzT6 Cz T6 weight=0.2
+ae CzO2 Cz O2 weight=1
+ae P3T6 P3 T6 weight=0.6
+ae T6O2 T6 O2 weight=0.2
+st 54
+ae Fp1Fp2 Fp1 Fp2 weight=0.2
+ae Fp1F7 Fp1 F7 weight=0.2
+de Fp1F3
+ae Fp1F4 Fp1 F4 weight=0.2
+de Fp1Cz
+de Fp1P3
+de Fp1T6
+de Fp1O2
+ae Fp2F4 Fp2 F4 weight=1
+de Fp2F8
+de Fp2T5
+ce F3Cz weight=0.8
+de F3P3
+de F3T6
+de F3O2
+ae FzO1 Fz O1 weight=0.2
+de F4T5
+ae F8P3 F8 P3 weight=0.8
+ae F8Pz F8 Pz weight=0.8
+de T3C4
+de C3P3
+de C3T6
+de CzT6
+de CzO2
+ae C4P4 C4 P4 weight=0.4
+ae P3Pz P3 Pz weight=0.6
+de P3T6
+de T6O2
+st 55
+de Fp1Fp2
+ce Fp1F7 weight=0.2
+ae Fp1F3 Fp1 F3 weight=0.8
+de Fp1F4
+ae Fp1Cz Fp1 Cz weight=1
+ae Fp1P3 Fp1 P3 weight=0.4
+ae Fp1O2 Fp1 O2 weight=0.4
+de Fp2F4
+ae Fp2F8 Fp2 F8 weight=0.6
+ae Fp2Pz Fp2 Pz weight=0.2
+ae F7F3 F7 F3 weight=0.4
+ae F7Cz F7 Cz weight=0.2
+ae F7P3 F7 P3 weight=0.8
+ae F7O2 F7 O2 weight=0.8
+ce F3Cz weight=0.8
+ae F3P3 F3 P3 weight=0.6
+ae F3O2 F3 O2 weight=0.6
+ce FzO1 weight=0.2
+de F8P3
+ce F8Pz weight=0.6
+ae T3C4 T3 C4 weight=0.4
+ae T3T4 T3 T4 weight=0.2
+ae CzP3 Cz P3 weight=0.4
+ae CzO2 Cz O2 weight=0.4
+ae C4T4 C4 T4 weight=0.8
+de C4P4
+de P3Pz
+ae P3O2 P3 O2 weight=1
+st 56
+de Fp1F7
+de Fp1F3
+de Fp1Cz
+ae Fp1T5 Fp1 T5 weight=0.8
+de Fp1P3
+ae Fp1P4 Fp1 P4 weight=0.8
+de Fp1O2
+ae Fp2F7 Fp2 F7 weight=0.8
+ae Fp2F4 Fp2 F4 weight=0.8
+ce Fp2F8 weight=1
+ae Fp2P3 Fp2 P3 weight=1
+de Fp2Pz
+de F7F3
+ae F7F4 F7 F4 weight=1
+ae F7F8 F7 F8 weight=0.8
+de F7Cz
+ce F7P3 weight=0.8
+de F7O2
+de F3Cz
+de F3P3
+ae F3T6 F3 T6 weight=1
+ae F3O1 F3 O1 weight=1
+de F3O2
+de FzO1
+ae F4F8 F4 F8 weight=0.8
+ae F4P3 F4 P3 weight=0.8
+ae F8P3 F8 P3 weight=1
+de F8Pz
+ce T3C4 weight=1
+de T3T4
+de CzP3
+de CzO2
+de C4T4
+ae T5P4 T5 P4 weight=1
+de P3O2
+ae T6O1 T6 O1 weight=1
+st 57
+ae Fp1F7 Fp1 F7 weight=0.8
+de Fp1T5
+de Fp1P4
+ae Fp1O1 Fp1 O1 weight=1
+de Fp2F7
+de Fp2F4
+de Fp2F8
+ae Fp2T3 Fp2 T3 weight=1
+de Fp2P3
+ae Fp2P4 Fp2 P4 weight=0.6
+de F7F4
+de F7F8
+de F7P3
+ae F7O1 F7 O1 weight=0.8
+ae F3Fz F3 Fz weight=0.2
+ae F3T4 F3 T4 weight=0.2
+ae F3T5 F3 T5 weight=0.8
+de F3T6
+de F3O1
+ae FzT4 Fz T4 weight=1
+ae FzT6 Fz T6 weight=0.4
+de F4F8
+de F4P3
+de F8P3
+ae F8Pz F8 Pz weight=0.2
+de T3C4
+ae T3P4 T3 P4 weight=0.6
+ae C3Cz C3 Cz weight=0.8
+ae T4T6 T4 T6 weight=0.4
+de T5P4
+de T6O1
+st 58
+de Fp1F7
+de Fp1O1
+de Fp2T3
+de Fp2P4
+de F7O1
+de F3Fz
+ae F3F4 F3 F4 weight=0.4
+ae F3C4 F3 C4 weight=0.2
+de F3T4
+de F3T5
+ae F3P3 F3 P3 weight=0.4
+ae F3P4 F3 P4 weight=0.8
+ae FzT3 Fz T3 weight=0.4
+de FzT4
+de FzT6
+ae FzO1 Fz O1 weight=0.6
+ae F4P3 F4 P3 weight=1
+ae F4P4 F4 P4 weight=0.6
+de F8Pz
+ae F8O2 F8 O2 weight=0.8
+de T3P4
+de C3Cz
+de T4T6
+ae P3P4 P3 P4 weight=0.6
+st 59
+ae Fp1F3 Fp1 F3 weight=0.2
+ae Fp1F4 Fp1 F4 weight=0.2
+ae Fp1P3 Fp1 P3 weight=0.8
+ae Fp1O1 Fp1 O1 weight=0.2
+ae Fp2F7 Fp2 F7 weight=0.8
+ae Fp2C3 Fp2 C3 weight=0.4
+ae F7C3 F7 C3 weight=0.6
+ce F3F4 weight=0.6
+de F3C4
+de F3P3
+ae F3Pz F3 Pz weight=0.4
+de F3P4
+ae F3O1 F3 O1 weight=0.6
+ce FzT3 weight=0.8
+de FzO1
+de F4P3
+ae F4Pz F4 Pz weight=0.8
+de F4P4
+ae F4O1 F4 O1 weight=0.2
+ae F8T4 F8 T4 weight=0.8
+de F8O2
+de P3P4
+ae P4O2 P4 O2 weight=0.4
+st 60
+ce Fp1F3 weight=0.8
+de Fp1F4
+de Fp1P3
+de Fp1O1
+de Fp2F7
+ae Fp2F4 Fp2 F4 weight=1
+de Fp2C3
+ae Fp2Pz Fp2 Pz weight=0.4
+ae Fp2O1 Fp2 O1 weight=0.8
+ae Fp2O2 Fp2 O2 weight=0.4
+de F7C3
+ae F7P4 F7 P4 weight=1
+de F3F4
+de F3Pz
+de F3O1
+ce FzT3 weight=0.2
+ae FzC4 Fz C4 weight=0.2
+ce F4Pz weight=0.4
+ce F4O1 weight=0.8
+ae F4O2 F4 O2 weight=0.4
+de F8T4
+ae T3C4 T3 C4 weight=1
+ae C3Cz C3 Cz weight=0.6
+ae PzO1 Pz O1 weight=0.2
+ae PzO2 Pz O2 weight=1
+de P4O2
+ae O1O2 O1 O2 weight=0.2
+st 61
+ae Fp1F7 Fp1 F7 weight=0.2
+de Fp1F3
+ae Fp1O2 Fp1 O2 weight=0.6
+de Fp2F4
+ae Fp2P3 Fp2 P3 weight=0.2
+de Fp2Pz
+de Fp2O1
+de Fp2O2
+ce F7P4 weight=0.4
+ae F7O2 F7 O2 weight=0.6
+ae F3C3 F3 C3 weight=0.8
+ae F3Cz F3 Cz weight=0.4
+ce FzT3 weight=1
+de FzC4
+ae FzT5 Fz T5 weight=0.2
+ae FzP4 Fz P4 weight=0.4
+ae F4C4 F4 C4 weight=1
+ae F4T5 F4 T5 weight=0.6
+de F4Pz
+de F4O1
+de F4O2
+de T3C4
+ae T3T5 T3 T5 weight=0.2
+ae T3P4 T3 P4 weight=0.4
+ce C3Cz weight=0.2
+ae C3Pz C3 Pz weight=0.2
+ae C4T5 C4 T5 weight=0.6
+de PzO1
+de PzO2
+de O1O2
+st 62
+de Fp1F7
+de Fp1O2
+ae Fp2F7 Fp2 F7 weight=1
+ae Fp2T5 Fp2 T5 weight=1
+de Fp2P3
+ae Fp2P4 Fp2 P4 weight=0.8
+ae Fp2O1 Fp2 O1 weight=1
+ae F7T5 F7 T5 weight=1
+ce F7P4 weight=0.8
+ae F7O1 F7 O1 weight=1
+de F7O2
+ae F3Fz F3 Fz weight=0.2
+de F3C3
+de F3Cz
+de FzT3
+de FzT5
+de FzP4
+ae F4F8 F4 F8 weight=0.4
+ae F4T3 F4 T3 weight=0.2
+ce F4C4 weight=0.2
+de F4T5
+ae F4P3 F4 P3 weight=0.2
+ae F8T3 F8 T3 weight=0.8
+ae F8C4 F8 C4 weight=0.8
+ae T3C4 T3 C4 weight=1
+de T3T5
+de T3P4
+de C3Cz
+de C3Pz
+de C4T5
+ae T4Pz T4 Pz weight=0.2
+ae T5P4 T5 P4 weight=0.8
+ae T5O1 T5 O1 weight=1
+ae P4O1 P4 O1 weight=0.8
+st 63
+ae Fp1F7 Fp1 F7 weight=0.4
+ae Fp1F3 Fp1 F3 weight=0.4
+de Fp2F7
+ae Fp2F8 Fp2 F8 weight=0.6
+de Fp2T5
+de Fp2P4
+de Fp2O1
+ae Fp2O2 Fp2 O2 weight=0.8
+ae F7F3 F7 F3 weight=1
+de F7T5
+ce F7P4 weight=0.6
+de F7O1
+de F3Fz
+ae F3P4 F3 P4 weight=0.6
+ae FzF4 Fz F4 weight=1
+de F4F8
+de F4T3
+de F4C4
+de F4P3
+de F8T3
+de F8C4
+ae F8O2 F8 O2 weight=0.6
+de T3C4
+ae C3Cz C3 Cz weight=0.2
+de T4Pz
+ae T4O1 T4 O1 weight=0.2
+de T5P4
+ce T5O1 weight=0.6
+de P4O1
+st 64
+de Fp1F7
+de Fp1F3
+ce Fp2F8 weight=0.6
+de Fp2O2
+de F7F3
+de F7P4
+ae F3Cz F3 Cz weight=0.6
+de F3P4
+de FzF4
+ae FzT3 Fz T3 weight=0.6
+ae FzT5 Fz T5 weight=0.6
+ae FzP4 Fz P4 weight=0.6
+ae F8T4 F8 T4 weight=0.4
+ae F8P3 F8 P3 weight=0.4
+de F8O2
+ae T3T5 T3 T5 weight=1
+ae T3P4 T3 P4 weight=0.6
+de C3Cz
+ae T4P3 T4 P3 weight=1
+de T4O1
+ae T5P4 T5 P4 weight=0.6
+de T5O1
+st 65
+ae Fp2F7 Fp2 F7 weight=0.6
+de Fp2F8
+ae Fp2P4 Fp2 P4 weight=0.4
+ae F7C4 F7 C4 weight=0.4
+ae F3Fz F3 Fz weight=0.6
+ae F3F4 F3 F4 weight=0.2
+de F3Cz
+ae F3T6 F3 T6 weight=0.2
+ae FzF4 Fz F4 weight=0.6
+de FzT3
+de FzT5
+de FzP4
+ae F4T4 F4 T4 weight=0.4
+de F8T4
+de F8P3
+ce T3T5 weight=0.6
+de T3P4
+ae C3Pz C3 Pz weight=0.8
+de T4P3
+de T5P4
+ae P3O1 P3 O1 weight=0.2
+st 66
+ae Fp1Fp2 Fp1 Fp2 weight=0.2
+ae Fp1F8 Fp1 F8 weight=0.8
+ae Fp1T4 Fp1 T4 weight=0.6
+de Fp2F7
+ae Fp2F8 Fp2 F8 weight=0.4
+ce Fp2P4 weight=0.4
+ae F7C3 F7 C3 weight=1
+de F7C4
+ae F7T4 F7 T4 weight=0.4
+ce F3Fz weight=0.2
+de F3F4
+de F3T6
+de FzF4
+de F4T4
+ae F4T5 F4 T5 weight=0.2
+ae F8T4 F8 T4 weight=0.4
+de T3T5
+ae C3T4 C3 T4 weight=0.4
+de C3Pz
+ae CzT6 Cz T6 weight=0.4
+de P3O1
+st 67
+de Fp1Fp2
+ae Fp1F7 Fp1 F7 weight=0.2
+de Fp1F8
+de Fp1T4
+ce Fp2F8 weight=0.6
+ae Fp2T4 Fp2 T4 weight=0.6
+ae Fp2P3 Fp2 P3 weight=0.4
+ae Fp2Pz Fp2 Pz weight=0.6
+de Fp2P4
+ae Fp2T6 Fp2 T6 weight=0.4
+ae Fp2O1 Fp2 O1 weight=0.4
+ae Fp2O2 Fp2 O2 weight=0.4
+de F7C3
+de F7T4
+ce F3Fz weight=0.4
+ae F4C4 F4 C4 weight=0.2
+ce F4T5 weight=0.6
+ae F8Cz F8 Cz weight=0.2
+ce F8T4 weight=0.8
+ae F8Pz F8 Pz weight=0.8
+ae T3P4 T3 P4 weight=0.6
+de C3T4
+ae C3P3 C3 P3 weight=0.2
+ae C3T6 C3 T6 weight=0.2
+ae C3O1 C3 O1 weight=0.2
+ae C3O2 C3 O2 weight=0.2
+de CzT6
+ae C4T5 C4 T5 weight=0.6
+ae T4Pz T4 Pz weight=1
+ae P3T6 P3 T6 weight=1
+ae P3O1 P3 O1 weight=1
+ae P3O2 P3 O2 weight=1
+ae T6O1 T6 O1 weight=1
+ae T6O2 T6 O2 weight=1
+ae O1O2 O1 O2 weight=1
+st 68
+de Fp1F7
+ae Fp1F3 Fp1 F3 weight=0.8
+de Fp2F8
+ae Fp2T3 Fp2 T3 weight=0.6
+de Fp2T4
+de Fp2P3
+de Fp2Pz
+de Fp2T6
+de Fp2O1
+de Fp2O2
+ae F7P3 F7 P3 weight=0.2
+de F3Fz
+ae FzF4 Fz F4 weight=0.4
+de F4C4
+de F4T5
+de F8Cz
+de F8T4
+de F8Pz
+de T3P4
+ae C3Cz C3 Cz weight=0.6
+de C3P3
+de C3T6
+de C3O1
+de C3O2
+de C4T5
+de T4Pz
+ae T4T6 T4 T6 weight=1
+ae T5O1 T5 O1 weight=0.6
+de P3T6
+de P3O1
+de P3O2
+de T6O1
+de T6O2
+de O1O2
+st 69
+ae Fp1F7 Fp1 F7 weight=0.8
+de Fp1F3
+ae Fp1P3 Fp1 P3 weight=0.8
+ce Fp2T3 weight=0.2
+ae Fp2Pz Fp2 Pz weight=0.6
+ce F7P3 weight=0.6
+ae F3Fz F3 Fz weight=1
+ae F3T3 F3 T3 weight=0.2
+ae F3C3 F3 C3 weight=0.8
+ae F3T6 F3 T6 weight=1
+de FzF4
+ae FzT3 Fz T3 weight=0.2
+ae FzC3 Fz C3 weight=0.8
+ae FzT6 Fz T6 weight=1
+ae F8Cz F8 Cz weight=0.6
+ae T3Pz T3 Pz weight=0.2
+ae T3T6 T3 T6 weight=0.2
+de C3Cz
+ae C3T6 C3 T6 weight=0.8
+ae C4T5 C4 T5 weight=0.4
+de T4T6
+de T5O1
+st 70
+ae Fp1Fp2 Fp1 Fp2 weight=0.6
+ce Fp1F7 weight=0.6
+ae Fp1F8 Fp1 F8 weight=0.6
+ae Fp1C4 Fp1 C4 weight=0.6
+de Fp1P3
+ae Fp1Pz Fp1 Pz weight=0.6
+ae Fp1P4 Fp1 P4 weight=0.6
+ae Fp1T6 Fp1 T6 weight=0.4
+ae Fp1O2 Fp1 O2 weight=0.2
+ae Fp2F7 Fp2 F7 weight=0.2
+ae Fp2F8 Fp2 F8 weight=0.2
+de Fp2T3
+ae Fp2C4 Fp2 C4 weight=0.2
+ce Fp2Pz weight=0.2
+ae Fp2P4 Fp2 P4 weight=0.2
+ae F7F8 F7 F8 weight=1
+ae F7C4 F7 C4 weight=1
+de F7P3
+ae F7Pz F7 Pz weight=1
+ae F7P4 F7 P4 weight=1
+ae F7T6 F7 T6 weight=0.8
+ae F7O2 F7 O2 weight=0.6
+de F3Fz
+de F3T3
+de F3C3
+de F3T6
+de FzT3
+de FzC3
+de FzT6
+ae F4O1 F4 O1 weight=0.6
+de F8Cz
+ae F8C4 F8 C4 weight=1
+ae F8Pz F8 Pz weight=1
+ae F8P4 F8 P4 weight=1
+ae F8T6 F8 T6 weight=0.8
+ae F8O2 F8 O2 weight=0.6
+de T3Pz
+de T3T6
+ae C3Cz C3 Cz weight=0.8
+de C3T6
+de C4T5
+ae C4Pz C4 Pz weight=1
+ae C4P4 C4 P4 weight=1
+ae C4T6 C4 T6 weight=0.8
+ae C4O2 C4 O2 weight=0.6
+ae PzP4 Pz P4 weight=1
+ae PzT6 Pz T6 weight=0.8
+ae PzO2 Pz O2 weight=0.6
+ae P4T6 P4 T6 weight=0.8
+ae P4O2 P4 O2 weight=0.6
+ae T6O2 T6 O2 weight=0.6
+st 71
+de Fp1Fp2
+ce Fp1F7 weight=0.6
+de Fp1F8
+ae Fp1Cz Fp1 Cz weight=1
+de Fp1C4
+ce Fp1Pz weight=0.2
+de Fp1P4
+de Fp1T6
+de Fp1O2
+de Fp2F7
+de Fp2F8
+ae Fp2T3 Fp2 T3 weight=1
+de Fp2C4
+de Fp2Pz
+de Fp2P4
+de F7F8
+ae F7Cz F7 Cz weight=0.6
+de F7C4
+ce F7Pz weight=0.6
+de F7P4
+de F7T6
+de F7O2
+ae F3Fz F3 Fz weight=0.6
+ae F3C3 F3 C3 weight=0.6
+ae F3T6 F3 T6 weight=0.6
+ae FzC3 Fz C3 weight=0.8
+ae FzT6 Fz T6 weight=0.8
+ae F4T5 F4 T5 weight=0.2
+de F4O1
+de F8C4
+de F8Pz
+de F8P4
+de F8T6
+ce F8O2 weight=0.4
+de C3Cz
+ae C3P4 C3 P4 weight=0.2
+ae C3T6 C3 T6 weight=0.8
+ae CzPz Cz Pz weight=0.2
+ae C4T4 C4 T4 weight=0.2
+de C4Pz
+de C4P4
+de C4T6
+de C4O2
+ae P3Pz P3 Pz weight=0.4
+de PzP4
+de PzT6
+de PzO2
+de P4T6
+de P4O2
+de T6O2
+st 72
+ce Fp1F7 weight=0.4
+ae Fp1C3 Fp1 C3 weight=1
+de Fp1Cz
+ae Fp1C4 Fp1 C4 weight=0.2
+ae Fp1P3 Fp1 P3 weight=0.6
+de Fp1Pz
+ae Fp2F8 Fp2 F8 weight=0.8
+de Fp2T3
+ae Fp2C4 Fp2 C4 weight=0.8
+ae Fp2P3 Fp2 P3 weight=0.4
+ae Fp2P4 Fp2 P4 weight=0.6
+ae F7C3 F7 C3 weight=0.4
+de F7Cz
+de F7Pz
+de F3Fz
+de F3C3
+de F3T6
+de FzC3
+de FzT6
+de F4T5
+ae F8C4 F8 C4 weight=0.6
+ae F8P3 F8 P3 weight=0.2
+ae F8P4 F8 P4 weight=0.8
+de F8O2
+ae C3C4 C3 C4 weight=0.2
+ae C3P3 C3 P3 weight=0.6
+de C3P4
+de C3T6
+de CzPz
+de C4T4
+ae C4P3 C4 P3 weight=0.6
+ae C4P4 C4 P4 weight=0.4
+ae T5O1 T5 O1 weight=0.8
+de P3Pz
+st 73
+ce Fp1F7 weight=0.8
+de Fp1C3
+de Fp1C4
+de Fp1P3
+ce Fp2F8 weight=0.6
+de Fp2C4
+ce Fp2P3 weight=0.8
+ae Fp2Pz Fp2 Pz weight=0.2
+ce Fp2P4 weight=0.6
+de F7C3
+de F8C4
+ce F8P3 weight=0.4
+ce F8P4 weight=0.2
+ae C3Cz C3 Cz weight=0.8
+de C3C4
+de C3P3
+ae C3T6 C3 T6 weight=0.6
+ae C3O2 C3 O2 weight=0.4
+ae CzT6 Cz T6 weight=0.8
+ae CzO2 Cz O2 weight=0.6
+de C4P3
+ae C4Pz C4 Pz weight=0.4
+de C4P4
+ae T4T5 T4 T5 weight=0.6
+de T5O1
+ae P3Pz P3 Pz weight=0.4
+ae P3P4 P3 P4 weight=0.8
+ae PzP4 Pz P4 weight=0.6
+ae T6O2 T6 O2 weight=0.8
+st 74
+ce Fp1F7 weight=0.6
+ae Fp1F3 Fp1 F3 weight=0.8
+ce Fp2F8 weight=0.8
+ce Fp2P3 weight=0.8
+de Fp2Pz
+de Fp2P4
+ae F7F3 F7 F3 weight=0.8
+ce F8P3 weight=1
+de F8P4
+de C3Cz
+ce C3T6 weight=0.4
+de C3O2
+ae CzT4 Cz T4 weight=0.6
+de CzT6
+de CzO2
+de C4Pz
+ae C4T6 C4 T6 weight=0.4
+ae C4O2 C4 O2 weight=0.4
+de T4T5
+ae T5P4 T5 P4 weight=1
+de P3Pz
+de P3P4
+de PzP4
+de T6O2
+st 75
+de Fp1F7
+de Fp1F3
+ae Fp1P4 Fp1 P4 weight=0.4
+ae Fp1O1 Fp1 O1 weight=0.6
+de Fp2F8
+de Fp2P3
+de F7F3
+ae F7Pz F7 Pz weight=0.6
+ae F3P4 F3 P4 weight=0.2
+ae FzT3 Fz T3 weight=0.4
+ae F8T4 F8 T4 weight=0.8
+de F8P3
+de C3T6
+de CzT4
+ae C4T5 C4 T5 weight=0.2
+ce C4T6 weight=0.2
+de C4O2
+de T5P4
+ae O1O2 O1 O2 weight=0.4
+st 76
+ae Fp1Fp2 Fp1 Fp2 weight=1
+ae Fp1F7 Fp1 F7 weight=1
+ae Fp1Cz Fp1 Cz weight=0.8
+de Fp1P4
+ae Fp1T6 Fp1 T6 weight=0.4
+de Fp1O1
+ae Fp1O2 Fp1 O2 weight=0.2
+ae Fp2F7 Fp2 F7 weight=1
+ae Fp2Cz Fp2 Cz weight=0.8
+ae Fp2T6 Fp2 T6 weight=0.4
+ae Fp2O2 Fp2 O2 weight=0.2
+ae F7Cz F7 Cz weight=0.8
+de F7Pz
+ae F7T6 F7 T6 weight=0.4
+ae F7O2 F7 O2 weight=0.2
+de F3P4
+ae F3O1 F3 O1 weight=0.6
+ae F3O2 F3 O2 weight=0.4
+ae FzF4 Fz F4 weight=1
+de FzT3
+ce F8T4 weight=0.8
+ae F8T6 F8 T6 weight=0.6
+ae CzT6 Cz T6 weight=0.2
+de C4T5
+ae C4P4 C4 P4 weight=0.2
+de C4T6
+ae T4T6 T4 T6 weight=0.6
+ae T5O1 T5 O1 weight=0.2
+ae T6O2 T6 O2 weight=0.2
+de O1O2
+st 77
+de Fp1Fp2
+de Fp1F7
+de Fp1Cz
+de Fp1T6
+de Fp1O2
+de Fp2F7
+ae Fp2F8 Fp2 F8 weight=0.2
+de Fp2Cz
+ae Fp2T4 Fp2 T4 weight=0.4
+de Fp2T6
+de Fp2O2
+de F7Cz
+de F7T6
+de F7O2
+ae F3Fz F3 Fz weight=0.4
+ae F3C4 F3 C4 weight=1
+de F3O1
+de F3O2
+de FzF4
+ae FzC4 Fz C4 weight=0.4
+ae F4O2 F4 O2 weight=1
+ce F8T4 weight=0.8
+de F8T6
+de CzT6
+de C4P4
+de T4T6
+de T5O1
+ae P3Pz P3 Pz weight=0.6
+de T6O2
+st 78
+ae Fp1F7 Fp1 F7 weight=0.4
+ae Fp1O1 Fp1 O1 weight=0.6
+ae Fp1O2 Fp1 O2 weight=0.4
+de Fp2F8
+ce Fp2T4 weight=0.2
+ce F3Fz weight=0.8
+de F3C4
+de FzC4
+ae F4P3 F4 P3 weight=0.4
+ae F4P4 F4 P4 weight=0.8
+de F4O2
+ce F8T4 weight=0.6
+ae C4T6 C4 T6 weight=1
+de P3Pz
+ae P3P4 P3 P4 weight=0.2
+ae O1O2 O1 O2 weight=0.6
+st 79
+ae Fp1Fp2 Fp1 Fp2 weight=0.6
+ce Fp1F7 weight=1
+ae Fp1Cz Fp1 Cz weight=0.6
+ae Fp1P4 Fp1 P4 weight=0.2
+ae Fp1T6 Fp1 T6 weight=1
+de Fp1O1
+ce Fp1O2 weight=0.4
+ae Fp2F7 Fp2 F7 weight=0.6
+ae Fp2Cz Fp2 Cz weight=1
+de Fp2T4
+ae Fp2Pz Fp2 Pz weight=0.2
+ae Fp2P4 Fp2 P4 weight=0.6
+ae Fp2T6 Fp2 T6 weight=0.6
+ae F7Cz F7 Cz weight=0.6
+ae F7P4 F7 P4 weight=0.2
+ae F7T6 F7 T6 weight=1
+ae F7O2 F7 O2 weight=0.4
+de F3Fz
+ae F3F4 F3 F4 weight=0.2
+ae F3C4 F3 C4 weight=0.8
+ae F4C4 F4 C4 weight=0.4
+de F4P3
+de F4P4
+ce F8T4 weight=0.8
+ae CzPz Cz Pz weight=0.2
+ae CzP4 Cz P4 weight=0.6
+ae CzT6 Cz T6 weight=0.6
+de C4T6
+ae T4P3 T4 P3 weight=0.2
+de P3P4
+ae P3O1 P3 O1 weight=0.8
+ae PzP4 Pz P4 weight=0.4
+ae P4T6 P4 T6 weight=0.2
+ae T6O2 T6 O2 weight=0.4
+ce O1O2 weight=0.2
+st 80
+de Fp1Fp2
+ce Fp1F7 weight=1
+de Fp1Cz
+de Fp1P4
+de Fp1T6
+de Fp1O2
+de Fp2F7
+de Fp2Cz
+ae Fp2C4 Fp2 C4 weight=0.8
+ae Fp2T5 Fp2 T5 weight=0.2
+de Fp2Pz
+de Fp2P4
+de Fp2T6
+ae Fp2O1 Fp2 O1 weight=0.4
+de F7Cz
+de F7P4
+de F7T6
+de F7O2
+ae F3Fz F3 Fz weight=0.2
+de F3F4
+de F3C4
+ae F3P4 F3 P4 weight=0.2
+ae F4Cz F4 Cz weight=0.2
+de F4C4
+ae F4P3 F4 P3 weight=0.4
+de F8T4
+ae F8P3 F8 P3 weight=0.2
+ae F8O1 F8 O1 weight=0.2
+de CzPz
+de CzP4
+de CzT6
+ae C4P3 C4 P3 weight=0.2
+ae C4O1 C4 O1 weight=0.6
+de T4P3
+ce P3O1 weight=0.6
+de PzP4
+de P4T6
+de T6O2
+de O1O2
+st 81
+de Fp1F7
+ae Fp1F3 Fp1 F3 weight=0.2
+de Fp2C4
+de Fp2T5
+de Fp2O1
+ae F7Cz F7 Cz weight=0.2
+ae F7C4 F7 C4 weight=0.4
+de F3Fz
+de F3P4
+ae FzF4 Fz F4 weight=0.4
+ae FzT5 Fz T5 weight=0.6
+ae FzP3 Fz P3 weight=0.4
+ae FzO1 Fz O1 weight=1
+ae FzO2 Fz O2 weight=1
+de F4Cz
+de F4P3
+ae F4O1 F4 O1 weight=0.4
+ae F4O2 F4 O2 weight=0.4
+ae F8T3 F8 T3 weight=0.2
+ae F8T4 F8 T4 weight=0.6
+de F8P3
+ae F8Pz F8 Pz weight=0.4
+de F8O1
+ae T3T4 T3 T4 weight=0.6
+ae T3Pz T3 Pz weight=0.8
+ae CzC4 Cz C4 weight=0.8
+de C4P3
+de C4O1
+ae T4Pz T4 Pz weight=0.8
+ae T5P3 T5 P3 weight=0.8
+ae T5O1 T5 O1 weight=0.6
+ae T5O2 T5 O2 weight=0.6
+ce P3O1 weight=0.4
+ae P3O2 P3 O2 weight=0.4
+ae O1O2 O1 O2 weight=1
+st 82
+ae Fp1F7 Fp1 F7 weight=0.8
+de Fp1F3
+ae Fp2Fz Fp2 Fz weight=0.6
+de F7Cz
+de F7C4
+ae F3P4 F3 P4 weight=1
+de FzF4
+de FzT5
+de FzP3
+de FzO1
+de FzO2
+de F4O1
+ce F4O2 weight=0.8
+de F8T3
+ce F8T4 weight=0.8
+de F8Pz
+de T3T4
+ae T3P3 T3 P3 weight=0.2
+de T3Pz
+ae C3Pz C3 Pz weight=0.2
+de CzC4
+ae C4O1 C4 O1 weight=0.4
+de T4Pz
+de T5P3
+ce T5O1 weight=0.6
+de T5O2
+de P3O1
+de P3O2
+de O1O2
+st 83
+ce Fp1F7 weight=0.4
+ae Fp1F3 Fp1 F3 weight=0.6
+ce Fp2Fz weight=0.6
+ae Fp2T5 Fp2 T5 weight=0.8
+ae Fp2P3 Fp2 P3 weight=0.8
+ae Fp2O1 Fp2 O1 weight=0.6
+ae Fp2O2 Fp2 O2 weight=0.2
+ae F7F3 F7 F3 weight=0.8
+de F3P4
+ae FzT5 Fz T5 weight=0.8
+ae FzP3 Fz P3 weight=0.4
+ae FzO1 Fz O1 weight=1
+ae FzO2 Fz O2 weight=0.6
+de F4O2
+de F8T4
+de T3P3
+de C3Pz
+ae CzPz Cz Pz weight=0.8
+ae CzP4 Cz P4 weight=0.8
+de C4O1
+ae T5P3 T5 P3 weight=0.6
+ce T5O1 weight=0.8
+ae T5O2 T5 O2 weight=0.4
+ae P3O1 P3 O1 weight=0.4
+ae PzP4 Pz P4 weight=1
+ae O1O2 O1 O2 weight=0.6
+st 84
+de Fp1F7
+ce Fp1F3 weight=0.8
+ae Fp1P3 Fp1 P3 weight=0.8
+ae Fp1P4 Fp1 P4 weight=0.2
+de Fp2Fz
+de Fp2T5
+de Fp2P3
+de Fp2O1
+de Fp2O2
+de F7F3
+ae F7F8 F7 F8 weight=0.2
+ae F7T4 F7 T4 weight=0.2
+ae F3P3 F3 P3 weight=1
+de FzT5
+de FzP3
+de FzO1
+de FzO2
+ae F4P4 F4 P4 weight=0.6
+ae F4O2 F4 O2 weight=0.8
+ae F8T4 F8 T4 weight=1
+de CzPz
+de CzP4
+de T5P3
+ce T5O1 weight=0.6
+de T5O2
+de P3O1
+de PzP4
+ae P4O2 P4 O2 weight=0.8
+de O1O2
+st 85
+ae Fp1Fp2 Fp1 Fp2 weight=0.8
+ae Fp1F7 Fp1 F7 weight=0.2
+ce Fp1F3 weight=0.4
+ae Fp1F8 Fp1 F8 weight=0.4
+ae Fp1T4 Fp1 T4 weight=0.8
+ce Fp1P3 weight=0.2
+de Fp1P4
+ae Fp1O1 Fp1 O1 weight=0.8
+ae Fp2F7 Fp2 F7 weight=0.4
+ae Fp2F3 Fp2 F3 weight=0.2
+ae Fp2F8 Fp2 F8 weight=0.6
+ae Fp2T4 Fp2 T4 weight=1
+ae Fp2O1 Fp2 O1 weight=0.6
+ae F7Fz F7 Fz weight=0.6
+ce F7F8 weight=0.8
+ce F7T4 weight=0.4
+ae F7Pz F7 Pz weight=0.4
+ae F7P4 F7 P4 weight=0.4
+ae F3T4 F3 T4 weight=0.2
+ce F3P3 weight=0.4
+ae F3O1 F3 O1 weight=0.6
+ae FzF8 Fz F8 weight=0.4
+ae FzPz Fz Pz weight=0.8
+ae FzP4 Fz P4 weight=0.8
+de F4P4
+de F4O2
+ce F8T4 weight=0.6
+ae F8Pz F8 Pz weight=0.2
+ae F8P4 F8 P4 weight=0.2
+ae F8O1 F8 O1 weight=0.2
+ae T3C4 T3 C4 weight=0.2
+ae C3Cz C3 Cz weight=0.6
+ae C3P3 C3 P3 weight=0.6
+ae CzP3 Cz P3 weight=0.6
+ae C4T5 C4 T5 weight=0.2
+ae T4O1 T4 O1 weight=0.6
+ae T5T6 T5 T6 weight=0.2
+de T5O1
+ae P3O1 P3 O1 weight=0.4
+ae PzP4 Pz P4 weight=1
+de P4O2
+st 86
+de Fp1Fp2
+de Fp1F7
+de Fp1F3
+ce Fp1F8 weight=1
+de Fp1T4
+de Fp1P3
+de Fp1O1
+de Fp2F7
+de Fp2F3
+de Fp2F8
+de Fp2T4
+de Fp2O1
+de F7Fz
+de F7F8
+de F7T4
+de F7Pz
+de F7P4
+de F3T4
+de F3P3
+de F3O1
+ae FzF4 Fz F4 weight=0.6
+de FzF8
+de FzPz
+de FzP4
+de F8T4
+de F8Pz
+de F8P4
+de F8O1
+de T3C4
+de C3Cz
+ae C3T4 C3 T4 weight=1
+ae C3T5 C3 T5 weight=0.8
+de C3P3
+ae CzC4 Cz C4 weight=0.6
+de CzP3
+de C4T5
+ae T4T5 T4 T5 weight=0.8
+de T4O1
+de T5T6
+de P3O1
+de PzP4
+st 87
+ae Fp1Fp2 Fp1 Fp2 weight=0.8
+de Fp1F8
+ae Fp1Pz Fp1 Pz weight=0.2
+ae Fp1P4 Fp1 P4 weight=0.8
+ae Fp1O2 Fp1 O2 weight=0.2
+ae Fp2Pz Fp2 Pz weight=0.4
+ae Fp2P4 Fp2 P4 weight=1
+ae Fp2T6 Fp2 T6 weight=0.2
+ae F7O2 F7 O2 weight=0.8
+ae F3Fz F3 Fz weight=0.4
+ae F3F4 F3 F4 weight=0.2
+ae F3Pz F3 Pz weight=0.6
+ae F3T6 F3 T6 weight=0.8
+ce FzF4 weight=0.8
+ae FzT6 Fz T6 weight=0.2
+ae FzO1 Fz O1 weight=0.2
+ae F4O1 F4 O1 weight=0.4
+ae F8Cz F8 Cz weight=0.6
+ae F8P3 F8 P3 weight=0.4
+ce C3T4 weight=1
+ce C3T5 weight=1
+ae C3P3 C3 P3 weight=0.6
+de CzC4
+ce T4T5 weight=1
+ae T4P3 T4 P3 weight=0.6
+ae T5P3 T5 P3 weight=0.6
+ae PzP4 Pz P4 weight=0.4
+ae PzT6 Pz T6 weight=0.8
+ae P4T6 P4 T6 weight=0.2
+st 88
+ce Fp1Fp2 weight=1
+ae Fp1F7 Fp1 F7 weight=0.2
+ae Fp1Fz Fp1 Fz weight=0.2
+ae Fp1F8 Fp1 F8 weight=0.6
+ae Fp1P3 Fp1 P3 weight=0.2
+de Fp1Pz
+de Fp1P4
+ae Fp1O1 Fp1 O1 weight=0.2
+de Fp1O2
+ae Fp2F7 Fp2 F7 weight=0.2
+ae Fp2Fz Fp2 Fz weight=0.2
+ae Fp2F8 Fp2 F8 weight=0.6
+ae Fp2P3 Fp2 P3 weight=0.2
+de Fp2Pz
+de Fp2P4
+de Fp2T6
+ae Fp2O1 Fp2 O1 weight=0.2
+ae F7F8 F7 F8 weight=0.6
+ae F7T3 F7 T3 weight=0.4
+ae F7Cz F7 Cz weight=0.4
+ae F7P4 F7 P4 weight=0.2
+de F7O2
+ce F3Fz weight=0.6
+ce F3F4 weight=0.8
+ae F3P3 F3 P3 weight=0.6
+de F3Pz
+ce F3T6 weight=0.2
+ae F3O1 F3 O1 weight=0.4
+ce FzF4 weight=0.4
+ae FzP3 Fz P3 weight=1
+de FzT6
+ce FzO1 weight=0.8
+ae F4P3 F4 P3 weight=0.4
+ae F4T6 F4 T6 weight=0.4
+ce F4O1 weight=0.2
+de F8Cz
+de F8P3
+ae F8P4 F8 P4 weight=0.2
+ae T3Cz T3 Cz weight=1
+ce C3T4 weight=0.8
+de C3T5
+de C3P3
+ae C3O2 C3 O2 weight=0.8
+de T4T5
+de T4P3
+ae T4O2 T4 O2 weight=1
+de T5P3
+ae T5T6 T5 T6 weight=0.2
+ae P3O1 P3 O1 weight=0.8
+de PzP4
+de PzT6
+de P4T6
+st 89
+de Fp1Fp2
+de Fp1F7
+de Fp1Fz
+de Fp1F8
+de Fp1P3
+de Fp1O1
+de Fp2F7
+de Fp2Fz
+de Fp2F8
+de Fp2P3
+de Fp2O1
+de F7F8
+de F7T3
+de F7Cz
+de F7P4
+ce F3Fz weight=0.4
+de F3F4
+de F3P3
+ce F3T6 weight=1
+ce F3O1 weight=1
+ae F3O2 F3 O2 weight=0.8
+ce FzF4 weight=0.2
+de FzP3
+ae FzT6 Fz T6 weight=0.4
+ce FzO1 weight=0.4
+ae FzO2 Fz O2 weight=0.6
+de F4P3
+de F4T6
+de F4O1
+ae F4O2 F4 O2 weight=0.2
+de F8P4
+de T3Cz
+ce C3T4 weight=0.4
+ae C3T5 C3 T5 weight=0.8
+de C3O2
+ae T4T5 T4 T5 weight=0.2
+ae T4P3 T4 P3 weight=0.6
+de T4O2
+de T5T6
+de P3O1
+ae PzP4 Pz P4 weight=0.2
+ae T6O1 T6 O1 weight=1
+ae T6O2 T6 O2 weight=0.8
+ae O1O2 O1 O2 weight=0.8
+st 90
+ae Fp1Fp2 Fp1 Fp2 weight=0.8
+ae Fp1F7 Fp1 F7 weight=1
+ae Fp1F3 Fp1 F3 weight=0.2
+ae Fp1Fz Fp1 Fz weight=0.8
+ae Fp1T4 Fp1 T4 weight=0.8
+ae Fp1P4 Fp1 P4 weight=1
+ae Fp2F7 Fp2 F7 weight=0.8
+ae Fp2Fz Fp2 Fz weight=0.6
+ae Fp2F8 Fp2 F8 weight=0.2
+ae Fp2T4 Fp2 T4 weight=1
+ae Fp2Pz Fp2 Pz weight=0.2
+ae Fp2P4 Fp2 P4 weight=0.8
+ae F7F3 F7 F3 weight=0.2
+ae F7Fz F7 Fz weight=0.8
+ae F7T4 F7 T4 weight=0.8
+ae F7P4 F7 P4 weight=1
+ce F3Fz weight=0.4
+ae F3C4 F3 C4 weight=0.8
+ae F3P4 F3 P4 weight=0.2
+ce F3T6 weight=0.8
+de F3O1
+de F3O2
+de FzF4
+ae FzC4 Fz C4 weight=0.2
+ae FzT4 Fz T4 weight=0.6
+ae FzP4 Fz P4 weight=0.8
+ce FzT6 weight=0.2
+de FzO1
+de FzO2
+de F4O2
+ae F8Cz F8 Cz weight=0.2
+ae F8T4 F8 T4 weight=0.2
+ae F8Pz F8 Pz weight=1
+de C3T4
+de C3T5
+ae CzPz Cz Pz weight=0.2
+ae C4T6 C4 T6 weight=1
+de T4T5
+de T4P3
+ae T4Pz T4 Pz weight=0.2
+ae T4P4 T4 P4 weight=0.8
+de PzP4
+de T6O1
+de T6O2
+ce O1O2 weight=0.8
+st 91
+ce Fp1Fp2 weight=0.8
+ce Fp1F7 weight=0.8
+ce Fp1F3 weight=0.6
+de Fp1Fz
+ae Fp1F8 Fp1 F8 weight=0.6
+ce Fp1T4 weight=0.8
+ce Fp1P4 weight=0.8
+ce Fp2F7 weight=0.6
+ae Fp2F3 Fp2 F3 weight=0.4
+de Fp2Fz
+ce Fp2F8 weight=0.8
+ce Fp2T4 weight=0.6
+de Fp2Pz
+ce Fp2P4 weight=0.6
+ce F7F3 weight=0.8
+de F7Fz
+ae F7F8 F7 F8 weight=0.4
+ce F7T4 weight=1
+ce F7P4 weight=1
+ce F3Fz weight=0.2
+ae F3F8 F3 F8 weight=0.2
+de F3C4
+ae F3T4 F3 T4 weight=0.8
+ce F3P4 weight=0.8
+ce F3T6 weight=0.2
+de FzC4
+de FzT4
+de FzP4
+ce FzT6 weight=1
+ae F4O1 F4 O1 weight=0.8
+de F8Cz
+ce F8T4 weight=0.4
+de F8Pz
+ae F8P4 F8 P4 weight=0.4
+de CzPz
+de C4T6
+de T4Pz
+ce T4P4 weight=1
+de O1O2
+st 92
+de Fp1Fp2
+ce Fp1F7 weight=0.4
+de Fp1F3
+de Fp1F8
+de Fp1T4
+ce Fp1P4 weight=0.2
+de Fp2F7
+de Fp2F3
+de Fp2F8
+de Fp2T4
+de Fp2P4
+de F7F3
+de F7F8
+de F7T4
+ce F7P4 weight=0.8
+de F3Fz
+de F3F8
+de F3T4
+de F3P4
+ce F3T6 weight=1
+de FzT6
+de F4O1
+ae F4O2 F4 O2 weight=0.8
+ae F8T3 F8 T3 weight=0.4
+de F8T4
+de F8P4
+ae C3Cz C3 Cz weight=0.4
+ae C3C4 C3 C4 weight=0.8
+ae CzC4 Cz C4 weight=0.2
+de T4P4
+ae P3Pz P3 Pz weight=0.8
+st 93
+de Fp1F7
+de Fp1P4
+ae Fp1O2 Fp1 O2 weight=0.8
+ae Fp2F7 Fp2 F7 weight=0.4
+ae Fp2Pz Fp2 Pz weight=0.4
+ae Fp2P4 Fp2 P4 weight=0.4
+ae F7Pz F7 Pz weight=1
+ce F7P4 weight=1
+ae F3C4 F3 C4 weight=0.4
+ce F3T6 weight=0.4
+de F4O2
+de F8T3
+ae T3T5 T3 T5 weight=0.2
+ae T3P3 T3 P3 weight=0.4
+de C3Cz
+de C3C4
+de CzC4
+ae CzT4 Cz T4 weight=0.4
+ae C4T6 C4 T6 weight=1
+ae T5P3 T5 P3 weight=0.8
+de P3Pz
+ae PzP4 Pz P4 weight=1
+st 94
+ae Fp1Fp2 Fp1 Fp2 weight=1
+ae Fp1F7 Fp1 F7 weight=0.2
+ae Fp1F8 Fp1 F8 weight=1
+ae Fp1Pz Fp1 Pz weight=1
+ce Fp1O2 weight=0.6
+ce Fp2F7 weight=0.2
+ae Fp2F8 Fp2 F8 weight=1
+ce Fp2Pz weight=1
+de Fp2P4
+ae Fp2O2 Fp2 O2 weight=0.6
+ae F7F8 F7 F8 weight=0.2
+ce F7Pz weight=0.2
+de F7P4
+ae F7O2 F7 O2 weight=0.6
+de F3C4
+ae F3T4 F3 T4 weight=0.4
+ce F3T6 weight=0.6
+ae F8Pz F8 Pz weight=1
+ae F8O2 F8 O2 weight=0.6
+de T3T5
+de T3P3
+ae C3Cz C3 Cz weight=0.2
+ae C3C4 C3 C4 weight=0.2
+ae CzC4 Cz C4 weight=1
+de CzT4
+de C4T6
+ae T4T6 T4 T6 weight=0.8
+de T5P3
+de PzP4
+ae PzO2 Pz O2 weight=0.6
+st 95
+de Fp1Fp2
+de Fp1F7
+de Fp1F8
+de Fp1Pz
+ae Fp1P4 Fp1 P4 weight=0.2
+de Fp1O2
+de Fp2F7
+ce Fp2F8 weight=0.6
+de Fp2Pz
+de Fp2O2
+de F7F8
+ae F7C4 F7 C4 weight=0.8
+de F7Pz
+ce F7O2 weight=0.6
+ae F3Fz F3 Fz weight=1
+ae F3F4 F3 F4 weight=0.4
+de F3T4
+de F3T6
+ae FzF4 Fz F4 weight=0.4
+ae F8P3 F8 P3 weight=0.4
+de F8Pz
+de F8O2
+de C3Cz
+de C3C4
+ae C3T6 C3 T6 weight=0.4
+de CzC4
+ae C4O2 C4 O2 weight=0.8
+de T4T6
+de PzO2
+st 96
+ae Fp1Fp2 Fp1 Fp2 weight=0.8
+ae Fp1F8 Fp1 F8 weight=1
+ae Fp1P3 Fp1 P3 weight=0.4
+de Fp1P4
+ce Fp2F8 weight=0.8
+ae Fp2P3 Fp2 P3 weight=0.6
+de F7C4
+de F7O2
+ce F3Fz weight=0.4
+de F3F4
+ae F3T3 F3 T3 weight=0.4
+de FzF4
+ae FzT3 Fz T3 weight=1
+ce F8P3 weight=0.4
+ae C3C4 C3 C4 weight=0.4
+de C3T6
+ae CzC4 Cz C4 weight=0.4
+de C4O2
+ae O1O2 O1 O2 weight=0.8
+st 97
+de Fp1Fp2
+ae Fp1F7 Fp1 F7 weight=1
+de Fp1F8
+de Fp1P3
+ae Fp1P4 Fp1 P4 weight=0.6
+de Fp2F8
+ce Fp2P3 weight=0.2
+ae F7P4 F7 P4 weight=0.6
+ce F3Fz weight=1
+ae F3F4 F3 F4 weight=0.8
+de F3T3
+ae FzF4 Fz F4 weight=0.8
+de FzT3
+ce F8P3 weight=0.2
+de C3C4
+de CzC4
+ae CzPz Cz Pz weight=0.4
+de O1O2
+st 98
+de Fp1F7
+de Fp1P4
+de Fp2P3
+ae F7Cz F7 Cz weight=0.4
+ce F7P4 weight=0.2
+ae F7O1 F7 O1 weight=0.4
+ae F7O2 F7 O2 weight=0.4
+ce F3Fz weight=0.4
+de F3F4
+ae F3P3 F3 P3 weight=0.2
+ae F3Pz F3 Pz weight=0.8
+de FzF4
+ae FzPz Fz Pz weight=0.2
+ae F8C3 F8 C3 weight=0.8
+de F8P3
+ae T3C4 T3 C4 weight=1
+ae T3T5 T3 T5 weight=0.8
+de CzPz
+ae CzO1 Cz O1 weight=1
+ae CzO2 Cz O2 weight=1
+ae C4T5 C4 T5 weight=0.8
+ae T4P3 T4 P3 weight=0.8
+ae T4Pz T4 Pz weight=0.2
+ae P3Pz P3 Pz weight=0.4
+ae O1O2 O1 O2 weight=1
+st 99
+ae Fp1F7 Fp1 F7 weight=0.4
+ae Fp1F3 Fp1 F3 weight=0.2
+ae Fp1Fz Fp1 Fz weight=1
+ae Fp1F4 Fp1 F4 weight=1
+ae Fp1T5 Fp1 T5 weight=0.4
+ae Fp1P3 Fp1 P3 weight=1
+ae Fp1Pz Fp1 Pz weight=1
+ae Fp1P4 Fp1 P4 weight=1
+ae Fp1O1 Fp1 O1 weight=0.2
+ae Fp2Cz Fp2 Cz weight=0.8
+ae Fp2O1 Fp2 O1 weight=0.2
+ae F7F3 F7 F3 weight=0.2
+ae F7Fz F7 Fz weight=0.4
+ae F7F4 F7 F4 weight=0.4
+de F7Cz
+ae F7P3 F7 P3 weight=0.4
+ae F7Pz F7 Pz weight=0.4
+ce F7P4 weight=0.4
+de F7O1
+de F7O2
+ce F3Fz weight=0.2
+ae F3F4 F3 F4 weight=0.2
+ce F3P3 weight=0.2
+ce F3Pz weight=0.2
+ae F3P4 F3 P4 weight=0.2
+ae FzF4 Fz F4 weight=1
+ae FzT5 Fz T5 weight=0.4
+ae FzP3 Fz P3 weight=1
+ce FzPz weight=1
+ae FzP4 Fz P4 weight=1
+ae FzO1 Fz O1 weight=0.2
+ae F4T5 F4 T5 weight=0.4
+ae F4P3 F4 P3 weight=1
+ae F4Pz F4 Pz weight=1
+ae F4P4 F4 P4 weight=1
+ae F4O1 F4 O1 weight=0.2
+de F8C3
+de T3C4
+de T3T5
+ae CzT5 Cz T5 weight=0.2
+ce CzO1 weight=0.4
+de CzO2
+de C4T5
+de T4P3
+de T4Pz
+ae T5P3 T5 P3 weight=0.4
+ae T5Pz T5 Pz weight=0.4
+ae T5P4 T5 P4 weight=0.4
+ae T5O1 T5 O1 weight=0.8
+ce P3Pz weight=1
+ae P3P4 P3 P4 weight=1
+ae P3O1 P3 O1 weight=0.2
+ae PzP4 Pz P4 weight=1
+ae PzO1 Pz O1 weight=0.2
+ae P4O1 P4 O1 weight=0.2
+de O1O2
+st 100
+ce Fp1F7 weight=0.6
+ce Fp1F3 weight=0.8
+de Fp1Fz
+de Fp1F4
+ae Fp1Cz Fp1 Cz weight=0.6
+de Fp1T5
+de Fp1P3
+de Fp1Pz
+ce Fp1P4 weight=1
+de Fp1O1
+de Fp2Cz
+de Fp2O1
+ce F7F3 weight=0.4
+de F7Fz
+de F7F4
+ae F7Cz F7 Cz weight=1
+de F7P3
+de F7Pz
+ce F7P4 weight=0.6
+de F3Fz
+de F3F4
+ae F3Cz F3 Cz weight=0.4
+de F3P3
+de F3Pz
+ce F3P4 weight=0.8
+ce FzF4 weight=0.4
+ce FzT5 weight=0.2
+de FzP3
+de FzPz
+de FzP4
+ce FzO1 weight=0.4
+de F4T5
+de F4P3
+de F4Pz
+de F4P4
+de F4O1
+ae F8C3 F8 C3 weight=0.6
+ae F8Pz F8 Pz weight=0.6
+ae T3T6 T3 T6 weight=0.2
+ae C3Pz C3 Pz weight=1
+de CzT5
+ae CzP4 Cz P4 weight=0.6
+de CzO1
+de T5P3
+de T5Pz
+de T5P4
+ce T5O1 weight=0.8
+de P3Pz
+de P3P4
+de P3O1
+ae P3O2 P3 O2 weight=0.8
+de PzP4
+de PzO1
+de P4O1
+st 101
+ce Fp1F7 weight=0.4
+de Fp1F3
+ae Fp1F8 Fp1 F8 weight=0.4
+de Fp1Cz
+ae Fp1Pz Fp1 Pz weight=0.4
+ce Fp1P4 weight=0.4
+ae Fp1O2 Fp1 O2 weight=0.4
+ae Fp2P3 Fp2 P3 weight=0.6
+de F7F3
+de F7Cz
+de F7P4
+ae F7O1 F7 O1 weight=0.4
+ae F7O2 F7 O2 weight=1
+de F3Cz
+de F3P4
+de FzF4
+de FzT5
+de FzO1
+de F8C3
+ce F8Pz weight=0.2
+ae F8P4 F8 P4 weight=0.2
+ae T3C4 T3 C4 weight=0.4
+ae T3T5 T3 T5 weight=0.6
+de T3T6
+de C3Pz
+de CzP4
+ce T5O1 weight=0.2
+de P3O2
+ae PzP4 Pz P4 weight=1
+ae O1O2 O1 O2 weight=0.4
+st 102
+ae Fp1Fp2 Fp1 Fp2 weight=0.4
+de Fp1F7
+de Fp1F8
+ce Fp1Pz weight=0.4
+de Fp1P4
+de Fp1O2
+de Fp2P3
+ae Fp2Pz Fp2 Pz weight=1
+de F7O1
+de F7O2
+ae F3F4 F3 F4 weight=0.8
+ae F3Cz F3 Cz weight=0.8
+ae F3C4 F3 C4 weight=0.8
+ae FzO2 Fz O2 weight=1
+ae F4Cz F4 Cz weight=1
+ae F4C4 F4 C4 weight=1
+de F8Pz
+de F8P4
+de T3C4
+de T3T5
+ae CzC4 Cz C4 weight=1
+ce T5O1 weight=0.4
+de PzP4
+de O1O2
+st 103
+ce Fp1Fp2 weight=0.8
+ce Fp1Pz weight=0.8
+ce Fp2Pz weight=1
+ae F7C4 F7 C4 weight=0.6
+de F3F4
+de F3Cz
+de F3C4
+de FzO2
+de F4Cz
+de F4C4
+ae F8C3 F8 C3 weight=0.6
+ae T3P3 T3 P3 weight=0.6
+de CzC4
+de T5O1
+st 104
+de Fp1Fp2
+de Fp1Pz
+ae Fp2P3 Fp2 P3 weight=0.4
+de Fp2Pz
+de F7C4
+ae FzT6 Fz T6 weight=0.6
+ae FzO2 Fz O2 weight=1
+de F8C3
+de T3P3
+ae CzC4 Cz C4 weight=1
+ae PzP4 Pz P4 weight=0.6
+ae T6O2 T6 O2 weight=0.6
+st 105
+ae Fp1Fp2 Fp1 Fp2 weight=0.8
+ae Fp1Pz Fp1 Pz weight=0.8
+de Fp2P3
+ae Fp2Pz Fp2 Pz weight=1
+ae F7T4 F7 T4 weight=0.8
+ae F3Cz F3 Cz weight=1
+ae FzT5 Fz T5 weight=0.6
+de FzT6
+de FzO2
+ae F4C4 F4 C4 weight=0.6
+ae F4O1 F4 O1 weight=0.6
+ae F8P3 F8 P3 weight=1
+de CzC4
+ae C4O1 C4 O1 weight=0.2
+de PzP4
+ae P4T6 P4 T6 weight=1
+de T6O2
+st 106
+de Fp1Fp2
+de Fp1Pz
+de Fp2Pz
+de F7T4
+ae F7T5 F7 T5 weight=0.4
+de F3Cz
+ae FzT3 Fz T3 weight=0.4
+ae FzCz Fz Cz weight=0.4
+de FzT5
+de F4C4
+de F4O1
+ce F8P3 weight=0.8
+ae C3T4 C3 T4 weight=0.4
+ae C4T5 C4 T5 weight=0.4
+de C4O1
+de P4T6
+st 107
+ae F7T3 F7 T3 weight=0.2
+de F7T5
+ae F7T6 F7 T6 weight=0.2
+ae F3T3 F3 T3 weight=0.8
+ae F3C3 F3 C3 weight=1
+ae F3Cz F3 Cz weight=1
+ae F3C4 F3 C4 weight=1
+de FzT3
+de FzCz
+ce F8P3 weight=0.6
+ae T3C3 T3 C3 weight=0.8
+ae T3Cz T3 Cz weight=0.8
+ae T3C4 T3 C4 weight=0.8
+ae C3Cz C3 Cz weight=1
+ae C3C4 C3 C4 weight=1
+de C3T4
+ae CzC4 Cz C4 weight=1
+de C4T5
+ae P4T6 P4 T6 weight=0.2
+st 108
+ae Fp1Fp2 Fp1 Fp2 weight=0.2
+ae Fp1Cz Fp1 Cz weight=0.4
+ae Fp1P3 Fp1 P3 weight=1
+ae Fp1Pz Fp1 Pz weight=1
+ae Fp1P4 Fp1 P4 weight=0.4
+ae Fp1O1 Fp1 O1 weight=1
+ae Fp2Cz Fp2 Cz weight=0.8
+ae Fp2P3 Fp2 P3 weight=0.2
+ae Fp2Pz Fp2 Pz weight=0.2
+ae Fp2O1 Fp2 O1 weight=0.2
+ae Fp2O2 Fp2 O2 weight=0.6
+de F7T3
+de F7T6
+de F3T3
+de F3C3
+de F3Cz
+de F3C4
+ae F3T4 F3 T4 weight=0.8
+ae FzC3 Fz C3 weight=0.4
+de F8P3
+ae F8O2 F8 O2 weight=0.4
+de T3C3
+de T3Cz
+de T3C4
+de C3Cz
+de C3C4
+de CzC4
+ae CzP3 Cz P3 weight=0.4
+ae CzPz Cz Pz weight=0.4
+ae CzO1 Cz O1 weight=0.4
+ae CzO2 Cz O2 weight=0.4
+ae P3Pz P3 Pz weight=1
+ae P3P4 P3 P4 weight=0.4
+ae P3O1 P3 O1 weight=1
+ae PzP4 Pz P4 weight=0.4
+ae PzO1 Pz O1 weight=1
+de P4T6
+ae P4O1 P4 O1 weight=0.4
+st 109
+de Fp1Fp2
+de Fp1Cz
+de Fp1P3
+de Fp1Pz
+de Fp1P4
+de Fp1O1
+ae Fp2F8 Fp2 F8 weight=0.6
+ae Fp2C3 Fp2 C3 weight=0.4
+de Fp2Cz
+ae Fp2T5 Fp2 T5 weight=1
+ce Fp2P3 weight=0.4
+ce Fp2Pz weight=0.8
+ce Fp2O1 weight=0.4
+ce Fp2O2 weight=0.4
+ae F7F3 F7 F3 weight=0.2
+de F3T4
+de FzC3
+ae F4C4 F4 C4 weight=0.4
+ae F8C3 F8 C3 weight=0.8
+ae F8T5 F8 T5 weight=0.6
+ae F8P3 F8 P3 weight=0.8
+ae F8Pz F8 Pz weight=0.4
+ae F8T6 F8 T6 weight=0.2
+ae F8O1 F8 O1 weight=0.8
+ce F8O2 weight=0.8
+ae T3P4 T3 P4 weight=0.8
+ae C3T4 C3 T4 weight=0.2
+ae C3T5 C3 T5 weight=0.4
+ae C3P3 C3 P3 weight=1
+ae C3Pz C3 Pz weight=0.2
+ae C3T6 C3 T6 weight=0.4
+ae C3O1 C3 O1 weight=1
+ae C3O2 C3 O2 weight=1
+de CzP3
+de CzPz
+de CzO1
+de CzO2
+ae T4P3 T4 P3 weight=0.2
+ae T4T6 T4 T6 weight=0.2
+ae T4O1 T4 O1 weight=0.2
+ae T4O2 T4 O2 weight=0.2
+ae T5P3 T5 P3 weight=0.4
+ae T5Pz T5 Pz weight=0.8
+ae T5O1 T5 O1 weight=0.4
+ae T5O2 T5 O2 weight=0.4
+ce P3Pz weight=0.2
+de P3P4
+ae P3T6 P3 T6 weight=0.4
+ce P3O1 weight=1
+ae P3O2 P3 O2 weight=1
+de PzP4
+ce PzO1 weight=0.2
+ae PzO2 Pz O2 weight=0.2
+de P4O1
+ae T6O1 T6 O1 weight=0.4
+ae T6O2 T6 O2 weight=0.4
+ae O1O2 O1 O2 weight=1
+st 110
+ae Fp1P3 Fp1 P3 weight=1
+ae Fp1Pz Fp1 Pz weight=0.8
+de Fp2F8
+de Fp2C3
+de Fp2T5
+de Fp2P3
+de Fp2Pz
+de Fp2O1
+de Fp2O2
+de F7F3
+ae F7Fz F7 Fz weight=0.2
+ae F3T4 F3 T4 weight=0.2
+ae FzT4 Fz T4 weight=0.8
+ae F4T3 F4 T3 weight=0.2
+de F4C4
+ce F8C3 weight=0.8
+de F8T5
+de F8P3
+de F8Pz
+de F8T6
+de F8O1
+de F8O2
+ce T3P4 weight=0.6
+de C3T4
+de C3T5
+de C3P3
+de C3Pz
+de C3T6
+de C3O1
+de C3O2
+ae C4P4 C4 P4 weight=0.4
+de T4P3
+de T4T6
+de T4O1
+de T4O2
+de T5P3
+ce T5Pz weight=0.2
+de T5O1
+de T5O2
+ce P3Pz weight=0.8
+de P3T6
+de P3O1
+de P3O2
+de PzO1
+de PzO2
+de T6O1
+de T6O2
+de O1O2
+st 111
+de Fp1P3
+de Fp1Pz
+ae Fp2F8 Fp2 F8 weight=0.6
+ae Fp2C3 Fp2 C3 weight=0.6
+ae Fp2C4 Fp2 C4 weight=0.4
+ae Fp2T4 Fp2 T4 weight=0.6
+ae Fp2T5 Fp2 T5 weight=0.4
+ae Fp2P3 Fp2 P3 weight=0.6
+ae Fp2Pz Fp2 Pz weight=0.6
+ae Fp2T6 Fp2 T6 weight=0.2
+ae Fp2O2 Fp2 O2 weight=0.6
+ce F7Fz weight=0.8
+ae F7T3 F7 T3 weight=0.8
+de F3T4
+ae FzT3 Fz T3 weight=0.6
+de FzT4
+de F4T3
+ce F8C3 weight=1
+ae F8T4 F8 T4 weight=1
+ae F8P3 F8 P3 weight=1
+ae F8Pz F8 Pz weight=0.2
+ae F8T6 F8 T6 weight=0.6
+ae F8O2 F8 O2 weight=1
+de T3P4
+ae C3T4 C3 T4 weight=1
+ae C3P3 C3 P3 weight=1
+ae C3Pz C3 Pz weight=0.2
+ae C3T6 C3 T6 weight=0.6
+ae C3O2 C3 O2 weight=1
+ae C4T5 C4 T5 weight=1
+ae C4Pz C4 Pz weight=0.8
+de C4P4
+ae T4P3 T4 P3 weight=1
+ae T4Pz T4 Pz weight=0.2
+ae T4T6 T4 T6 weight=0.6
+ae T4O2 T4 O2 weight=1
+ce T5Pz weight=0.8
+ce P3Pz weight=0.2
+ae P3T6 P3 T6 weight=0.6
+ae P3O2 P3 O2 weight=1
+ae PzO2 Pz O2 weight=0.2
+ae T6O2 T6 O2 weight=0.6
+st 112
+ae Fp1Fp2 Fp1 Fp2 weight=0.2
+de Fp2F8
+de Fp2C3
+de Fp2C4
+de Fp2T4
+ce Fp2T5 weight=0.4
+de Fp2P3
+de Fp2Pz
+de Fp2T6
+de Fp2O2
+de F7Fz
+de F7T3
+ae F3F8 F3 F8 weight=0.2
+de FzT3
+ae F4C4 F4 C4 weight=1
+de F8C3
+de F8T4
+de F8P3
+de F8Pz
+de F8T6
+de F8O2
+ae C3Cz C3 Cz weight=1
+de C3T4
+ae C3T5 C3 T5 weight=0.6
+de C3P3
+de C3Pz
+de C3T6
+de C3O2
+ae CzT5 Cz T5 weight=0.6
+de C4T5
+de C4Pz
+de T4P3
+de T4Pz
+de T4T6
+de T4O2
+de T5Pz
+de P3Pz
+ae P3P4 P3 P4 weight=0.4
+ce P3T6 weight=0.8
+de P3O2
+de PzO2
+ae P4T6 P4 T6 weight=0.6
+de T6O2
+st 113
+de Fp1Fp2
+ae Fp1P4 Fp1 P4 weight=1
+de Fp2T5
+ae Fp2P3 Fp2 P3 weight=0.6
+ae Fp2Pz Fp2 Pz weight=0.6
+ae F7Cz F7 Cz weight=0.4
+ae F7C4 F7 C4 weight=0.6
+ae F7T6 F7 T6 weight=0.6
+de F3F8
+de F4C4
+ae T3Cz T3 Cz weight=0.4
+ae T3T6 T3 T6 weight=0.2
+de C3Cz
+ce C3T5 weight=1
+de CzT5
+ae CzT6 Cz T6 weight=0.8
+ae C4T4 C4 T4 weight=0.2
+ae C4T6 C4 T6 weight=0.2
+ae P3Pz P3 Pz weight=0.2
+de P3P4
+de P3T6
+de P4T6
+ae O1O2 O1 O2 weight=0.2
+st 114
+ae Fp1C4 Fp1 C4 weight=0.4
+de Fp1P4
+ae Fp2Fz Fp2 Fz weight=0.6
+de Fp2P3
+de Fp2Pz
+de F7Cz
+de F7C4
+ae F7P4 F7 P4 weight=0.8
+ce F7T6 weight=0.8
+de T3Cz
+de T3T6
+ce C3T5 weight=0.2
+ae C3O1 C3 O1 weight=0.8
+de CzT6
+de C4T4
+de C4T6
+de P3Pz
+ae P4T6 P4 T6 weight=1
+de O1O2
+st 115
+ae Fp1C3 Fp1 C3 weight=0.6
+de Fp1C4
+ae Fp1O1 Fp1 O1 weight=0.6
+de Fp2Fz
+ae Fp2Pz Fp2 Pz weight=0.6
+de F7P4
+de F7T6
+ae F8T4 F8 T4 weight=0.6
+ae C3C4 C3 C4 weight=0.4
+de C3T5
+ce C3O1 weight=0.2
+ae CzO2 Cz O2 weight=0.2
+ae T5T6 T5 T6 weight=0.6
+de P4T6
+st 116
+ae Fp1Fp2 Fp1 Fp2 weight=0.6
+ae Fp1F8 Fp1 F8 weight=0.2
+de Fp1C3
+ae Fp1C4 Fp1 C4 weight=1
+ce Fp1O1 weight=0.8
+ae Fp2F8 Fp2 F8 weight=0.6
+ae Fp2C4 Fp2 C4 weight=0.6
+de Fp2Pz
+ae Fp2O1 Fp2 O1 weight=0.8
+ae F7Cz F7 Cz weight=0.8
+ae F7P4 F7 P4 weight=0.4
+ae FzPz Fz Pz weight=0.8
+ae F8C4 F8 C4 weight=0.2
+de F8T4
+ae F8O1 F8 O1 weight=0.4
+ae T3P4 T3 P4 weight=0.4
+de C3C4
+ae C3T6 C3 T6 weight=0.4
+de C3O1
+ae C3O2 C3 O2 weight=0.6
+ae CzP4 Cz P4 weight=0.6
+de CzO2
+ae C4O1 C4 O1 weight=0.8
+de T5T6
+st 117
+de Fp1Fp2
+ae Fp1F7 Fp1 F7 weight=0.4
+de Fp1F8
+ae Fp1C3 Fp1 C3 weight=0.8
+ae Fp1Cz Fp1 Cz weight=0.6
+ce Fp1C4 weight=0.6
+de Fp1O1
+ce Fp2F8 weight=0.8
+de Fp2C4
+ae Fp2P3 Fp2 P3 weight=0.4
+ae Fp2Pz Fp2 Pz weight=0.8
+de Fp2O1
+ae F7C3 F7 C3 weight=0.2
+ce F7Cz weight=0.8
+ae F7C4 F7 C4 weight=0.8
+ae F7T4 F7 T4 weight=0.2
+de F7P4
+ae F3P3 F3 P3 weight=0.2
+de FzPz
+de F8C4
+ae F8P3 F8 P3 weight=0.2
+ae F8Pz F8 Pz weight=0.6
+de F8O1
+de T3P4
+ae C3Cz C3 Cz weight=0.4
+ae C3C4 C3 C4 weight=0.4
+de C3T6
+de C3O2
+ae CzC4 Cz C4 weight=1
+de CzP4
+de C4O1
+ae T4T6 T4 T6 weight=0.6
+ae P3Pz P3 Pz weight=0.6
+ae P4O1 P4 O1 weight=0.8
+st 118
+ce Fp1F7 weight=0.8
+ce Fp1C3 weight=0.6
+ce Fp1Cz weight=0.2
+ce Fp1C4 weight=0.6
+ae Fp1P3 Fp1 P3 weight=0.6
+ce Fp2F8 weight=0.8
+ae Fp2T4 Fp2 T4 weight=0.8
+de Fp2P3
+de Fp2Pz
+ce F7C3 weight=0.4
+de F7Cz
+ce F7C4 weight=0.8
+de F7T4
+ae F7P3 F7 P3 weight=0.6
+ae F3F4 F3 F4 weight=0.2
+de F3P3
+ae F8T4 F8 T4 weight=0.6
+de F8P3
+de F8Pz
+ce C3Cz weight=0.6
+ce C3C4 weight=0.2
+ae C3T5 C3 T5 weight=0.4
+ae C3P3 C3 P3 weight=0.4
+de CzC4
+ae CzT5 Cz T5 weight=0.8
+ae C4P3 C4 P3 weight=0.4
+de T4T6
+ae T5T6 T5 T6 weight=0.2
+ae T5O2 T5 O2 weight=0.2
+de P3Pz
+ae P4T6 P4 T6 weight=0.8
+de P4O1
+ae P4O2 P4 O2 weight=0.8
+ae T6O2 T6 O2 weight=1
+st 119
+ce Fp1F7 weight=0.4
+de Fp1C3
+de Fp1Cz
+de Fp1C4
+de Fp1P3
+ae Fp1P4 Fp1 P4 weight=0.6
+ae Fp1T6 Fp1 T6 weight=1
+ae Fp1O2 Fp1 O2 weight=1
+de Fp2F8
+de Fp2T4
+de F7C3
+de F7C4
+de F7P3
+ae F7T6 F7 T6 weight=0.4
+ae F7O2 F7 O2 weight=0.4
+ae F3Fz F3 Fz weight=0.6
+de F3F4
+ae F3C4 F3 C4 weight=0.6
+ae F3T5 F3 T5 weight=0.6
+ae F3O1 F3 O1 weight=0.6
+ae FzC4 Fz C4 weight=1
+ae FzT5 Fz T5 weight=0.8
+ae FzO1 Fz O1 weight=1
+ce F8T4 weight=0.4
+ae T3T5 T3 T5 weight=0.2
+de C3Cz
+de C3C4
+ae C3T4 C3 T4 weight=0.4
+de C3T5
+de C3P3
+de CzT5
+ae C4T5 C4 T5 weight=0.8
+de C4P3
+ae C4O1 C4 O1 weight=1
+de T5T6
+ae T5O1 T5 O1 weight=0.8
+de T5O2
+ce P4T6 weight=0.6
+ce P4O2 weight=0.6
+ce T6O2 weight=1
+st 120
+ce Fp1F7 weight=1
+ce Fp1P4 weight=1
+de Fp1T6
+de Fp1O2
+ae F7P4 F7 P4 weight=1
+de F7T6
+de F7O2
+de F3Fz
+de F3C4
+de F3T5
+de F3O1
+ae FzF4 Fz F4 weight=0.8
+de FzC4
+de FzT5
+de FzO1
+ce F8T4 weight=0.8
+ae F8Pz F8 Pz weight=0.4
+ae F8O1 F8 O1 weight=1
+de T3T5
+de C3T4
+ae C3P3 C3 P3 weight=1
+ae C3T6 C3 T6 weight=0.6
+ae CzT5 Cz T5 weight=0.2
+de C4T5
+de C4O1
+ae T4Pz T4 Pz weight=0.2
+ae T4O1 T4 O1 weight=0.8
+de T5O1
+ae P3T6 P3 T6 weight=0.6
+ae PzO1 Pz O1 weight=0.4
+de P4T6
+de P4O2
+de T6O2
+st 121
+ae Fp1Fp2 Fp1 Fp2 weight=1
+de Fp1F7
+ae Fp1F8 Fp1 F8 weight=0.4
+ae Fp1Pz Fp1 Pz weight=1
+de Fp1P4
+ae Fp1O1 Fp1 O1 weight=1
+ae Fp2F8 Fp2 F8 weight=0.4
+ae Fp2Pz Fp2 Pz weight=1
+ae Fp2O1 Fp2 O1 weight=1
+ae F7T3 F7 T3 weight=0.2
+ae F7Cz F7 Cz weight=1
+ce F7P4 weight=1
+de FzF4
+ae F8C3 F8 C3 weight=0.6
+ce F8T4 weight=0.6
+ce F8Pz weight=0.4
+ce F8O1 weight=0.4
+ae T3Cz T3 Cz weight=0.2
+ae T3P4 T3 P4 weight=0.2
+ae C3T4 C3 T4 weight=1
+de C3P3
+de C3T6
+de CzT5
+ae CzP4 Cz P4 weight=1
+de T4Pz
+de T4O1
+ae T5T6 T5 T6 weight=0.4
+de P3T6
+ce PzO1 weight=1
+ae T6O2 T6 O2 weight=0.6
+st 122
+ce Fp1Fp2 weight=0.6
+ae Fp1F7 Fp1 F7 weight=1
+ce Fp1F8 weight=0.2
+ae Fp1P3 Fp1 P3 weight=0.2
+de Fp1Pz
+ae Fp1P4 Fp1 P4 weight=0.6
+de Fp1O1
+ae Fp2F7 Fp2 F7 weight=0.6
+ce Fp2F8 weight=0.6
+ae Fp2T4 Fp2 T4 weight=0.2
+ae Fp2P3 Fp2 P3 weight=0.6
+de Fp2Pz
+ae Fp2P4 Fp2 P4 weight=0.2
+de Fp2O1
+ae F7F8 F7 F8 weight=0.2
+de F7T3
+de F7Cz
+ae F7P3 F7 P3 weight=0.2
+ce F7P4 weight=0.6
+ae F3Fz F3 Fz weight=0.4
+ae F3F4 F3 F4 weight=0.2
+ae F3T6 F3 T6 weight=0.4
+ae FzF4 Fz F4 weight=0.8
+ae FzC4 Fz C4 weight=0.2
+ae FzT6 Fz T6 weight=1
+ae F4C4 F4 C4 weight=0.2
+ae F4T6 F4 T6 weight=0.8
+de F8C3
+ce F8T4 weight=0.6
+ae F8P3 F8 P3 weight=1
+ce F8Pz weight=0.2
+de F8O1
+de T3Cz
+ae T3T5 T3 T5 weight=0.4
+de T3P4
+ae T3O1 T3 O1 weight=0.2
+de C3T4
+de CzP4
+ae C4T6 C4 T6 weight=0.2
+ae T4P3 T4 P3 weight=0.6
+ae T4Pz T4 Pz weight=0.6
+de T5T6
+ae P3Pz P3 Pz weight=0.2
+de PzO1
+de T6O2
+st 123
+de Fp1Fp2
+de Fp1F7
+ae Fp1F4 Fp1 F4 weight=0.6
+de Fp1F8
+de Fp1P3
+de Fp1P4
+ae Fp1O1 Fp1 O1 weight=0.6
+ae Fp1O2 Fp1 O2 weight=0.8
+de Fp2F7
+de Fp2F8
+de Fp2T4
+de Fp2P3
+de Fp2P4
+de F7F8
+ae F7T3 F7 T3 weight=1
+de F7P3
+de F7P4
+ce F3Fz weight=0.2
+de F3F4
+de F3T6
+de FzF4
+de FzC4
+de FzT6
+de F4C4
+de F4T6
+ae F4O1 F4 O1 weight=0.2
+ae F4O2 F4 O2 weight=0.4
+ae F8C3 F8 C3 weight=0.6
+de F8T4
+ce F8P3 weight=0.6
+de F8Pz
+de T3T5
+de T3O1
+ae C3T4 C3 T4 weight=0.2
+ae C3P3 C3 P3 weight=1
+de C4T6
+ce T4P3 weight=0.2
+de T4Pz
+de P3Pz
+ae O1O2 O1 O2 weight=0.8
+st 124
+de Fp1F4
+de Fp1O1
+de Fp1O2
+ae Fp2P3 Fp2 P3 weight=0.6
+de F7T3
+ae F7C3 F7 C3 weight=1
+ae F7Cz F7 Cz weight=0.6
+ae F7Pz F7 Pz weight=0.6
+ce F3Fz weight=0.8
+de F4O1
+de F4O2
+de F8C3
+ce F8P3 weight=0.2
+ae F8P4 F8 P4 weight=0.2
+ae T3T6 T3 T6 weight=0.6
+ae T3O2 T3 O2 weight=0.8
+ae C3Cz C3 Cz weight=0.6
+de C3T4
+de C3P3
+ae C3Pz C3 Pz weight=0.6
+ae CzPz Cz Pz weight=1
+ae T4T5 T4 T5 weight=1
+de T4P3
+ae T4T6 T4 T6 weight=0.4
+ae T5T6 T5 T6 weight=0.4
+ae T6O2 T6 O2 weight=0.4
+de O1O2
+st 125
+ae Fp1F7 Fp1 F7 weight=0.4
+ae Fp1C3 Fp1 C3 weight=0.6
+ae Fp1Cz Fp1 Cz weight=0.4
+ae Fp1T4 Fp1 T4 weight=0.2
+ae Fp1Pz Fp1 Pz weight=0.6
+de Fp2P3
+de F7C3
+de F7Cz
+de F7Pz
+de F3Fz
+ae F3O2 F3 O2 weight=1
+ae F4O1 F4 O1 weight=0.4
+de F8P3
+de F8P4
+de T3T6
+de T3O2
+ce C3Cz weight=0.4
+ae C3T4 C3 T4 weight=0.6
+ce C3Pz weight=1
+ce CzPz weight=0.4
+de T4T5
+ae T4P3 T4 P3 weight=0.4
+ae T4Pz T4 Pz weight=0.6
+de T4T6
+de T5T6
+de T6O2
+st 126
+de Fp1F7
+de Fp1C3
+de Fp1Cz
+de Fp1T4
+de Fp1Pz
+ae Fp2F8 Fp2 F8 weight=0.8
+ae Fp2O1 Fp2 O1 weight=0.8
+ae F3Fz F3 Fz weight=0.2
+ae F3C3 F3 C3 weight=1
+de F3O2
+ae FzC3 Fz C3 weight=0.2
+de F4O1
+ae F4O2 F4 O2 weight=0.4
+ae F8O1 F8 O1 weight=1
+ae T3Cz T3 Cz weight=0.8
+ae T3C4 T3 C4 weight=0.8
+ae T3T6 T3 T6 weight=0.8
+de C3Cz
+de C3T4
+de C3Pz
+ae CzC4 Cz C4 weight=0.6
+de CzPz
+ae CzT6 Cz T6 weight=0.6
+ae C4T6 C4 T6 weight=1
+de T4P3
+de T4Pz
+st 127
+ae Fp1Fp2 Fp1 Fp2 weight=0.2
+ae Fp1P4 Fp1 P4 weight=0.4
+de Fp2F8
+de Fp2O1
+ae F7P4 F7 P4 weight=0.4
+de F3Fz
+de F3C3
+ae F3T6 F3 T6 weight=0.2
+ae FzF4 Fz F4 weight=0.2
+de FzC3
+ae FzC4 Fz C4 weight=1
+ae F4C3 F4 C3 weight=0.2
+ae F4C4 F4 C4 weight=0.2
+de F4O2
+de F8O1
+de T3Cz
+de T3C4
+de T3T6
+de CzC4
+de CzT6
+de C4T6
+ae T5O1 T5 O1 weight=0.4
+ae P3Pz P3 Pz weight=0.8
+ae T6O2 T6 O2 weight=0.2
+st 128
+de Fp1Fp2
+ae Fp1F7 Fp1 F7 weight=0.6
+ce Fp1P4 weight=0.2
+ce F7P4 weight=0.6
+de F3T6
+de FzF4
+ae FzT3 Fz T3 weight=0.8
+de FzC4
+de F4C3
+de F4C4
+ae F4T5 F4 T5 weight=0.8
+ae F4O1 F4 O1 weight=0.8
+ae C3T6 C3 T6 weight=1
+ae C3O2 C3 O2 weight=0.2
+ce T5O1 weight=0.6
+de P3Pz
+ce T6O2 weight=0.2
+st 129
+de Fp1F7
+ae Fp1Cz Fp1 Cz weight=0.8
+ae Fp1T4 Fp1 T4 weight=0.2
+de Fp1P4
+ae Fp2F8 Fp2 F8 weight=0.8
+ae Fp2O2 Fp2 O2 weight=0.4
+ae F7T4 F7 T4 weight=0.6
+de F7P4
+de FzT3
+de F4T5
+ae F4P3 F4 P3 weight=0.2
+de F4O1
+ae F8O2 F8 O2 weight=0.2
+ae T3C4 T3 C4 weight=0.4
+ae C3Pz C3 Pz weight=1
+de C3T6
+de C3O2
+ae CzT4 Cz T4 weight=0.4
+ce T5O1 weight=0.8
+de T6O2
+st 130
+ae Fp1F7 Fp1 F7 weight=0.6
+ae Fp1F3 Fp1 F3 weight=0.2
+ce Fp1Cz weight=0.2
+de Fp1T4
+ae Fp1Pz Fp1 Pz weight=0.4
+ae Fp1O1 Fp1 O1 weight=0.6
+de Fp2F8
+de Fp2O2
+ae F7F8 F7 F8 weight=0.2
+ae F7Cz F7 Cz weight=0.6
+ce F7T4 weight=0.4
+ae F7Pz F7 Pz weight=0.4
+ae F7O1 F7 O1 weight=1
+ae FzF4 Fz F4 weight=0.4
+ce F4P3 weight=0.6
+ae F8Cz F8 Cz weight=0.6
+ae F8T4 F8 T4 weight=0.8
+ae F8P4 F8 P4 weight=0.8
+ae F8O1 F8 O1 weight=0.2
+de F8O2
+de T3C4
+ae T3T5 T3 T5 weight=0.8
+ce C3Pz weight=0.6
+ce CzT4 weight=0.8
+ae CzPz Cz Pz weight=0.2
+ae CzP4 Cz P4 weight=0.4
+ae CzO1 Cz O1 weight=0.6
+ae T4P4 T4 P4 weight=0.6
+ae T4O1 T4 O1 weight=0.4
+de T5O1
+ae PzO1 Pz O1 weight=0.4
+st 131
+ae Fp1Fp2 Fp1 Fp2 weight=0.8
+ce Fp1F7 weight=0.8
+de Fp1F3
+ae Fp1T3 Fp1 T3 weight=0.2
+de Fp1Cz
+de Fp1Pz
+de Fp1O1
+ae Fp2F7 Fp2 F7 weight=0.6
+de F7F8
+ae F7T3 F7 T3 weight=0.4
+de F7Cz
+de F7T4
+de F7Pz
+ae F7P4 F7 P4 weight=0.2
+de F7O1
+ae F3Fz F3 Fz weight=0.2
+ae F3T4 F3 T4 weight=0.6
+ce FzF4 weight=0.2
+ae FzT4 Fz T4 weight=0.6
+ae FzP3 Fz P3 weight=0.4
+ce F4P3 weight=0.2
+de F8Cz
+de F8T4
+de F8P4
+de F8O1
+de T3T5
+ae T3Pz T3 Pz weight=0.4
+ae T3P4 T3 P4 weight=0.8
+ce C3Pz weight=0.6
+de CzT4
+de CzPz
+de CzP4
+de CzO1
+de T4P4
+de T4O1
+ae T5O1 T5 O1 weight=1
+ae PzP4 Pz P4 weight=0.4
+de PzO1
+st 132
+de Fp1Fp2
+ce Fp1F7 weight=0.4
+ae Fp1F8 Fp1 F8 weight=0.8
+de Fp1T3
+ae Fp1Cz Fp1 Cz weight=0.6
+ae Fp1P4 Fp1 P4 weight=0.4
+ae Fp1O1 Fp1 O1 weight=0.4
+ce Fp2F7 weight=0.4
+ae Fp2Cz Fp2 Cz weight=0.2
+ae Fp2C4 Fp2 C4 weight=0.6
+ae Fp2Pz Fp2 Pz weight=0.6
+ae Fp2P4 Fp2 P4 weight=0.4
+ae Fp2O1 Fp2 O1 weight=0.4
+ae F7F8 F7 F8 weight=0.4
+de F7T3
+ae F7Cz F7 Cz weight=0.8
+ce F7P4 weight=1
+ae F7O1 F7 O1 weight=1
+de F3Fz
+de F3T4
+ce FzF4 weight=0.8
+de FzT4
+ce FzP3 weight=0.8
+ce F4P3 weight=0.6
+ae F8Cz F8 Cz weight=0.6
+ae F8T4 F8 T4 weight=0.2
+ae F8P4 F8 P4 weight=0.4
+ae F8O1 F8 O1 weight=0.4
+de T3Pz
+de T3P4
+ce C3Pz weight=0.2
+ae CzP4 Cz P4 weight=0.8
+ae CzO1 Cz O1 weight=0.8
+ae C4Pz C4 Pz weight=0.8
+de T5O1
+de PzP4
+ae P4O1 P4 O1 weight=1
+st 133
+ae Fp1Fp2 Fp1 Fp2 weight=0.6
+de Fp1F7
+de Fp1F8
+de Fp1Cz
+ce Fp1P4 weight=0.8
+ae Fp1T6 Fp1 T6 weight=0.8
+de Fp1O1
+ae Fp1O2 Fp1 O2 weight=0.4
+de Fp2F7
+de Fp2Cz
+de Fp2C4
+de Fp2Pz
+ce Fp2P4 weight=0.8
+ae Fp2T6 Fp2 T6 weight=0.4
+de Fp2O1
+ae Fp2O2 Fp2 O2 weight=0.8
+de F7F8
+de F7Cz
+ae F7Pz F7 Pz weight=0.6
+de F7P4
+de F7O1
+ae F3Fz F3 Fz weight=0.6
+ce FzF4 weight=0.4
+de FzP3
+de F4P3
+de F8Cz
+ce F8T4 weight=0.2
+ae F8P3 F8 P3 weight=0.8
+de F8P4
+de F8O1
+de C3Pz
+ae CzC4 Cz C4 weight=0.8
+de CzP4
+de CzO1
+de C4Pz
+ae T4P3 T4 P3 weight=0.4
+ae T4O1 T4 O1 weight=0.4
+ae T5O1 T5 O1 weight=0.6
+ae P4T6 P4 T6 weight=0.6
+de P4O1
+ae P4O2 P4 O2 weight=0.6
+ae T6O2 T6 O2 weight=0.2
+st 134
+de Fp1Fp2
+ae Fp1F7 Fp1 F7 weight=0.2
+ae Fp1F3 Fp1 F3 weight=0.2
+ce Fp1P4 weight=0.6
+ce Fp1T6 weight=0.2
+ce Fp1O2 weight=0.4
+ae Fp2F4 Fp2 F4 weight=1
+ae Fp2F8 Fp2 F8 weight=0.6
+ae Fp2Pz Fp2 Pz weight=0.4
+de Fp2P4
+de Fp2T6
+de Fp2O2
+de F7Pz
+ae F7O2 F7 O2 weight=0.8
+ce F3Fz weight=0.4
+ae F3T4 F3 T4 weight=0.8
+ae F3P4 F3 P4 weight=0.2
+ae F3T6 F3 T6 weight=0.2
+de FzF4
+ae FzT4 Fz T4 weight=0.4
+ae FzP3 Fz P3 weight=0.2
+ae F4F8 F4 F8 weight=0.6
+ae F4Pz F4 Pz weight=0.4
+de F8T4
+de F8P3
+ae F8Pz F8 Pz weight=0.4
+ae T3T5 T3 T5 weight=0.8
+ae C3Pz C3 Pz weight=0.6
+ae C3T6 C3 T6 weight=0.4
+de CzC4
+de T4P3
+de T4O1
+de T5O1
+ae P3O1 P3 O1 weight=0.8
+ae PzT6 Pz T6 weight=0.4
+ce P4T6 weight=0.6
+de P4O2
+de T6O2
+st 135
+de Fp1F7
+ce Fp1F3 weight=0.4
+de Fp1P4
+de Fp1T6
+de Fp1O2
+de Fp2F4
+ce Fp2F8 weight=0.2
+ae Fp2T4 Fp2 T4 weight=0.8
+ce Fp2Pz weight=0.2
+ae F7P4 F7 P4 weight=1
+de F7O2
+de F3Fz
+de F3T4
+de F3P4
+de F3T6
+ae F3O2 F3 O2 weight=0.2
+de FzT4
+de FzP3
+ae FzT6 Fz T6 weight=1
+de F4F8
+de F4Pz
+ae F4O1 F4 O1 weight=0.4
+de F8Pz
+ce T3T5 weight=0.6
+de C3Pz
+de C3T6
+ae T4Pz T4 Pz weight=0.4
+ae P3Pz P3 Pz weight=0.4
+de P3O1
+de PzT6
+de P4T6
+st 136
+ae Fp1Fp2 Fp1 Fp2 weight=0.6
+de Fp1F3
+ae Fp1C3 Fp1 C3 weight=0.6
+ae Fp1Pz Fp1 Pz weight=0.6
+ae Fp1P4 Fp1 P4 weight=0.4
+ae Fp1T6 Fp1 T6 weight=0.6
+de Fp2F8
+ae Fp2C3 Fp2 C3 weight=1
+de Fp2T4
+ce Fp2Pz weight=1
+ae Fp2T6 Fp2 T6 weight=1
+de F7P4
+de F3O2
+ae FzT5 Fz T5 weight=0.8
+de FzT6
+ae F4P3 F4 P3 weight=0.2
+de F4O1
+ae F8Cz F8 Cz weight=0.2
+ae F8T4 F8 T4 weight=0.4
+ae T3C4 T3 C4 weight=0.4
+de T3T5
+ae C3Pz C3 Pz weight=1
+ae C3T6 C3 T6 weight=1
+de T4Pz
+de P3Pz
+ae PzT6 Pz T6 weight=1
+st 137
+ce Fp1Fp2 weight=0.8
+ae Fp1F7 Fp1 F7 weight=0.2
+de Fp1C3
+ae Fp1Cz Fp1 Cz weight=0.2
+ce Fp1Pz weight=0.8
+ce Fp1P4 weight=0.8
+de Fp1T6
+ae Fp2F7 Fp2 F7 weight=0.4
+de Fp2C3
+ce Fp2Pz weight=0.6
+ae Fp2P4 Fp2 P4 weight=0.6
+de Fp2T6
+ae FzF4 Fz F4 weight=0.6
+ae FzT3 Fz T3 weight=0.6
+ce FzT5 weight=0.2
+ae FzO1 Fz O1 weight=0.4
+ae F4T3 F4 T3 weight=1
+ae F4C4 F4 C4 weight=0.4
+de F4P3
+de F8Cz
+ce F8T4 weight=1
+ae F8P3 F8 P3 weight=1
+ce T3C4 weight=0.4
+de C3Pz
+de C3T6
+ae CzPz Cz Pz weight=0.4
+ae CzP4 Cz P4 weight=0.4
+ae T4P3 T4 P3 weight=1
+ae T5O1 T5 O1 weight=0.2
+ae PzP4 Pz P4 weight=1
+de PzT6
+st 138
+ce Fp1Fp2 weight=0.4
+de Fp1F7
+ae Fp1F8 Fp1 F8 weight=1
+de Fp1Cz
+de Fp1Pz
+ce Fp1P4 weight=0.8
+de Fp2F7
+ae Fp2F8 Fp2 F8 weight=0.4
+de Fp2Pz
+ce Fp2P4 weight=0.2
+ae F7C3 F7 C3 weight=0.8
+ae F7Cz F7 Cz weight=0.4
+ae F7P3 F7 P3 weight=0.4
+ae F7Pz F7 Pz weight=1
+de FzF4
+de FzT3
+de FzT5
+de FzO1
+de F4T3
+de F4C4
+ae F4O2 F4 O2 weight=0.6
+de F8T4
+de F8P3
+ae F8P4 F8 P4 weight=0.8
+de T3C4
+ae T3T5 T3 T5 weight=0.6
+ae C3Cz C3 Cz weight=0.2
+ae C3T4 C3 T4 weight=0.2
+ae C3P3 C3 P3 weight=0.2
+ae C3Pz C3 Pz weight=0.8
+ae CzP3 Cz P3 weight=1
+ce CzPz weight=0.4
+ce CzP4 weight=0.2
+de T4P3
+de T5O1
+ae P3Pz P3 Pz weight=0.4
+ae P3P4 P3 P4 weight=0.2
+de PzP4
+st 139
+ce Fp1Fp2 weight=1
+de Fp1F8
+ae Fp1T5 Fp1 T5 weight=1
+de Fp1P4
+de Fp2F8
+ae Fp2T5 Fp2 T5 weight=1
+de Fp2P4
+ae F7F8 F7 F8 weight=0.6
+de F7C3
+ce F7Cz weight=0.6
+de F7P3
+ce F7Pz weight=0.4
+ae F4O1 F4 O1 weight=0.8
+de F4O2
+ae F8Cz F8 Cz weight=1
+ae F8P3 F8 P3 weight=0.4
+ae F8Pz F8 Pz weight=0.8
+de F8P4
+de T3T5
+de C3Cz
+ce C3T4 weight=0.8
+ce C3P3 weight=0.6
+ce C3Pz weight=0.2
+ce CzP3 weight=0.4
+ce CzPz weight=0.8
+de CzP4
+ae T4P3 T4 P3 weight=0.4
+ce P3Pz weight=0.6
+de P3P4
+st 140
+ce Fp1Fp2 weight=1
+ae Fp1F7 Fp1 F7 weight=0.2
+ae Fp1F8 Fp1 F8 weight=0.6
+de Fp1T5
+ae Fp1P4 Fp1 P4 weight=1
+ae Fp1O2 Fp1 O2 weight=0.8
+ae Fp2F7 Fp2 F7 weight=0.2
+ae Fp2F8 Fp2 F8 weight=0.6
+de Fp2T5
+ae Fp2P4 Fp2 P4 weight=1
+ae Fp2O2 Fp2 O2 weight=0.8
+ce F7F8 weight=0.6
+ce F7Cz weight=0.8
+ae F7T4 F7 T4 weight=0.8
+ce F7Pz weight=0.8
+ae F7P4 F7 P4 weight=0.2
+ae F3Fz F3 Fz weight=0.6
+ae F4T5 F4 T5 weight=1
+de F4O1
+ce F8Cz weight=0.4
+ae F8T4 F8 T4 weight=0.4
+de F8P3
+ce F8Pz weight=0.4
+ae F8P4 F8 P4 weight=0.6
+ae F8O2 F8 O2 weight=0.4
+de C3T4
+de C3P3
+de C3Pz
+ae CzT4 Cz T4 weight=1
+de CzP3
+ce CzPz weight=1
+ae C4P3 C4 P3 weight=0.6
+de T4P3
+ae T4Pz T4 Pz weight=1
+de P3Pz
+ae P4O2 P4 O2 weight=0.8
+ae T6O1 T6 O1 weight=0.2
+st 141
+ce Fp1Fp2 weight=0.8
+ce Fp1F7 weight=0.4
+de Fp1F8
+ce Fp1P4 weight=0.6
+de Fp1O2
+ce Fp2F7 weight=0.6
+de Fp2F8
+ce Fp2P4 weight=0.8
+de Fp2O2
+de F7F8
+de F7Cz
+de F7T4
+de F7Pz
+ce F7P4 weight=0.8
+de F3Fz
+de F4T5
+ce F8Cz weight=0.6
+de F8T4
+ae F8P3 F8 P3 weight=0.8
+ce F8Pz weight=0.8
+de F8P4
+de F8O2
+ae T3T5 T3 T5 weight=0.4
+ae T3O2 T3 O2 weight=1
+de CzT4
+ae CzP3 Cz P3 weight=0.6
+ce CzPz weight=0.6
+de C4P3
+de T4Pz
+ae T5O2 T5 O2 weight=0.4
+ae P3Pz P3 Pz weight=1
+de P4O2
+ce T6O1 weight=0.4
+st 142
+ce Fp1Fp2 weight=0.6
+ce Fp1F7 weight=0.2
+ae Fp1F4 Fp1 F4 weight=1
+ae Fp1P3 Fp1 P3 weight=0.4
+ae Fp1Pz Fp1 Pz weight=1
+ce Fp1P4 weight=0.6
+ae Fp1T6 Fp1 T6 weight=0.6
+ae Fp1O1 Fp1 O1 weight=1
+ce Fp2F7 weight=0.6
+ae Fp2F4 Fp2 F4 weight=0.6
+ae Fp2P3 Fp2 P3 weight=0.8
+ae Fp2Pz Fp2 Pz weight=0.6
+ce Fp2P4 weight=0.2
+ae Fp2T6 Fp2 T6 weight=0.2
+ae Fp2O1 Fp2 O1 weight=0.6
+ae F7F4 F7 F4 weight=0.2
+ae F7P3 F7 P3 weight=0.8
+ae F7Pz F7 Pz weight=0.2
+de F7P4
+ae F7O1 F7 O1 weight=0.2
+ae F4P3 F4 P3 weight=0.4
+ae F4Pz F4 Pz weight=1
+ae F4P4 F4 P4 weight=0.6
+ae F4T6 F4 T6 weight=0.6
+ae F4O1 F4 O1 weight=1
+ce F8Cz weight=0.4
+de F8P3
+de F8Pz
+ae T3Cz T3 Cz weight=0.6
+ae T3C4 T3 C4 weight=0.6
+de T3T5
+de T3O2
+ae C3T4 C3 T4 weight=0.4
+ae CzC4 Cz C4 weight=0.2
+de CzP3
+de CzPz
+de T5O2
+ce P3Pz weight=0.4
+ae P3O1 P3 O1 weight=0.4
+ae PzP4 Pz P4 weight=0.6
+ae PzT6 Pz T6 weight=0.6
+ae PzO1 Pz O1 weight=1
+ae P4T6 P4 T6 weight=1
+ae P4O1 P4 O1 weight=0.6
+ae P4O2 P4 O2 weight=0.4
+ce T6O1 weight=0.6
+ae T6O2 T6 O2 weight=0.4
+st 143
+ce Fp1Fp2 weight=1
+ce Fp1F7 weight=0.8
+ce Fp1F4 weight=1
+ae Fp1F8 Fp1 F8 weight=0.8
+ae Fp1T5 Fp1 T5 weight=1
+ce Fp1P3 weight=1
+de Fp1Pz
+ce Fp1P4 weight=0.6
+de Fp1T6
+ce Fp1O1 weight=1
+ce Fp2F7 weight=0.8
+ce Fp2F4 weight=1
+ae Fp2F8 Fp2 F8 weight=0.8
+ae Fp2T5 Fp2 T5 weight=1
+ce Fp2P3 weight=1
+de Fp2Pz
+ce Fp2P4 weight=0.6
+de Fp2T6
+ce Fp2O1 weight=1
+ce F7F4 weight=0.8
+ae F7F8 F7 F8 weight=0.6
+ae F7T5 F7 T5 weight=0.8
+ce F7P3 weight=0.8
+de F7Pz
+ae F7P4 F7 P4 weight=0.6
+ce F7O1 weight=0.8
+ae F4F8 F4 F8 weight=0.8
+ae F4T5 F4 T5 weight=1
+ce F4P3 weight=1
+de F4Pz
+ce F4P4 weight=0.6
+de F4T6
+ce F4O1 weight=1
+de F8Cz
+ae F8T5 F8 T5 weight=0.8
+ae F8P3 F8 P3 weight=0.8
+ae F8P4 F8 P4 weight=0.4
+ae F8O1 F8 O1 weight=0.8
+de T3Cz
+de T3C4
+de C3T4
+de CzC4
+ae CzT4 Cz T4 weight=0.4
+ae CzT6 Cz T6 weight=0.6
+ae CzO2 Cz O2 weight=1
+ae C4Pz C4 Pz weight=0.6
+ae T4O2 T4 O2 weight=0.4
+ae T5P3 T5 P3 weight=1
+ae T5P4 T5 P4 weight=0.6
+ae T5O1 T5 O1 weight=1
+de P3Pz
+ae P3P4 P3 P4 weight=0.6
+ce P3O1 weight=1
+de PzP4
+de PzT6
+de PzO1
+de P4T6
+ce P4O1 weight=0.6
+de P4O2
+de T6O1
+ce T6O2 weight=0.6

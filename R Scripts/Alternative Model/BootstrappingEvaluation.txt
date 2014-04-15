@@ -1,0 +1,75 @@
+#######################################Function Definition
+LOO.knn<-function(m,k,l){
+n<-dim(m)[[1]]
+correct<-0
+
+for(i in 1:n){
+env<-m[i,]
+neighbour.index<-order(env)[2:k+1]
+neighbour.label<-l[neighbour.index]
+predicted<-majority_h_d(neighbour.label)
+test<-l[i]
+if(predicted==test){correct<-correct+1}
+}#end for
+accuracy<-correct/n
+return (accuracy)
+}#end function
+
+
+
+
+majority_h_d<-function(x){
+
+count.h<-0
+count.d<-0
+for(j in 1:length(x)){
+if (x[j]=="h"){count.h<-count.h+1}
+if (x[j]=="d"){count.d<-count.d+1}
+}#end for
+
+if(count.h>=count.d) {return ("h")}
+if(count.h<count.d){return ("d")}
+
+}#end fucntion
+######################################## Bootstrapping function
+
+
+check.accuracy<-function(data,indices){
+indices<-unique(indices)
+d<-data[indices,]#allow boot to select samle
+N<-nrow(d)
+#print (indices)
+string.list<-d[,2]  # a list of character vector
+
+string.dist.matrix<-matrix(numeric(0), N,N) 
+
+for(i in 1:length(string.list)){
+for(j in 1:length(string.list)){
+string.dist.matrix[i,j]<-stringdist(string.list[i],string.list[j],"cosine",q=1)
+}#end j
+}#end i
+#####################################calculate accuracy with loo
+l<-d[[3]]
+#print (l)
+acc<-LOO.knn(string.dist.matrix,1,l)
+
+return(acc)
+
+}#end function check.accuracy
+
+
+
+library("boot")
+library("stringdist")
+
+
+
+label<-c(rep("h",15),rep("d",15))
+sequence_db$label<-label
+results<-boot(data=sequence_db,statistic=check.accuracy,R=1000)
+stats<-c(results$t)
+
+sprintf("mean: %s , std: %s", mean(stats),sd(stats))
+print(mean(stats))
+print(sd(stats))
+#boot.ci(results)

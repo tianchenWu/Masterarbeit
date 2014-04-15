@@ -1,0 +1,100 @@
+library("ergm.count")
+library("statnet")
+
+
+read.weight.mat <- function(mat.path) {
+con <- file(mat.path, "rb")
+dim <- readBin(con, "integer", 2)
+Mat <- matrix( readBin(con, "numeric", prod(dim)), dim[1], dim[2])
+close(con)
+return(Mat)
+}
+
+
+in_<-"C:\\Users\\wu\\Desktop\\Discretized_TimeSeries\\"
+out_<-"C:\\Users\\wu\\Desktop\\ERGM_coefficients.txt"
+
+#############################Healthy Group
+write("Healthy",file=out_,append=T)
+healthy_filenames <- list.files(paste(in_,"Healthy",sep=""),full.name=TRUE)
+
+for(i in 1:length(healthy_filenames)){
+patient.path<-healthy_filenames[[i]]
+patient.id<-strsplit(patient.path,"/")[[1]][[2]]
+patient.matpath<-paste(paste(strsplit(patient.path,"/")[[1]][[1]],"MAT",sep="_"),paste(patient.id,"_MAT",sep=""),sep="/")
+patient.graphnames<-list.files(patient.path,full.name=T)
+
+readPaj<- function(x) read.paj(x)
+patient.graphlist<-lapply(patient.graphnames,readPaj)
+
+for(j in 1:length(patient.graphlist)){
+
+g<-patient.graphlist[[j]]
+#name vertex
+network.vertex.names(g)<-c("Fp1", "Fp2", "F7", "F3", "Fz", "F4", "F8", "T3", "C3", "Cz", "C4", "T4", "T5", "P3", "Pz", "P4", "T6", "O1", "O2")
+set.vertex.attribute(g,attrname="R",value=c(0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1))
+
+g.matPath<-paste(patient.matpath,paste(as.character(j-1),"bin",sep="."),sep="/")
+mat<-read.weight.mat(g.matPath)
+#value edge
+set.edge.value(g,"weight",mat)
+}#end patient.graphlist
+
+
+#fit temporal network model to patient.WeightedAverage
+
+
+
+
+write(coef(model),file=out_,append=T)
+
+}#end healthy_filenames
+
+print ("###################################")
+
+
+########################Disease Group
+
+disease_filenames <- list.files(paste(in_,"Disease",sep=""),full.name=TRUE)
+write("Disease",file=out_,append=T)
+
+for(i in 1:length(disease_filenames)){
+patient.path<-disease_filenames[[i]]
+patient.id<-strsplit(patient.path,"/")[[1]][[2]]
+patient.matpath<-paste(paste(strsplit(patient.path,"/")[[1]][[1]],"MAT",sep="_"),paste(patient.id,"_MAT",sep=""),sep="/")
+patient.graphnames<-list.files(patient.path,full.name=T)
+
+readPaj<- function(x) read.paj(x)
+patient.graphlist<-lapply(patient.graphnames,readPaj)
+
+for(j in 1:length(patient.graphlist)){
+
+g<-patient.graphlist[[j]]
+#name vertex
+network.vertex.names(g)<-c("Fp1", "Fp2", "F7", "F3", "Fz", "F4", "F8", "T3", "C3", "Cz", "C4", "T4", "T5", "P3", "Pz", "P4", "T6", "O1", "O2")
+set.vertex.attribute(g,attrname="R",value=c(0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1))
+
+g.matPath<-paste(patient.matpath,paste(as.character(j-1),"bin",sep="."),sep="/")
+mat<-read.weight.mat(g.matPath)
+#value edge
+set.edge.value(g,"weight",mat)
+}#end patient.graphlist
+
+#empty graph
+empty<-patient.graphlist[[1]]
+delete.edges(empty,seq_along(empty$mel))
+
+sum<-Reduce("+",lapply(patient.graphlist,as.matrix))
+average<-floor(sum/(length(patient.graphlist)*0.3))
+network.adjacency(average, empty, ignore.eval = F, names.eval = "weight")
+patient.WeightedAverage<-empty
+
+#fit network model to patient.WeightedAverage
+#print(patient.WeightedAverage)
+model<-ergm(patient.WeightedAverage~sum+cyclicalweights+nodesqrtcovar(center=T),response="weight",reference=~Binomial(3))
+print (summary(model))
+#mcmc.diagnostics(model)
+
+write(coef(model),file=out_,append=T)
+
+}#end healthy_filenames

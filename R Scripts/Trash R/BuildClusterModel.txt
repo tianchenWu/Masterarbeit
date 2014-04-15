@@ -1,0 +1,289 @@
+library("ergm.count")
+library("statnet")
+library("cvTools")
+library("igraph")
+library("intergraph")
+library("csound")
+library("playitbyr")
+library("fpc")
+library("cluster")
+library("stringdist")
+
+##########################################Global variables
+numCluster<-3
+set.seed(1234) # set seed for reproducibility
+K<-10
+R<-30
+
+
+
+##########################################Functions
+#readPaj<- function(x) read.paj(x)
+#minmax.scale<-function(v){
+#    max<-max(v)
+#    min<-min(v)
+    #print(max)
+    #print (min) 
+#    normalizeit<-function(x){
+#	return ((x-min)/(max-min))
+#    }
+#    
+#    return (list(sapply(v,normalizeit),min,max))
+#}
+#calculate.pairwiseDistance<-function(v){
+#    n<-length(v)
+#    m<-matrix(numeric(0),n,n)
+#    for(i in 1:n){
+#	for(j in 1:n){
+#	m[i,j]<-abs(v[i]-v[j])#manhattan distance
+#	} 
+#    }#i loop
+#    return(m)
+#
+#}
+convert.to.string<-function(x) return(paste(as.character(x[[1]]),collapse=""))
+
+###################Given two graphs, find the distance between two
+#find.distance<- function(g1,g2,min_apl,max_apl,min_cc,max_cc){
+#g1.apl<-average.path.length(graph=g1,directed=F,unconnected=F)
+#g2.apl<-average.path.length(graph=g2,directed=F,unconnected=F)
+#g1.cc<-transitivity(g1,type="localaverageundirected",isolates="zero")
+#g2.cc<-transitivity(g2,type="localaverageundirected",isolates="zero")
+#g1.apl.normalized<-(g1.apl-min_apl)/(max_apl-min_apl)
+#g2.apl.normalized<-(g2.apl-min_apl)/(max_apl-min_apl)
+#g1.cc.normalized<-(g1.cc-min_cc)/(max_cc-min_cc)
+#g2.cc.normalized<-(g2.cc-min_cc)/(max_cc-min_cc)
+#apl.dist<-abs(g1.apl.normalized-g2.apl.normalized)
+#cc.dist<-abs(g1.cc.normalized-g2.cc.normalized)
+#dist<-(apl.dist+cc.dist)/2
+#
+#return(dist)
+#}
+
+
+#mark.cluster<-function(graph,model,min_apl,max_apl,min_cc,max_cc){
+#graph is in the type of igraph
+#model is a list of centroids
+#distance<-lapply(model,function(x){return(find.distance(x,graph,min_apl,max_apl,min_cc,max_cc))})
+#min.position<-which.min(distance)
+#the position is just the cluster
+
+#return(min.position)
+
+#}
+
+mark.cluster<-function(graph){
+distance<-lapply(model,function(x){return(as.matrix(gcor(c(x,graph),mode="graph"))[1][2])})
+min.position<-which.min(distance)
+return(min.position)
+}
+
+
+
+majority_h_d<-function(x){
+
+count.h<-0
+count.d<-0
+for(j in 1:length(x)){
+if (x[j]=="h"){count.h<-count.h+1}
+if (x[j]=="d"){count.d<-count.d+1}
+}#end for
+
+if(count.h>=count.d) {return ("h")}
+if(count.h<count.d){return ("d")}
+
+}#end fucntion
+
+#x:test string
+#m:sequence_train.db
+#k:number of neighbours
+#output: label of test string
+
+knn<-function(x,m,k){
+
+training.string<-sequence_train.db$Sequence
+test.string<-x
+distance<-lapply(training.string,function(x){return(stringdist(x,test.string,"cosine",q=1))})
+distance<-rapply(distance,c)
+neighbour.index<-sort(distance,decreasing=F,index.return=T)$ix[1:k]
+neighbour.label<-sequence_train.db$Label[neighbour.index]
+predicted<-majority_h_d(neighbour.label)
+return(predicted)
+}#end function
+
+
+
+
+
+###########################################
+
+
+in_<-"C:\\Users\\wu\\Desktop\\15_15_threshold_30_timeSeries\\"
+out_<-"C:\\Users\\wu\\Desktop\\ERGM_coefficients.txt"
+
+
+
+
+#######################################################
+print ("Splitting Training Dataset and Testing Dataset")
+healthy_filenames <- list.files(paste(in_,"Healthy",sep=""),full.name=TRUE)
+disease_filenames <- list.files(paste(in_,"Disease",sep=""),full.name=TRUE)
+filenames<-append(healthy_filenames,disease_filenames)
+label<-c(rep("h",15),rep("d",15))
+#construct empty data base
+filenames.db<-data.frame(filenames,label,stringsAsFactors=F)
+names(filenames.db)<-c("filename","Label")
+#######################################################
+
+#######################################################Main loop
+
+cv<-cvFolds(30, K = K,R=R, type = "random")
+mask<-cv$which
+
+average.acc<-0
+
+for(r in 1:R){
+print ("r:")
+print (r)
+data.index<-cv$subsets[,r]#rth column of the data set matrix
+or.correct<-0# the number of correct prediction in one round(or) kfold evaluation
+acc<-0
+
+for(k in 1:K){
+print ("k")
+print (k)
+#construct empty data frame as data base
+train.db<-data.frame(t(rep(NA,3)),stringAsFactors=F)
+names(train.db) <- c("ID","ST","GraphRef")
+train.db<- train.db[-1,]
+#construct a list as graph_db
+train.graph_db<-list()
+test.db<-data.frame(t(rep(NA,3)),stringsAsFactors=F)
+names(test.db) <- c("ID","ST","GraphRef")
+test.db<- test.db[-1,]
+#construct a list as graph_db
+test.graph_db<-list()
+train.graph_db.index<-1 #index for train.graph_db
+test.graph_db.index<-1 #index for test.graph_db
+
+
+
+test.data.index<-data.index[mask==k]
+train.data.index<-data.index[mask!=k]
+test.filenames<-filenames.db$filename[test.data.index]
+train.filenames<-filenames.db$filename[train.data.index]
+###############################Load training data
+for(i in 1:length(train.filenames)){
+patient.path<-train.filenames[[i]]
+#patient.id<-strsplit(patient.path,"/")[[1]][[2]]
+patient.graphnames<-list.files(patient.path,full.name=T)
+patient.graphlist<-lapply(patient.graphnames,readPaj)
+for(j in 1:length(patient.graphlist)){
+g<-patient.graphlist[[j]]
+#insert graph into graph_db, index it
+train.graph_db[[train.graph_db.index]]<-g
+#insert one row into db
+train.db<-rbind(train.db,data.frame(ID=patient.path,ST=j,GraphRef=train.graph_db.index))
+#increase the index by 1
+train.graph_db.index<-train.graph_db.index+1
+}#end patient.graphlist
+}#end train.filenames
+###############################Load test data
+for(i in 1:length(test.filenames)){
+patient.path<-test.filenames[[i]]
+#patient.id<-strsplit(patient.path,"/")[[1]][[2]]
+patient.graphnames<-list.files(patient.path,full.name=T)
+patient.graphlist<-lapply(patient.graphnames,readPaj)
+for(j in 1:length(patient.graphlist)){
+g<-patient.graphlist[[j]]
+#insert graph into graph_db, index it
+test.graph_db[[test.graph_db.index]]<-g
+#insert one row into db
+test.db<-rbind(test.db,data.frame(ID=patient.path,ST=j,GraphRef=test.graph_db.index))
+#increase the index by 1
+test.graph_db.index<-test.graph_db.index+1
+}#end patient.graphlist
+}#end train.filenames
+
+###############################Build Model on training data
+#Calculate Small World Distance
+#igraph_db<-lapply(train.graph_db,asIgraph)
+#average path length
+#apl_list<-lapply(igraph_db,function(x){return (average.path.length(graph=x,directed=F,unconnected=F))})
+#apl<-c(do.call("cbind",apl_list))
+#apl_return<-minmax.scale(apl)
+#normalized_apl<-apl_return[[1]]
+#min_apl<-apl_return[[2]]
+#max_apl<-apl_return[[3]]
+#normalized_apl_distance<-calculate.pairwiseDistance(normalized_apl)
+#clustering coefficent
+#cc_list<-lapply(igraph_db,function(x){return(transitivity(x,type="localaverageundirected",isolates="zero"))})
+#cc<-c(do.call("cbind",cc_list))
+#cc_return<-minmax.scale(cc)
+#normalized_cc<-cc_return[[1]]
+#min_cc<-cc_return[[2]]
+#max_cc<-cc_return[[3]]
+#normalized_cc_distance<-calculate.pairwiseDistance(normalized_cc)
+#sw.dist.matrix<-as.dist((normalized_apl_distance+normalized_cc_distance)/2)
+gcor.dist.matrix<-gcor(train.graph_db,mode="graph")
+#clustering
+pam1<-pam(gcor.dist.matrix,k=numCluster)
+print ("before")
+model<-train.graph_db[pam1$id.med]#medoids,1,2,3,4,...k
+#model<-lapply(model,asIgraph)
+train.db$cluster<-pam1$clustering
+
+#################################reconstruct time series for each patient
+sequence_train.db<-aggregate(train.db$cluster,by=list(train.db$ID),FUN=as.vector)
+####Now the structure of the data is following id,  list(c(1,2,3,3,3,4,5))
+#convert the 2 column to a string
+col_headings<-c("ID","Sequence")
+names(sequence_train.db)<-col_headings
+sequence_train.db["Sequence"]<-apply(sequence_train.db["Sequence"],MARGIN=c(1),FUN=convert.to.string)
+#add class label to sequence_train.db
+sequence_train.db.label<-sapply(sequence_train.db$ID,function(x){return(filenames.db[which(filenames.db["filename"]==as.character(x)),2])})
+sequence_train.db$Label<-sequence_train.db.label
+
+print ("after")
+###############################build sequence of test data
+#mark the cluster of test data
+#igraph_db<-lapply(test.graph_db,asIgraph)
+test.db$cluster<-sapply(test.graph_db,function(x){return(mark.cluster(x))})
+
+sequence_test.db<-aggregate(test.db$cluster,by=list(test.db$ID),FUN=as.vector)
+####Now the structure of the data is following id,  list(c(1,2,3,3,3,4,5))
+#convert the 2 column to a string
+col_headings<-c("ID","Sequence")
+names(sequence_test.db)<-col_headings
+sequence_test.db["Sequence"]<-apply(sequence_test.db["Sequence"],MARGIN=c(1),FUN=convert.to.string)
+#add class label to sequence_test.db
+sequence_test.db.label<-sapply(sequence_test.db$ID,function(x){return(filenames.db[which(filenames.db["filename"]==as.character(x)),2])})
+sequence_test.db$Label<-sequence_test.db.label
+
+#################################Classification
+#distance method : stringdist(str1,str2,"cosine",q=1)
+
+predicted.class<-rapply(lapply(sequence_test.db$Sequence,function(x){return(knn(x,sequence_train.db,k=1))}),c)
+
+################################Evaluation
+real.class<-sequence_test.db$Label
+correct<-length(which(predicted.class==real.class))
+or.correct<-or.correct+correct
+}#end kth fold
+
+acc<-or.correct/(30)
+average.acc<-average.acc+acc
+
+}#end each random loop
+
+
+average.acc<-average.acc/R
+
+
+########################################################
+print (average.acc)
+
+
+
+
+

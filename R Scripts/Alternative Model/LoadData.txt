@@ -1,0 +1,84 @@
+library("ergm.count")
+library("statnet")
+
+readPaj<- function(x) read.paj(x)
+
+
+
+in_<-"C:\\Users\\wu\\spyder_workspace\\HurryUp2\\TempData\\15_15_threshold_30_timeSeries\\"
+
+
+#construct empty data frame as data base
+db<-data.frame(t(rep(NA,3)))
+names(db) <- c("ID","ST","GraphRef")
+db<- db[-1,]
+#construct a list as graph_db
+graph_db<-list()
+index<-1
+
+print ("Load Healthy Group")
+#############################Load Healthy Group
+healthy_filenames <- list.files(paste(in_,"Healthy",sep=""),full.name=TRUE)
+
+for(i in 1:length(healthy_filenames)){
+patient.path<-healthy_filenames[[i]]
+patient.id<-strsplit(patient.path,"/")[[1]][[2]]
+patient.matpath<-paste(paste(strsplit(patient.path,"/")[[1]][[1]],"MAT",sep="_"),paste(patient.id,"_MAT",sep=""),sep="/")
+patient.graphnames<-list.files(patient.path,full.name=T)
+
+patient.graphlist<-lapply(patient.graphnames,readPaj)
+
+for(j in 1:length(patient.graphlist)){
+
+g<-patient.graphlist[[j]]
+#name vertex
+network.vertex.names(g)<-c("Fp1", "Fp2", "F7", "F3", "Fz", "F4", "F8", "T3", "C3", "Cz", "C4", "T4", "T5", "P3", "Pz", "P4", "T6", "O1", "O2")
+set.vertex.attribute(g,attrname="R",value=c(0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1))
+
+#insert graph into graph_db, index it
+graph_db[[index]]<-g
+#insert one row into db
+db<-rbind(db,data.frame(ID=patient.id,ST=j,GraphRef=index))
+#increase the index by 1
+index<-index+1
+
+}#end patient.graphlist
+
+
+
+
+}#end healthy_filenames
+
+
+print ("Load Disease Group")
+########################Load Disease Group
+
+disease_filenames <- list.files(paste(in_,"Disease",sep=""),full.name=TRUE)
+
+
+for(i in 1:length(disease_filenames)){
+patient.path<-disease_filenames[[i]]
+patient.id<-strsplit(patient.path,"/")[[1]][[2]]
+patient.matpath<-paste(paste(strsplit(patient.path,"/")[[1]][[1]],"MAT",sep="_"),paste(patient.id,"_MAT",sep=""),sep="/")
+patient.graphnames<-list.files(patient.path,full.name=T)
+
+readPaj<- function(x) read.paj(x)
+patient.graphlist<-lapply(patient.graphnames,readPaj)
+
+for(j in 1:length(patient.graphlist)){
+
+g<-patient.graphlist[[j]]
+#name vertex
+network.vertex.names(g)<-c("Fp1", "Fp2", "F7", "F3", "Fz", "F4", "F8", "T3", "C3", "Cz", "C4", "T4", "T5", "P3", "Pz", "P4", "T6", "O1", "O2")
+set.vertex.attribute(g,attrname="R",value=c(0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1))
+
+#insert graph into graph_db, index it
+graph_db[[index]]<-g
+#insert one row into db
+db<-rbind(db,data.frame(ID=patient.id,ST=j,GraphRef=index))
+#increase the index by 1
+index<-index+1
+
+}#end patient.graphlist
+
+}#end healthy_filenames

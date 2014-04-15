@@ -1,0 +1,62 @@
+library("ergm.count")
+library("statnet")
+
+
+#Also different model can be used
+#model<- ergm(g~kstar(2)+triangle,constraints=~edges)
+#model<-ergm(g~altkstar(2,fixed=TRUE)+gwesp(alpha=0.693,fixed=TRUE)+gwdsp(alpha=0.693,fixed=TRUE),constraints=~edges)
+
+read.weight.mat <- function(mat.path) {
+con <- file(mat.path, "rb")
+dim <- readBin(con, "integer", 2)
+Mat <- matrix( readBin(con, "numeric", prod(dim)), dim[1], dim[2])
+close(con)
+return(Mat)
+}
+
+
+in_<-"C:\\Users\\wu\\spyder_workspace\\HurryUp2\\TempData\\unvalued_ERGM_reg"
+out_<-"C:\\Users\\wu\\Desktop\\Extra\\"
+
+#read in
+already_filenames <- list.files("C:\\Users\\wu\\spyder_workspace\\HurryUp2\\TempData\\TimeSeriesCoefficientRegression",full.name=T)
+#extract id
+extract.id<-function(x){
+return(strsplit(strsplit(x,"/")[[1]][[2]],"\\.")[[1]][[1]])
+}
+already_file<-lapply(already_filenames,extract.id)
+
+filenames <- list.files(in_,full.name=TRUE)
+print (length(filenames))
+for(i in 1:length(filenames)){
+patient.path<-filenames[[i]]
+patient.id<-strsplit(patient.path,"/")[[1]][[2]]
+if(patient.id %in% already_file){
+print ("already loaded")
+print (patient.id)
+next
+}
+patient.out<-paste(out_,paste(patient.id,".txt",sep=""),sep="")
+patient.graphnames<-list.files(patient.path,full.name=T)
+
+readPaj<- function(x) read.paj(x)
+patient.graphlist<-lapply(patient.graphnames,readPaj)
+
+if(!file.exists(patient.out)){file.create(patient.out)}
+for(j in 1:length(patient.graphlist)){
+g<-patient.graphlist[[j]]
+if(network.density(g)==1){
+write("density full",file=patient.out,append=T)
+next}
+model<-ergm(g~kstar(2)+triangle,constraints=~edges)
+#model<-ergm(g~edges+kstar(2)+triangle)
+density<-network.density(g)
+vars<-as.numeric(c(density,coef(model)))
+write(vars,file=patient.out,append=T)
+print(summary(model))
+
+}#end patient.graphlist
+
+}#end filenames
+
+

@@ -1,0 +1,8 @@
+
+print ("Calculate hamming distance matrix")
+
+
+hamming.matrix<-hdist(graph_db,mode="graph",normalize=F)
+hamming.matrix<-as.dist(hamming.matrix)
+hamming.agn<-agnes(hamming.matrix,method="ward")
+
