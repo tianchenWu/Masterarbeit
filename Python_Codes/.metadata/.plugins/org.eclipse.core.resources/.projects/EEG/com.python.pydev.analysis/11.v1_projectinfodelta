@@ -1,0 +1,12 @@
+INSTUPTrash.code_trash_bin
+/home/deathlypest/Masterarbeit/Python_Codes/EEG/Trash/code_trash_bin.py
+INFOS:&&2|1|2|0&&2|3|2|0&&2|4|2|0&&2|5|2|0&&2|6|2|0&&2|7|2|0&&2|8|2|0&&2|9|2|0
+calculateMaximalWeightedPathLength=8
+evaluate=6
+weightedPathLength=9
+leave_one_out=3
+k_fold_cross_validation=1
+Trash.code_trash_bin=2
+analyze_eval_result=5
+model_prediction=4
+find_all_paths=7

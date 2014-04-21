@@ -1,0 +1,237 @@
+
+import os
+from Models.GraphModel import EEGGraph
+from I_O_put.ReadDGS import ReadDGS
+import Global.globalvars as vars
+from Filter.WeightsFilter import WFilter
+import random
+import gzip
+import pandas as pd
+import numpy as np
+
+def get_healthy_group():
+    healthy_group=[]
+    healthy_group.append(vars.rootDir+"\\EEG-Graphen\\Healthy\\Magdeburg\\AM\\alpha_AM_prae_closed1.dgs.gz")
+    healthy_group.append(vars.rootDir+"\\EEG-Graphen\\Healthy\\Magdeburg\\AB\\alpha_AB_prae_closed1.dgs.gz")
+    healthy_group.append(vars.rootDir+"\\EEG-Graphen\\Healthy\\Magdeburg\\AG\\alpha_AG_prae_closed1.dgs.gz")
+    healthy_group.append(vars.rootDir+"\\EEG-Graphen\\Healthy\\Magdeburg\\AV\\alpha_AV_prae_closed1.dgs.gz")
+    healthy_group.append(vars.rootDir+"\\EEG-Graphen\\Healthy\\Magdeburg\\BH\\alpha_BH_prae_closed1.dgs.gz")
+    healthy_group.append(vars.rootDir+"\\EEG-Graphen\\Healthy\\Magdeburg\\CV\\alpha_CV_prae_closed1.dgs.gz")
+    healthy_group.append(vars.rootDir+"\\EEG-Graphen\\Healthy\\Magdeburg\\DK\\alpha_DK_prae_closed1.dgs.gz")
+    healthy_group.append(vars.rootDir+"\\EEG-Graphen\\Healthy\\Magdeburg\\HS\\alpha_HS_prae_closed1.dgs.gz")
+    healthy_group.append(vars.rootDir+"\\EEG-Graphen\\Healthy\\Magdeburg\\KS\\alpha_KS_prae_closed1.dgs.gz")
+    healthy_group.append(vars.rootDir+"\\EEG-Graphen\\Healthy\\Magdeburg\\ME\\alpha_ME_prae_closed1.dgs.gz")
+    healthy_group.append(vars.rootDir+"\\EEG-Graphen\\Healthy\\Magdeburg\\MS\\alpha_MS_prae_closed1.dgs.gz")
+    healthy_group.append(vars.rootDir+"\\EEG-Graphen\\Healthy\\Magdeburg\\RM\\alpha_RM_prae_closed1.dgs.gz")
+    healthy_group.append(vars.rootDir+"\\EEG-Graphen\\Healthy\\Magdeburg\\TG\\alpha_TG_prae_closed1.dgs.gz")
+    healthy_group.append(vars.rootDir+"\\EEG-Graphen\\Healthy\\Magdeburg\\UH\\alpha_UH_prae_closed1.dgs.gz")
+    healthy_group.append(vars.rootDir+"\\EEG-Graphen\\Healthy\\Magdeburg\\UW\\alpha_UW_prae_closed1.dgs.gz")
+    return healthy_group
+
+def get_eye_disease_group():
+    eye_disease_group=[]
+    eye_disease_group.append(vars.rootDir+"\\EEG-Graphen\\MCS\\Berlin\\MCS050\\alpha_MCS050B_1PRE.dgs.gz")
+    eye_disease_group.append(vars.rootDir+"\\EEG-Graphen\\MCS\\Berlin\\MCS018\\alpha_MCS018B_ED.dgs.gz")
+    eye_disease_group.append(vars.rootDir+"\\EEG-Graphen\\MCS\\Berlin\\MCS013\\alpha_MCS013B_ED.dgs.gz")
+    eye_disease_group.append(vars.rootDir+"\\EEG-Graphen\\MCS\\Berlin\\MCS051\\alpha_MCS051B_1PRE.dgs.gz")
+    eye_disease_group.append(vars.rootDir+"\\EEG-Graphen\\MCS\\Magdeburg\\MCS031\\alpha_MCS031M_1PRE.dgs.gz")
+    eye_disease_group.append(vars.rootDir+"\\EEG-Graphen\\MCS\\Kassel\\MCS047\\alpha_MCS047K_1PRE.dgs.gz")
+    eye_disease_group.append(vars.rootDir+"\\EEG-Graphen\\MCS\\Magdeburg\\MCS065\\alpha_MCS065M_1PRE.dgs.gz")
+    eye_disease_group.append(vars.rootDir+"\\EEG-Graphen\\MCS\\Magdeburg\\MCS088\\alpha_MCS088M_1PRE.dgs.gz")
+    eye_disease_group.append(vars.rootDir+"\\EEG-Graphen\\NO2\\Hermann\\f08\\alpha_f08A_ruhe2.dgs.gz")    
+    eye_disease_group.append(vars.rootDir+"\\EEG-Graphen\\NO2\\Fedorov\\HK\\alpha_HK_prae_closed1.dgs.gz")
+    eye_disease_group.append(vars.rootDir+"\\EEG-Graphen\\NO2\\Fedorov\\RL\\alpha_RL_prae_closed1.dgs.gz")
+    eye_disease_group.append(vars.rootDir+"\\EEG-Graphen\\NO3\\Magdeburg\\AK\\alpha_AK_prae_closed_day01.dgs.gz")
+    eye_disease_group.append(vars.rootDir+"\\EEG-Graphen\\NO3\\Magdeburg\\EM\\alpha_EM_prae_closed_day01.dgs.gz")
+    eye_disease_group.append(vars.rootDir+"\\EEG-Graphen\\NO3\\Magdeburg\\HKa\\alpha_HKa_prae_closed_day01.dgs.gz")
+    eye_disease_group.append(vars.rootDir+"\\EEG-Graphen\\MCS\\Magdeburg\\MCS003\\alpha_MCS003M_1PRE.dgs.gz")
+    
+    return eye_disease_group
+    
+    
+class Selector:
+    """
+    Selector select patients from list OVGU_FME_IMP_EEG_used4pre_analysis.txt,
+    which may not be in the optometry table anymore
+    so selectK(k=10) might not give back clinical_variables of length 10
+    selectAll() should give all the patients in the optometry table
+    
+    Input: Selector parameters, the number of data should be selected
+    Output: a list of modeled graphs with file_names as index
+    [(file_name1,g1),(file_name2,g2),......]
+    """
+    def __init__(self,selectMethod,weight_filter_method):
+        """
+        selectMethod:defaut "5"-->selectK(k=10),it can also be other integer ranging from 1 to maximal number of patients
+        selectMethod can also be "all",which means select all the patient
+        """
+
+        self.selectMethod=selectMethod
+        self.wfm=weight_filter_method
+        if self.selectMethod=="all":
+            self.data=self.selectAll()
+        elif self.selectMethod=="specified":
+            self.data=self.selectSpecified()
+        elif self.selectMethod=="one":
+            self.data=self.selectOne()
+        else:
+            self.k=int(selectMethod)
+            assert isinstance( self.k, int ),"selectMethod should be specified by an integer of string from or \"all\" "
+            self.data=self.selectK(self.k)
+            
+        
+    def selectAll(self):
+        data=[]
+        #read in patients_list
+        patients_list=open(os.path.join(vars.rootDir,"Data","EEG-Graphen","OVGU_FME_IMP_EEG_used4pre_analysis.txt"),"r").readlines()       
+        print len(patients_list)    
+        for patient in patients_list:
+            patient=patient.strip("\r").strip("\n").strip("\r")
+            study,center,initial,doc=patient.split("\\")
+            #print study,center,initial,doc
+            path=os.path.join(study,center,initial)
+            postfix=vars.FREQUENCY+'_'+doc+'.dgs.gz'
+            print postfix
+            print path
+            file_name=os.path.join(vars.rootDir,"Data","EEG-Graphen",path,postfix)
+            print file_name
+            #open gz file with
+            f = gzip.open(file_name, 'rb')
+            file_content = f.read()
+            dgs=ReadDGS(file_content)
+            g=self.constructEEGGraph(dgs)
+            data.append((file_name,g))
+            f.close()
+        data=self.filter_against_opotometry_table(data)
+        print "data length: %d" %len(data)
+        return data
+     
+    #random select k patients
+    def selectK(self,k=10):
+        data=[]
+        #read in patients_list
+        patients_list=open(vars.rootDir+"\\EEG-Graphen\\OVGU_FME_IMP_EEG_used4pre_analysis.txt","r").readlines()
+        patients_list=random.sample(patients_list,k)
+            
+        for patient in patients_list:
+            study,center,initial,doc=patient[:-1].split("\\")
+            path=study+"\\"+center+"\\"+initial+"\\alpha_"+doc+".dgs.gz"
+            file_name=vars.rootDir+"\\EEG-Graphen\\"+path
+            #open gz file with
+            f = gzip.open(file_name, 'rb')
+            file_content = f.read()
+            dgs=ReadDGS(file_content)
+            g=self.constructEEGGraph(dgs)
+            data.append((file_name,g))
+            f.close()
+        data=self.filter_against_opotometry_table(data)
+        print "data length: %d" %len(data)
+        return data
+    
+    #select a specific one
+    def selectSpecified(self):
+        healthy_data=[]
+        disease_data=[]
+        #file_name=vars.rootDir+"\\EEG-Graphen\\Healthy\\Magdeburg\\AM\\alpha_AM_prae_closed1.dgs.gz"
+        #file_name=vars.rootDir+"\\EEG-Graphen\\MCS\\Berlin\\MCS050\\alpha_MCS050B_1PRE.dgs.gz"
+        #patients_list=[]
+        patients_healthy_list=get_healthy_group()
+        patients_eye_disease_list=get_eye_disease_group()
+        for patient in patients_healthy_list:
+            file_name=patient
+            f = gzip.open(file_name, 'rb')
+            file_content = f.read()
+            dgs=ReadDGS(file_content)  
+            g=self.constructEEGGraph(dgs)
+            healthy_data.append((file_name,g))
+            f.close()
+        for patient in patients_eye_disease_list:
+            file_name=patient
+            f = gzip.open(file_name, 'rb')
+            file_content = f.read()
+            dgs=ReadDGS(file_content)  
+            g=self.constructEEGGraph(dgs)
+            disease_data.append((file_name,g))
+            f.close()
+        #data=self.filter_against_opotometry_table(data)
+        #print "data length: %d" %len(data)
+        return (healthy_data,disease_data)
+    
+    def selectOne(self):
+        data=[]
+        file_name=vars.rootDir+"\\EEG-Graphen\\Healthy\\Magdeburg\\AM\\alpha_AM_prae_closed1.dgs.gz"
+        f = gzip.open(file_name, 'rb')
+        file_content = f.read()
+        dgs=ReadDGS(file_content)  
+        g=self.constructEEGGraph(dgs)
+        data.append((file_name,g))
+        f.close()
+        return data
+    
+    
+    #return an Object of EEGGraph
+    def constructEEGGraph(self,dgs):
+        if self.wfm=="binarilize":
+            g=EEGGraph(WFilter(dgs).binarilize())
+        elif self.wfm=="discretize":
+            g=EEGGraph(WFilter(dgs).discretize())
+        elif self.wfm=="original":     
+            #original graph                    
+            g=EEGGraph(dgs.graphlist)
+        else:
+            raise ValueError("please type in the correct weight_filter_method ")
+            
+        return g
+        
+    def filter_against_opotometry_table(self,data):
+        data_filtered=[]
+        #clinical_variables=((variables for each person),.......)
+        clinical_variables=[]
+        
+        #parse out "center","study","initials" out of the filename
+        #filename looks like this:"C:\Users\wu\Desktop\daten\daten\EEG-Graphen\NO2\Fedorov\GE\alpha_GE_prae_closed1.dgs.gz"
+        #path string in python lools like this: C:\\Users\\wu\\Desktop\\EEG-Graphen-Mythesis\\..    
+
+        for filename,g in data:
+            dummy=filename.split("\\")
+            study=dummy[9]
+            center=dummy[10]
+            initials=dummy[11]
+            #print study,center,initials
+            #fetch ID with (center,study,initials) from pd table ANONYMIZED
+            print study,center,initials
+            subject=vars.SUBJECTS[vars.SUBJECTS.study==study][vars.SUBJECTS.center==center][vars.SUBJECTS.initials==initials]      
+            print "ID:%s"%(subject["ID"])            
+            id=int(subject["ID"])
+            #print id
+            
+            
+            #Fetch clinical variables using patient ID,store them into clinical_variables.csv
+            cv=vars.OPTOMETRY[vars.OPTOMETRY.ID==id]
+            #code for original data
+            #cv=OPTOMETRY[OPTOMETRY.ID==id][OPTOMETRY.eye==geye]  
+            #resulted cv is 2D-array        
+            cv=cv[vars.clinical_variable_names].values
+            #this causes imprecision,why
+            cv=[ _ for nested in cv for _ in nested]
+            if  cv:
+                data_filtered.append((filename,g))
+                clinical_variables.append(cv)
+        clinical_variables=np.asarray(clinical_variables)    
+        print "clinical_variables is in shape (%s,%s)" %(clinical_variables.shape[0],clinical_variables.shape[1])
+        #dump clinical_variables into file clinical_variables.csv
+        np.savetxt(vars.tempDataDir,clinical_variables)
+        return data_filtered
+        
+    #return clinical_variables in form of 2d-array
+    def build_clinical_variables(self):
+        #read clinical_variables.csv back into a 2d-array
+        clinical_variables=np.loadtxt(vars.tempDataDir,ndmin=2)
+        return clinical_variables
+        
+if __name__=="__main__":
+        selector=Selector("10",weight_filter_method="discretize")
+        #selector=Selector("all",weight_filter_method="discretize")
+        #cv=selector.build_clinical_variables()
+        print selector.data
+        #print cv

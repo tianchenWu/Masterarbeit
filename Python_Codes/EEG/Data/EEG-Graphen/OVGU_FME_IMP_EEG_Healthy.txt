@@ -1,0 +1,15 @@
+Healthy/Magdeburg/AB/AB_prae_closed1
+Healthy/Magdeburg/AG/AG_prae_closed1
+Healthy/Magdeburg/AM/AM_prae_closed1
+Healthy/Magdeburg/AV/AV_prae_closed1
+Healthy/Magdeburg/BH/BH_prae_closed1
+Healthy/Magdeburg/CV/CV_prae_closed1
+Healthy/Magdeburg/DK/DK_prae_closed1
+Healthy/Magdeburg/HS/HS_prae_closed1
+Healthy/Magdeburg/KS/KS_prae_closed1
+Healthy/Magdeburg/ME/ME_prae_closed1
+Healthy/Magdeburg/MS/MS_prae_closed1
+Healthy/Magdeburg/RM/RM_prae_closed1
+Healthy/Magdeburg/TG/TG_prae_closed1
+Healthy/Magdeburg/UH/UH_prae_closed1
+Healthy/Magdeburg/UW/UW_prae_closed1

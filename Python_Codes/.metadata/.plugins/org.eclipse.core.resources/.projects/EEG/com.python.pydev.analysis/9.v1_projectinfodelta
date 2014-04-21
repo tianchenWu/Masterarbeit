@@ -1,0 +1,5 @@
+INSTUPFilter.LowPassFilter
+/home/deathlypest/Masterarbeit/Python_Codes/EEG/Filter/LowPassFilter.py
+INFOS:&&2|1|2|0
+savitzky_golay=1
+Filter.LowPassFilter=2

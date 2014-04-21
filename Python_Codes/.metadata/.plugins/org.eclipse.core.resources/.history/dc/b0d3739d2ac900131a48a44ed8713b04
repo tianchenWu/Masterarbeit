@@ -1,0 +1,8 @@
+eclipse.preferences.version=1
+encoding//Filter/WeightsFilter.py=utf-8
+encoding//Global/HelpFunction.py=utf-8
+encoding//Global/globalvars.py=utf-8
+encoding//I_O_put/ReadDGS.py=utf-8
+encoding//I_O_put/Selector.py=utf-8
+encoding//Models/GraphModel.py=utf-8
+encoding//RegressionTask/BinaryDynamicERGMRegression.py=utf-8
